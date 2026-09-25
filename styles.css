@@ -307,3 +307,7 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
 /* eliminated players read red in the tribe lists */
 .tribe li.out{background:rgba(224,90,74,.18);border-color:rgba(240,162,140,.55);color:#F3B4A4}
 .tribe li.out b{color:#FFD6C9}
+
+/* cast page: voted out players get a red border */
+.card.out{opacity:1;border-color:#D9634E;background:linear-gradient(rgba(217,99,78,.07),rgba(217,99,78,.07)),var(--ink-2)}
+.card.out .who h3{color:#FFD6C9}

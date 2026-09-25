@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Survivor 51 · Leader Board</title>
+<meta name="description" content="Survivor 51: pool standings, player race, episodes, cast and point scale.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-home">
+<div class="grain" aria-hidden="true"></div>
+<nav class="topnav"><a class="brand" href="index.html">Survivor 51</a><div class="links"><a href="index.html" class="on">Leader Board</a><a href="standings.html">Standings</a><a href="episodes.html">Episodes</a><a href="cast.html">Cast</a><a href="scale.html">Points Scale</a></div></nav>
+<div class="brandband" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<header class="masthead">
+  <div class="mast-left">
+    <p class="season-no">Season 51</p>
+    <h1>Survivor<br><span class="h1-em">51</span></h1>
+  </div>
+  <div class="mast-right">
+    <p class="era">The Open Era</p>
+    <p class="era-note">Two tribes. Everything from fifty seasons back in play, no warning, any order.</p>
+    <dl class="meta" id="meta"></dl>
+  </div>
+</header>
+<main>
+  <section class="block">
+    <div class="block-head"><h2>Leader Board</h2><p class="lede">The pool. Four of us drafted players, and each roster's points are the sum of its players.</p></div>
+    <div class="pool" id="pool"></div><p class="callout" id="poolnote"></p>
+  </section>
+  <section class="block">
+    <div class="block-head"><h2>The Race, So Far</h2><p class="lede">A snapshot of the top of the standings. Full table on the Standings page.</p></div>
+    <div class="race" id="race" data-limit="8"></div><p class="more"><a href="standings.html">All 21 players →</a></p>
+  </section>
+  <section class="block">
+    <div class="block-head"><h2>Tribe Face-Off</h2><p class="lede">Points per starting tribe. Savu never went to Tribal Council.</p></div>
+    <div class="tribes" id="tribes"></div>
+  </section>
+</main>
+<footer>
+  <p>Data pulled from Anne-Marie's Notion · built <span id="built"></span></p>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

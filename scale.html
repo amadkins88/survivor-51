@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Points Scale · Survivor 51</title>
+<meta name="description" content="Survivor 51: pool standings, player race, episodes, cast and point scale.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-scale">
+<div class="grain" aria-hidden="true"></div>
+<nav class="topnav"><a class="brand" href="index.html">Survivor 51</a><div class="links"><a href="index.html">Leader Board</a><a href="standings.html">Standings</a><a href="episodes.html">Episodes</a><a href="cast.html">Cast</a><a href="scale.html" class="on">Points Scale</a></div></nav>
+<div class="brandband" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<header class="masthead">
+  <div class="mast-left">
+    <p class="season-no">Season 51</p>
+    <h1>Survivor<br><span class="h1-em">51</span></h1>
+  </div>
+  <div class="mast-right">
+    <p class="era">The Open Era</p>
+    <p class="era-note">Two tribes. Everything from fifty seasons back in play, no warning, any order.</p>
+    <dl class="meta" id="meta"></dl>
+  </div>
+</header>
+<main>
+  <section class="block">
+    <div class="block-head"><h2>What Everything Is Worth</h2><p class="lede">The full scale as it stands today. Any event not listed pays nothing.</p></div>
+    <div class="scale" id="scale"></div>
+  </section>
+</main>
+<footer>
+  <p>Data pulled from Anne-Marie's Notion · built <span id="built"></span></p>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

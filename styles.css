@@ -303,3 +303,7 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
   .block-head h2{font-size:23px}
   .lede{font-size:13.5px}
 }
+
+/* eliminated players read red in the tribe lists */
+.tribe li.out{background:rgba(224,90,74,.18);border-color:rgba(240,162,140,.55);color:#F3B4A4}
+.tribe li.out b{color:#FFD6C9}

@@ -126,7 +126,8 @@
       return '<div class="tribe ' + t.toLowerCase() + '"><h3>' + t + '</h3>' +
         '<p class="tot">' + (D.tribeTotals[t] || 0) + '</p><p class="lede">' + mem.length + ' players</p>' +
         '<ul>' + mem.map(function (m) {
-          return '<li>' + esc(m.name) + ' <b>' + m.points + '</b></li>';
+          var out = m.status === "Eliminated" ? ' class="out"' : "";
+          return '<li' + out + '>' + esc(m.name) + ' <b>' + m.points + '</b></li>';
         }).join("") + '</ul></div>';
     }).join("");
   }

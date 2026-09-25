@@ -42,8 +42,8 @@
     return POOL[POOL.length - 1];
   }
 
-  // eight on a real screen, six on a phone so it stays calm
-  const COUNT = () => (W < 700 ? 6 : 8);
+  // flat eight, everywhere
+  const COUNT = () => 8;
 
   function makeFish(sp) {
     const k = S * (0.86 + Math.random() * 0.58);

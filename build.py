@@ -70,12 +70,12 @@ def block(head, lede, inner, bid=None):
   </section>"""
 
 
-HOME = "\n".join([
+HOME = '<div class="homelayout">' + "\n".join([
     block("Leader Board", "The pool. Four of us drafted players, and each roster's points are the sum of its players.",
           '<div class="pool" id="pool"></div><p class="callout" id="poolnote"></p>'),
     block("Tribe Face-Off", "Points per starting tribe. Savu never went to Tribal Council.",
           '<div class="tribes" id="tribes"></div>'),
-])
+]) + '</div>'
 
 STANDINGS = "\n".join([
     block("The Race", "Points banked after episode one. One for every episode survived, plus whatever the game handed out.",

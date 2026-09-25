@@ -265,3 +265,13 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
 .era-note{margin:10px auto 0}
 .meta{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px;text-align:center;margin-top:22px}
 .meta dd{margin-top:2px}
+
+/* home: two sections side by side */
+.homelayout{display:grid;gap:0}
+@media (min-width:940px){
+  .homelayout{grid-template-columns:1fr 1fr;gap:0 clamp(32px,4vw,64px);align-items:start}
+  .homelayout > .block{border-bottom:0;padding-top:0}
+  .homelayout > .block + .block{border-left:1px solid var(--line);padding-left:clamp(32px,4vw,64px)}
+  .homelayout .tribes{grid-template-columns:1fr}
+  .homelayout .pool{grid-template-columns:repeat(auto-fit,minmax(168px,1fr))}
+}

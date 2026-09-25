@@ -275,3 +275,9 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
   .homelayout .tribes{grid-template-columns:1fr}
   .homelayout .pool{grid-template-columns:repeat(auto-fit,minmax(168px,1fr))}
 }
+
+/* home: sections stacked, items within each row side by side */
+@media (min-width:760px){
+  .pool{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .tribes{grid-template-columns:1fr 1fr}
+}

@@ -7,7 +7,7 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "/home/snikdama/homeserver"
+publish = "/home/snikdama/homeserver/survivor51-site"
 publishOrigin = "default"
 
 [build.environment]

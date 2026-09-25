@@ -71,10 +71,20 @@
     }).join("");
   }
 
+  var evKey = function (n) {
+    var m = /^E(\d+)([A-Z]+)$/.exec(n || "");
+    return m ? [parseInt(m[1], 10), m[2]] : [9999, n || ""];
+  };
+  var byEvNum = function (a, b) {
+    var ka = evKey(a.num), kb = evKey(b.num);
+    return ka[0] - kb[0] || (ka[1] < kb[1] ? -1 : ka[1] > kb[1] ? 1 : 0);
+  };
+
   // ---- episodes
   if (el("episode")) {
     el("episode").innerHTML = D.episodes.map(function (e) {
-      var evs = D.events.filter(function (x) { return x.episode && x.episode.indexOf(e.id) > -1; });
+      var evs = D.events.filter(function (x) { return x.episode && x.episode.indexOf(e.id) > -1; })
+        .sort(byEvNum);
       var facts = [
         ["Voted out", (e.votedOff && e.votedOff[0]) || "none", e.elim || ""],
         ["Vote", e.voteCount || "n/a", ""],

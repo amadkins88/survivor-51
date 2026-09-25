@@ -41,8 +41,7 @@ def page(name, title, page_id, body, home=False):
 <div class="brandband" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 <header class="masthead">
   <div class="mast-left">
-    <p class="season-no">Season 51</p>
-    <h1>Survivor<br><span class="h1-em">51</span></h1>
+    <img class="wordmark" src="logo.png" alt="Survivor 51">
   </div>
   <div class="mast-right">
     <p class="era">The Open Era</p>

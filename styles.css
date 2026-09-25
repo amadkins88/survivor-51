@@ -251,3 +251,8 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
 .tribe.savu .tot{color:#BE93E4}
 .topnav{background:rgba(8,19,31,.94)}
 .rank,.ptot,.v{font-variant-numeric:tabular-nums}
+
+/* logo wordmark replaces the typed title */
+.wordmark{width:min(470px,84%);height:auto;display:block}
+.mast-left{padding-bottom:4px}
+.page-standings .wordmark,.page-episodes .wordmark,.page-cast .wordmark,.page-scale .wordmark{width:min(230px,62%)}

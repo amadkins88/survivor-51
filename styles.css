@@ -256,3 +256,12 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
 .wordmark{width:min(470px,84%);height:auto;display:block}
 .mast-left{padding-bottom:4px}
 .page-standings .wordmark,.page-episodes .wordmark,.page-cast .wordmark,.page-scale .wordmark{width:min(230px,62%)}
+
+/* centered masthead */
+.masthead{display:block;text-align:center}
+.mast-left{display:flex;justify-content:center;padding-bottom:0}
+.wordmark{margin:0 auto}
+.mast-right{max-width:64ch;margin:22px auto 0;align-self:auto}
+.era-note{margin:10px auto 0}
+.meta{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px;text-align:center;margin-top:22px}
+.meta dd{margin-top:2px}

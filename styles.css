@@ -334,3 +334,11 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
 .tribe.savu{border-color:rgba(139,95,191,.6);background:linear-gradient(rgba(139,95,191,.13),rgba(139,95,191,.13)),var(--ink-2)}
 .tribe.toka::before{background:var(--toka)}
 .tribe.savu::before{background:var(--savu)}
+
+/* legend stays on one line on phones */
+@media (max-width:759px){
+  .legend{flex-wrap:nowrap;gap:8px;overflow-x:auto;scrollbar-width:none}
+  .legend::-webkit-scrollbar{display:none}
+  .legend span{font-size:11px;gap:5px;flex:0 0 auto;white-space:nowrap}
+  .legend i{width:8px;height:8px}
+}

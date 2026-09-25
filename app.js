@@ -199,6 +199,27 @@
       Object.keys(tops).forEach(function (k) { out.push("  navrow" + (i++) + ": " + tops[k].join(" | ")); });
       out.push("NAV_W=" + document.querySelector(".topnav .links").getBoundingClientRect().width +
                " SCROLL_W=" + document.querySelector(".topnav .links").scrollWidth);
+      out.push("WIN=" + window.innerWidth + " DOC_W=" + document.documentElement.scrollWidth +
+               " BODY_W=" + document.body.scrollWidth);
+      var mn = document.querySelector("main"), sc = document.querySelector(".scale");
+      if (mn) out.push("MAIN_W=" + Math.round(mn.getBoundingClientRect().width));
+      if (sc) out.push("SCALE_W=" + Math.round(sc.getBoundingClientRect().width));
+      document.querySelectorAll("h2, .lede, .sgroup li, .tribe, .facts").forEach(function (b) {
+        var r = b.getBoundingClientRect();
+        if (r.right > window.innerWidth + 1) out.push("OVERFLOW " + b.className + " right=" + Math.round(r.right));
+      });
+      var legend = document.querySelectorAll(".legend span"), lrows = {}, ln = 1;
+      legend.forEach(function (x) {
+        var k = Math.round(x.getBoundingClientRect().top);
+        (lrows[k] = lrows[k] || []).push(x.textContent.trim());
+      });
+      out.push("LEGEND_ROWS=" + Object.keys(lrows).length);
+      Object.keys(lrows).forEach(function (k) { out.push("  legendrow" + (ln++) + ": " + lrows[k].join(" | ")); });
+      document.querySelectorAll(".sgroup h3").forEach(function (h) {
+        var r = h.getBoundingClientRect();
+        out.push("GROUP " + h.textContent + " x=" + Math.round(r.left) + " y=" + Math.round(r.top) +
+                 " boxW=" + Math.round(h.parentElement.getBoundingClientRect().width));
+      });
       var lineCount = function (elm) {
         var t = elm.firstChild;
         if (!t || t.nodeType !== 3 || !t.length) return 1;

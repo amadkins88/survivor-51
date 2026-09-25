@@ -5,19 +5,19 @@ import pathlib
 OUT = pathlib.Path(__file__).parent
 
 NAV = [
-    ("index.html", "Leader Board"),
-    ("standings.html", "Standings"),
-    ("episodes.html", "Episodes"),
-    ("cast.html", "Cast"),
-    ("scale.html", "Points Scale"),
+    ("index.html", "Leader Board", "Board"),
+    ("standings.html", "Standings", "Standings"),
+    ("episodes.html", "Episodes", "Episodes"),
+    ("cast.html", "Cast", "Cast"),
+    ("scale.html", "Points Scale", "Scale"),
 ]
 
 
 def nav_html(active):
     items = []
-    for href, label in NAV:
+    for href, label, short in NAV:
         cls = ' class="on"' if href == active else ""
-        items.append(f'<a href="{href}"{cls}>{label}</a>')
+        items.append(f'<a href="{href}"{cls}><span class="lg">{label}</span><span class="sm">{short}</span></a>')
     return '<nav class="topnav"><a class="brand" href="index.html">Survivor 51</a>' \
            '<div class="links">' + "".join(items) + "</div></nav>"
 

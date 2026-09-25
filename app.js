@@ -187,4 +187,39 @@
       document.querySelectorAll(".bar i").forEach(function (b) { b.style.width = b.dataset.w + "%"; });
     }, 90);
   });
+
+  // ?measure=1 reports wrapping so layout can be checked headlessly
+  if (/[?&]measure/.test(location.search)) {
+    var report = function () {
+      var out = [], tops = {}, i = 1;
+      document.querySelectorAll(".topnav .links a").forEach(function (a) {
+        (tops[a.offsetTop] = tops[a.offsetTop] || []).push(a.textContent.trim());
+      });
+      out.push("NAV_ROWS=" + Object.keys(tops).length);
+      Object.keys(tops).forEach(function (k) { out.push("  navrow" + (i++) + ": " + tops[k].join(" | ")); });
+      out.push("NAV_W=" + document.querySelector(".topnav .links").getBoundingClientRect().width +
+               " SCROLL_W=" + document.querySelector(".topnav .links").scrollWidth);
+      var lineCount = function (elm) {
+        var t = elm.firstChild;
+        if (!t || t.nodeType !== 3 || !t.length) return 1;
+        try { var r = document.createRange(); r.setStart(t, 0); r.setEnd(t, t.length); return r.getClientRects().length; }
+        catch (e) { return -1; }
+      };
+      document.querySelectorAll(".sgroup li span").forEach(function (s) {
+        var n = lineCount(s); if (n > 1) out.push("WRAP li (" + n + "): " + s.textContent);
+      });
+      document.querySelectorAll(".name").forEach(function (s) {
+        var n = lineCount(s); if (n > 1) out.push("WRAP name (" + n + "): " + s.textContent.replace(/\s+/g, " ").slice(0, 40));
+      });
+      document.querySelectorAll(".meta dd, .viewer h3, .sgroup h3").forEach(function (s) {
+        var n = lineCount(s); if (n > 1) out.push("WRAP other (" + n + "): " + s.textContent.replace(/\s+/g, " ").slice(0, 40));
+      });
+      var pre = document.createElement("pre");
+      pre.id = "measure";
+      pre.textContent = out.join("\n");
+      document.body.appendChild(pre);
+    };
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { setTimeout(report, 250); });
+    else setTimeout(report, 500);
+  }
 })();

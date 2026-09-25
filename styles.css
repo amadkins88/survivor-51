@@ -311,3 +311,18 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
 /* cast page: voted out players get a red border */
 .card.out{opacity:1;border-color:#D9634E;background:linear-gradient(rgba(217,99,78,.07),rgba(217,99,78,.07)),var(--ink-2)}
 .card.out .who h3{color:#FFD6C9}
+
+/* one horizontal line, always */
+.topnav .sm{display:none}
+.sgroup li span{flex:1 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sgroup li b{flex:0 0 auto}
+.tag,.who-pick,.pname{white-space:nowrap}
+@media (max-width:759px){
+  .topnav{flex-wrap:nowrap;padding:10px 12px;gap:6px}
+  .topnav .brand{display:none}
+  .topnav .links{flex-wrap:nowrap;gap:2px;overflow-x:auto;scrollbar-width:none}
+  .topnav .links::-webkit-scrollbar{display:none}
+  .topnav .links a{font-size:11.5px;letter-spacing:.05em;padding:6px 7px;flex:0 0 auto}
+  .topnav .lg{display:none}
+  .topnav .sm{display:inline}
+}

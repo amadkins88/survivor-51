@@ -34,7 +34,9 @@
   /* Draw one fish. f needs: x, y, angle, len, h, k, phase, tail, excite, sp (species). */
   function drawFish(ctx, f, time, alphaScale) {
     const sp = f.sp, L = f.len, Hh = f.h;
-    const alpha = (0.55 + Math.min(0.42, f.k * 0.40)) * (alphaScale === undefined ? 1 : alphaScale);
+    // Subdued so the reef reads as background: a single fish layer lands around
+    // 0.24-0.32, and overlapping parts (fin over body) stay well under opaque.
+    const alpha = (0.16 + Math.min(0.16, f.k * 0.13)) * (alphaScale === undefined ? 1 : alphaScale);
 
     ctx.save();
     ctx.translate(f.x, f.y);

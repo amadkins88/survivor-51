@@ -1,11 +1,15 @@
 (function () {
   var D = window.SURVIVOR51;
   var CAT_COLOR = {
-    Immunity: "#2E8B8B", Reward: "#C9A227", Idols: "#E5623A", Advantages: "#7FA650",
-    Shots: "#B65C8A", Survival: "#6C8B99", Journeys: "#D98E4A", Twists: "#5F7FD1",
-    Endgame: "#D8D2C4"
+    Immunity: "#4A90E2", Reward: "#2E7D4F", Idols: "#FF8C00", Advantages: "#7FA650",
+    Shots: "#C0574F", Survival: "#8FB3F5", Journeys: "#D98E4A", Twists: "#A52A2A",
+    Endgame: "#FFF8E7"
   };
   var TRIBE_COLOR = { Toka: "#E8B430", Savu: "#8B5FBF" };
+  var PICKERS = {};
+  D.viewers.forEach(function (v) {
+    (v.picks || []).forEach(function (n) { (PICKERS[n] = PICKERS[n] || []).push(v.name); });
+  });
   var el = function (id) { return document.getElementById(id); };
   var esc = function (s) {
     return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
@@ -42,10 +46,13 @@
       var st = p.status === "Eliminated"
         ? '<span class="tag out">Voted out</span>'
         : '<span class="tag">' + esc(p.status || "") + '</span>';
+      var who = (PICKERS[p.name] || []).map(function (w) {
+        return '<span class="who-pick">' + esc(w) + '</span>';
+      }).join("");
       return '<div class="row ' + t.toLowerCase() + '">' +
         '<span class="rank">' + (i + 1) + '</span>' +
         '<span class="dot" style="background:' + (TRIBE_COLOR[t] || "#666") + '"></span>' +
-        '<span class="name">' + esc(p.name) + st + '</span>' +
+        '<span class="name">' + esc(p.name) + st + who + '</span>' +
         '<span class="pts">' + p.points + '</span>' +
         '<span class="bar"><i data-w="' + Math.round((p.points / top) * 100) + '"></i></span>' +
         '</div>';

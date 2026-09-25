@@ -281,3 +281,25 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
   .pool{grid-template-columns:repeat(4,minmax(0,1fr))}
   .tribes{grid-template-columns:1fr 1fr}
 }
+
+/* tribe colors: proper buff hues */
+.tribe.savu .tot{color:#A87BD8}
+
+/* picked-by chips (show once rosters are set) */
+.who-pick{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+  padding:2px 6px;border-radius:3px;background:var(--ink-3);color:var(--bone);white-space:nowrap}
+
+/* mobile: keep the home rows horizontal */
+@media (max-width:759px){
+  .pool{grid-template-columns:1fr 1fr;gap:10px}
+  .tribes{grid-template-columns:1fr 1fr;gap:10px}
+  .viewer{padding:13px}
+  .viewer h3{font-size:14px}
+  .viewer .v-tot{font-size:26px}
+  .tribe{padding:13px}
+  .tribe h3{font-size:18px}
+  .tribe .tot{font-size:30px}
+  .tribe li{font-size:10.5px;padding:2px 5px}
+  .block-head h2{font-size:23px}
+  .lede{font-size:13.5px}
+}

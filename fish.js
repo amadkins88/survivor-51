@@ -27,23 +27,33 @@
 
   const fishes = [];
 
-  /* Only the warm, saturated species. The cream and silver-bodied ones (Moorish
-     idol, sergeant major, copperband butterflyfish) washed out the white text in
-     front of them, so they are out of the rotation. They stay defined in
-     fish-art.js, just unweighted here, so re-adding one is a one-line change. */
-  const WEIGHT = { clown: 3, tang: 3, bluetang: 2, emperor: 1, anthias: 3 };
-  const POOL = ART.SPECIES.filter(s => WEIGHT[s.id]);
-  const LOADOUT = POOL.map(s => WEIGHT[s.id]);
-  const LOADOUT_TOTAL = LOADOUT.reduce((a, b) => a + b, 0);
+  /* Three fish only: one orange, one blue, one pink. The cream and silver species
+     washed out the white text, and the yellow tang plus the emperor angelfish came
+     out on request too. Everything stays defined in fish-art.js, just unlisted
+     here, so bringing one back is a one-line change. */
+  const POOL = ART.SPECIES.filter(s => ['clown', 'bluetang', 'anthias'].includes(s.id));
 
-  function pickSpecies() {
-    let r = Math.random() * LOADOUT_TOTAL;
-    for (let i = 0; i < POOL.length; i++) { r -= LOADOUT[i]; if (r <= 0) return POOL[i]; }
-    return POOL[POOL.length - 1];
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = (Math.random() * (i + 1)) | 0;
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
   }
 
-  // flat eight, everywhere
-  const COUNT = () => 8;
+  // one of each, so you always get the orange, the blue and the pink
+  function loadout() {
+    const bag = [];
+    while (bag.length < COUNT()) {
+      for (const s of shuffle(POOL.slice())) {
+        if (bag.length >= COUNT()) break;
+        bag.push(s);
+      }
+    }
+    return bag;
+  }
+
+  const COUNT = () => 3;
 
   function makeFish(sp) {
     const k = S * (0.86 + Math.random() * 0.58);
@@ -65,8 +75,7 @@
 
   function populate() {
     fishes.length = 0;
-    const n = COUNT();
-    for (let i = 0; i < n; i++) fishes.push(makeFish(pickSpecies()));
+    for (const sp of loadout()) fishes.push(makeFish(sp));
     fishes.sort((a, b) => a.len - b.len);   // big fish in front
     for (const f of fishes) f.ry = f.y;
   }

@@ -326,3 +326,11 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
   .topnav .lg{display:none}
   .topnav .sm{display:inline}
 }
+
+/* tribe face-off: make each tribe read in its own buff color */
+.tribe.toka h3{color:var(--toka)}
+.tribe.savu h3{color:#A87BD8}
+.tribe.toka{border-color:rgba(232,180,48,.55);background:linear-gradient(rgba(232,180,48,.09),rgba(232,180,48,.09)),var(--ink-2)}
+.tribe.savu{border-color:rgba(139,95,191,.6);background:linear-gradient(rgba(139,95,191,.13),rgba(139,95,191,.13)),var(--ink-2)}
+.tribe.toka::before{background:var(--toka)}
+.tribe.savu::before{background:var(--savu)}

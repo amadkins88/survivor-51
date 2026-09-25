@@ -26,7 +26,24 @@
   }
 
   const fishes = [];
-  const COUNT = () => Math.max(12, Math.min(21, Math.round((W * H) / 70000)));
+
+  /* Only the warm, saturated species. The cream and silver-bodied ones (Moorish
+     idol, sergeant major, copperband butterflyfish) washed out the white text in
+     front of them, so they are out of the rotation. They stay defined in
+     fish-art.js, just unweighted here, so re-adding one is a one-line change. */
+  const WEIGHT = { clown: 3, tang: 3, bluetang: 2, emperor: 1, anthias: 3 };
+  const POOL = ART.SPECIES.filter(s => WEIGHT[s.id]);
+  const LOADOUT = POOL.map(s => WEIGHT[s.id]);
+  const LOADOUT_TOTAL = LOADOUT.reduce((a, b) => a + b, 0);
+
+  function pickSpecies() {
+    let r = Math.random() * LOADOUT_TOTAL;
+    for (let i = 0; i < POOL.length; i++) { r -= LOADOUT[i]; if (r <= 0) return POOL[i]; }
+    return POOL[POOL.length - 1];
+  }
+
+  // eight on a real screen, six on a phone so it stays calm
+  const COUNT = () => (W < 700 ? 6 : 8);
 
   function makeFish(sp) {
     const k = S * (0.86 + Math.random() * 0.58);
@@ -49,7 +66,7 @@
   function populate() {
     fishes.length = 0;
     const n = COUNT();
-    for (let i = 0; i < n; i++) fishes.push(makeFish(ART.SPECIES[i % ART.SPECIES.length]));
+    for (let i = 0; i < n; i++) fishes.push(makeFish(pickSpecies()));
     fishes.sort((a, b) => a.len - b.len);   // big fish in front
     for (const f of fishes) f.ry = f.y;
   }

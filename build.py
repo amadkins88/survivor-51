@@ -36,6 +36,7 @@ def page(name, title, page_id, body, home=False):
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-{page_id}">
+<canvas id="reef" aria-hidden="true"></canvas>
 <div class="grain" aria-hidden="true"></div>
 {nav_html(name)}
 <div class="brandband" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
@@ -57,6 +58,8 @@ def page(name, title, page_id, body, home=False):
 </footer>
 <script src="data.js"></script>
 <script src="app.js"></script>
+<script src="fish-art.js"></script>
+<script src="fish.js" defer></script>
 </body>
 </html>
 """

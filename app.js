@@ -142,9 +142,13 @@
       var p = D.contestants.filter(function (x) { return x.name === c.name; })[0];
       var out = p && p.status === "Eliminated";
       var t = c.tribe[0] || "";
+      var owners = PICKERS[c.name] || [];
       return '<article class="card' + (out ? " out" : "") + '">' +
         '<div class="who"><h3>' + esc(c.name) + '</h3><span class="age">' + esc(c.age) + '</span></div>' +
         '<span class="chip ' + t.toLowerCase() + '">' + esc(t) + '</span>' +
+        '<p class="owner">' + (owners.length
+          ? 'Picked by ' + owners.map(function (o) { return '<span class="who-pick">' + esc(o) + '</span>'; }).join(" ")
+          : '<span class="pend">Not picked</span>') + '</p>' +
         '<p class="job">' + esc(c.occupation) + '</p>' +
         '<p class="where">' + esc(c.residence) + '</p>' +
         (c.notes ? '<p class="note">' + esc(c.notes) + '</p>' : "") +
@@ -152,9 +156,12 @@
     }).join("");
   }
 
-  // ---- pool
+  // ---- pool: highest total on the left, lowest on the right
   if (el("pool")) {
-    el("pool").innerHTML = D.viewers.map(function (v) {
+    var rosters = D.viewers.slice().sort(function (a, b) {
+      return b.total - a.total || a.name.localeCompare(b.name);
+    });
+    el("pool").innerHTML = rosters.map(function (v) {
       var picks = (v.picks && v.picks.length)
         ? '<ul class="picks">' + v.picks.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul>"
         : '<p class="pend">picks pending</p>';

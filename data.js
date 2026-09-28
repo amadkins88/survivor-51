@@ -2,27 +2,11 @@ window.SURVIVOR51 = {
  "season": {
   "name": "Survivor 51",
   "subtitle": "The Open Era",
-  "premiere": "2026-09-23",
   "location": "Mamanuca Islands, Fiji",
+  "premiere": "2026-09-23",
   "players": 21
  },
  "contestants": [
-  {
-   "name": "Rob Antonson",
-   "tribe": [
-    "Savu"
-   ],
-   "status": "In Game",
-   "points": 9,
-   "id": "3e6db8f4-3f83-813c-8fd0-e26f6efe09f5",
-   "breakdown": {
-    "Immunity": 2.0,
-    "Reward": 1.0,
-    "Idols": 5.0,
-    "Survival": 1.0
-   },
-   "tribe1": "Savu"
-  },
   {
    "name": "Ana Sani",
    "tribe": [
@@ -32,9 +16,9 @@ window.SURVIVOR51 = {
    "points": 4,
    "id": "3e6db8f4-3f83-81d3-a5c9-f329eadb2dd2",
    "breakdown": {
-    "Immunity": 2.0,
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Immunity": 2,
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Savu"
   },
@@ -47,9 +31,9 @@ window.SURVIVOR51 = {
    "points": 4,
    "id": "3e6db8f4-3f83-8181-8450-f9e3f3879d4c",
    "breakdown": {
-    "Immunity": 2.0,
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Immunity": 2,
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Savu"
   },
@@ -62,9 +46,9 @@ window.SURVIVOR51 = {
    "points": 4,
    "id": "3e6db8f4-3f83-8185-9c7b-d762c3a25893",
    "breakdown": {
-    "Immunity": 2.0,
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Immunity": 2,
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Savu"
   },
@@ -77,9 +61,9 @@ window.SURVIVOR51 = {
    "points": 4,
    "id": "3e6db8f4-3f83-8114-89a8-f702b5a4237c",
    "breakdown": {
-    "Immunity": 2.0,
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Immunity": 2,
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Savu"
   },
@@ -92,9 +76,9 @@ window.SURVIVOR51 = {
    "points": 4,
    "id": "3e6db8f4-3f83-81d6-8bfe-e529ff913a98",
    "breakdown": {
-    "Immunity": 2.0,
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Immunity": 2,
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Savu"
   },
@@ -107,9 +91,9 @@ window.SURVIVOR51 = {
    "points": 4,
    "id": "3e6db8f4-3f83-81c2-99fd-fc8be739c106",
    "breakdown": {
-    "Immunity": 2.0,
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Immunity": 2,
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Savu"
   },
@@ -122,9 +106,9 @@ window.SURVIVOR51 = {
    "points": 4,
    "id": "3e6db8f4-3f83-8104-a839-f0fd0a9f1891",
    "breakdown": {
-    "Immunity": 2.0,
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Immunity": 2,
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Savu"
   },
@@ -137,9 +121,9 @@ window.SURVIVOR51 = {
    "points": 4,
    "id": "3e6db8f4-3f83-81f4-8dfe-de304eeff75c",
    "breakdown": {
-    "Immunity": 2.0,
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Immunity": 2,
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Savu"
   },
@@ -152,26 +136,27 @@ window.SURVIVOR51 = {
    "points": 4,
    "id": "3e6db8f4-3f83-811b-ad98-e7bde804c142",
    "breakdown": {
-    "Immunity": 2.0,
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Immunity": 2,
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Savu"
   },
   {
-   "name": "Jenna Doore",
+   "name": "Rob Antonson",
    "tribe": [
-    "Toka"
+    "Savu"
    ],
    "status": "In Game",
-   "points": 3,
-   "id": "3e6db8f4-3f83-81b7-91a4-e05e42369343",
+   "points": 9,
+   "id": "3e6db8f4-3f83-813c-8fd0-e26f6efe09f5",
    "breakdown": {
-    "Reward": 1.0,
-    "Shots": 1.0,
-    "Survival": 1.0
+    "Immunity": 2,
+    "Reward": 1,
+    "Idols": 5,
+    "Survival": 1
    },
-   "tribe1": "Toka"
+   "tribe1": "Savu"
   },
   {
    "name": "Devin Way",
@@ -182,8 +167,8 @@ window.SURVIVOR51 = {
    "points": 2,
    "id": "3e6db8f4-3f83-81fd-bdef-ecda1c1a5a8d",
    "breakdown": {
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Toka"
   },
@@ -196,8 +181,8 @@ window.SURVIVOR51 = {
    "points": 2,
    "id": "3e6db8f4-3f83-8106-a5ed-f2dde1aa9fb0",
    "breakdown": {
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Toka"
   },
@@ -210,8 +195,8 @@ window.SURVIVOR51 = {
    "points": 2,
    "id": "3e6db8f4-3f83-81ff-b290-f7b530a85786",
    "breakdown": {
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Toka"
   },
@@ -224,8 +209,8 @@ window.SURVIVOR51 = {
    "points": 2,
    "id": "3e6db8f4-3f83-8182-b79d-c9266f473738",
    "breakdown": {
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Toka"
   },
@@ -238,8 +223,8 @@ window.SURVIVOR51 = {
    "points": 2,
    "id": "3e6db8f4-3f83-8190-b95d-fb493d42ab61",
    "breakdown": {
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Toka"
   },
@@ -252,8 +237,8 @@ window.SURVIVOR51 = {
    "points": 2,
    "id": "3e6db8f4-3f83-81cc-97a3-d6de6d6402ff",
    "breakdown": {
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Toka"
   },
@@ -266,8 +251,23 @@ window.SURVIVOR51 = {
    "points": 2,
    "id": "3e6db8f4-3f83-81d4-8148-ebb50fe694ed",
    "breakdown": {
-    "Survival": 1.0,
-    "Journeys": 1.0
+    "Survival": 1,
+    "Journeys": 1
+   },
+   "tribe1": "Toka"
+  },
+  {
+   "name": "Jenna Doore",
+   "tribe": [
+    "Toka"
+   ],
+   "status": "In Game",
+   "points": 3,
+   "id": "3e6db8f4-3f83-81b7-91a4-e05e42369343",
+   "breakdown": {
+    "Reward": 1,
+    "Shots": 1,
+    "Survival": 1
    },
    "tribe1": "Toka"
   },
@@ -280,8 +280,8 @@ window.SURVIVOR51 = {
    "points": 2,
    "id": "3e6db8f4-3f83-818a-956e-f72d42fd34b5",
    "breakdown": {
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Toka"
   },
@@ -294,8 +294,8 @@ window.SURVIVOR51 = {
    "points": 2,
    "id": "3e6db8f4-3f83-8190-907e-fefb98f328b2",
    "breakdown": {
-    "Reward": 1.0,
-    "Survival": 1.0
+    "Reward": 1,
+    "Survival": 1
    },
    "tribe1": "Toka"
   },
@@ -308,8 +308,8 @@ window.SURVIVOR51 = {
    "points": 2,
    "id": "3e6db8f4-3f83-81fb-b8a2-f88c5fb2e105",
    "breakdown": {
-    "Reward": 1.0,
-    "Shots": 1.0
+    "Reward": 1,
+    "Shots": 1
    },
    "tribe1": "Toka"
   }
@@ -704,24 +704,48 @@ window.SURVIVOR51 = {
  ],
  "viewers": [
   {
-   "name": "Carolyn",
-   "picks": [],
-   "total": 0
-  },
-  {
    "name": "Stacy",
-   "picks": [],
-   "total": 0
-  },
-  {
-   "name": "Anne-Marie",
-   "picks": [],
-   "total": 0
+   "picks": [
+    "Rob Antonson",
+    "Linnea Capobianco",
+    "Jenna Doore",
+    "An \u201cThien An\u201d Nguyen",
+    "Cristian Chavez"
+   ],
+   "total": 22
   },
   {
    "name": "Andrew",
-   "picks": [],
-   "total": 0
+   "picks": [
+    "Ori Jean-Charles",
+    "Brady Booker",
+    "Eric Macksoud",
+    "Alexis Levine",
+    "Devin Way"
+   ],
+   "total": 16
+  },
+  {
+   "name": "Anne-Marie",
+   "picks": [
+    "Kristin Flickinger",
+    "Carter Krull",
+    "Lewis Kelly",
+    "Maggie Nestor",
+    "Ana Sani"
+   ],
+   "total": 16
+  },
+  {
+   "name": "Carolyn",
+   "picks": [
+    "Mike Pinsky",
+    "Sharonda Cox",
+    "Danny \u201cKilby\u201d Kilby",
+    "Patt Cannaday",
+    "Angelica \u201cJelly\u201d Loblack"
+   ],
+   "total": 12
   }
  ],
  "cats": [
@@ -736,8 +760,8 @@ window.SURVIVOR51 = {
   "Endgame"
  ],
  "tribeTotals": {
-  "Savu": 45.0,
-  "Toka": 23.0
+  "Savu": 45,
+  "Toka": 23
  },
  "scale": [
   {

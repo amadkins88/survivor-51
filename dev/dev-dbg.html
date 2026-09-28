@@ -1,0 +1,14 @@
+<!doctype html><html><body style="background:#0B1512">
+<canvas id="c" width="600" height="400"></canvas><pre id="out" style="color:#fff;font:11px monospace"></pre>
+<script src="fish-art.js"></script>
+<script>
+const g = document.getElementById('c').getContext('2d');
+const out = [];
+try {
+  const sp = window.ReefArt.SPECIES.find(s => s.id === 'clown');
+  const f = { sp, len: 200, h: sp.h * (200 / sp.len), k: 1, x: 300, y: 200, angle: 0, phase: 0.4, tail: 1, excite: 0.8 };
+  window.ReefArt.drawFish(g, f, 0.9, 1);
+  out.push('drew ok');
+} catch (e) { out.push('ERROR: ' + e.message); out.push((e.stack||'').split('\n').slice(0,4).join(' || ')); }
+document.getElementById('out').textContent = out.join('\n');
+</script></body></html>

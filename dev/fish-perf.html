@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Reef perf</title></head>
+<body style="margin:0;background:#0B1512">
+<canvas id="reef" style="position:fixed;inset:0;width:100%;height:100%"></canvas>
+<pre id="out" style="position:relative;color:#cfe;font:12px monospace;z-index:2"></pre>
+<script src="fish-art.js"></script>
+<script>
+/* Times 150 frames of three fish at page size on a 1440x900 canvas. */
+const cvs = document.getElementById('reef');
+const W = 1440, H = 900, dpr = 1;
+cvs.width = W * dpr; cvs.height = H * dpr;
+const ctx = cvs.getContext('2d');
+ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+const pool = window.ReefArt.SPECIES.filter(s => ['clown', 'bluetang', 'anthias'].includes(s.id));
+const S = 1.15;
+const fishes = pool.map((sp, i) => {
+  const k = S * (0.86 + Math.random() * 0.58);
+  return { sp, len: sp.len * k, h: sp.h * k, k, x: W * (0.25 + i * 0.25), y: H * 0.5,
+           angle: 0, phase: i, tail: 5, excite: 0, ix: 0, iy: 0 };
+});
+const times = [];
+let n = 0;
+function frame() {
+  const t0 = performance.now();
+  ctx.clearRect(0, 0, W, H);
+  for (const f of fishes) {
+    f.x += 0.6; if (f.x > W - 20) f.x = 20;
+    window.ReefArt.drawFish(ctx, f, t0 / 1000, undefined);
+  }
+  times.push(performance.now() - t0);
+  if (++n < 150) requestAnimationFrame(frame);
+  else {
+    times.sort((a, b) => a - b);
+    document.getElementById('out').textContent = JSON.stringify({
+      med: +times[75].toFixed(2), p90: +times[135].toFixed(2), max: +times[149].toFixed(2)
+    });
+  }
+}
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>

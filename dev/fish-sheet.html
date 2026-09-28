@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reef fish sheet</title>
+<style>
+  body { margin: 0; background: #0b1a2a; color: #dbe7f2; font: 12px/1.4 system-ui, sans-serif; }
+  h1 { font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; padding: 14px 18px 0; opacity: .55; margin: 0; }
+  .grid { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 18px 30px; }
+  .cell { background: #0f2337; border: 1px solid rgba(255,255,255,.06); border-radius: 10px; padding: 6px; }
+  .cell b { display: block; font-size: 10px; font-weight: 500; opacity: .5; padding: 2px 2px 4px; }
+</style>
+</head>
+<body>
+<h1 id="title">Reef fish sheet, full opacity</h1>
+<div class="grid" id="grid"></div>
+<script src="fish-art.js"></script>
+<script>
+  /* ?sp=clown sets one species, ?L=600 the drawn length, ?a=angle in degrees */
+  const q = new URLSearchParams(location.search);
+  const only = q.get('sp');
+  const sizes = q.has('L') ? [[+q.get('L')]] : [[300], [120], [54]];
+  const deg = q.has('a') ? +q.get('a') : 0;
+  const grid = document.getElementById('grid');
+  let n = 0;
+  for (const sp of window.ReefArt.SPECIES) {
+    if (only && sp.id !== only) continue;
+    for (const [L] of sizes) {
+      const h = sp.h * (L / sp.len);
+      const c = document.createElement('canvas');
+      c.width = Math.round(L * 1.9);
+      c.height = Math.round(L * 1.35);
+      if (q.has('L')) { c.style.width = L + 'px'; c.style.height = Math.round(L * 1.35) + 'px'; }
+      const box = document.createElement('div');
+      box.className = 'cell';
+      box.innerHTML = '<b>' + sp.name + ' &middot; L' + L + (deg ? ' &middot; ' + deg + '&deg;' : '') + '</b>';
+      box.appendChild(c);
+      grid.appendChild(box);
+      const g = c.getContext('2d');
+      const f = { sp, len: L, h, k: 1, x: c.width * 0.46, y: c.height * 0.5,
+                  angle: deg * Math.PI / 180, phase: 0.4 + n * 0.5, tail: 1, excite: 0.8 };
+      window.ReefArt.drawFish(g, f, 0.9, 1);
+      n++;
+    }
+  }
+</script>
+</body>
+</html>

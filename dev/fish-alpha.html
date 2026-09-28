@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reef fish at page opacity</title>
+<style>
+  body { margin: 0; background: #0B1512; font: 0/0 system-ui; }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+<canvas id="c" width="900" height="1200"></canvas>
+<script src="fish-art.js"></script>
+<script>
+  /* ?bg=0B1512 page background, ?L=60 drawn length, ?zoom=4 pixel zoom,
+     ?a=0.20,0.30,0.40 the opacity rows to compare. */
+  const q = new URLSearchParams(location.search);
+  const bg = '#' + (q.get('bg') || '0B1512');
+  const L = +(q.get('L') || 60);
+  const zoom = +(q.get('zoom') || 3);
+  const opts = (q.get('a') || '0.20,0.30,0.40').split(',').map(Number);
+  const ids = (q.get('sp') || 'clown,bluetang,anthias').split(',');
+  const rows = [];
+  for (const al of opts) for (const id of ids) rows.push([id, al]);
+
+  const cellW = Math.ceil(L * 1.9), cellH = Math.ceil(L * 1.35);
+  const pad = 6;
+  const c = document.getElementById('c');
+  c.width = (cellW + pad * 2) * zoom;
+  c.height = (cellH + pad * 2 + 12) * rows.length * zoom;
+  const g = c.getContext('2d');
+  g.fillStyle = bg;
+  g.fillRect(0, 0, c.width, c.height);
+  g.scale(zoom, zoom);
+
+  let i = 0;
+  for (const [id, al] of rows) {
+    const sp = window.ReefArt.SPECIES.find(s => s.id === id);
+    const y0 = i * (cellH + pad * 2 + 12) + pad + 12;
+    g.save();
+    g.translate(pad, y0);
+    g.strokeStyle = 'rgba(255,255,255,0.08)';
+    g.lineWidth = 1;
+    g.strokeRect(0.5, 0.5, cellW - 1, cellH - 1);
+    g.fillStyle = 'rgba(239,233,219,0.5)';
+    g.font = '9px system-ui, sans-serif';
+    g.fillText(sp.name + '  alpha ' + al, 2, -3);
+    const f = { sp, len: L, h: sp.h * (L / sp.len), k: 1, x: cellW * 0.46, y: cellH * 0.5,
+                angle: 0, phase: 0.4 + i * 0.7, tail: 1, excite: 0.8 };
+    window.ReefArt.drawFish(g, f, 0.9, undefined);
+    g.restore();
+    i++;
+  }
+</script>
+</body>
+</html>

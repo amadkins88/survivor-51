@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Reef fish metrics</title></head>
+<body style="background:#0b1a2a">
+<div id="stage"></div>
+<pre id="out" style="color:#cfe;font:11px ui-monospace,monospace"></pre>
+<script src="fish-art.js"></script>
+<script>
+/* Renders one fish per species at full opacity, then reports objective pixel
+   metrics for each: how much of the sprite is inked, the bounding box in units
+   of body length, and whether the ink is where a fish should have it. */
+const out = document.getElementById('out');
+const rows = [];
+const F = 0.9;
+
+/* Connected components of inked pixels: a fish with a detached fin or a gap
+   at the peduncle shows up as more than one blob. */
+function components(d, side) {
+  const seen = new Uint8Array(side * side);
+  const sizes = [];
+  const stack = [];
+  for (let start = 0; start < side * side; start++) {
+    if (seen[start] || d[start * 4 + 3] <= 8) continue;
+    let n = 0;
+    stack.length = 0;
+    stack.push(start);
+    seen[start] = 1;
+    while (stack.length) {
+      const i = stack.pop();
+      n++;
+      const x = i % side, y = (i - x) / side;
+      const nb = [[x + 1, y], [x - 1, y], [x, y + 1], [x, y - 1]];
+      for (const p of nb) {
+        if (p[0] < 0 || p[1] < 0 || p[0] >= side || p[1] >= side) continue;
+        const j = p[1] * side + p[0];
+        if (!seen[j] && d[j * 4 + 3] > 8) { seen[j] = 1; stack.push(j); }
+      }
+    }
+    sizes.push(n);
+  }
+  sizes.sort((a, b) => b - a);
+  return { count: sizes.length, blobs: sizes.slice(0, 4) };
+}
+
+for (const L0 of [300, 120, 60]) {
+for (const sp of window.ReefArt.SPECIES) {
+  const L = L0;
+  const h = sp.h * (L / sp.len);
+  const side = Math.ceil(L * 1.9);
+  const c = document.createElement('canvas');
+  c.width = side; c.height = side;
+  document.getElementById('stage').appendChild(c);
+  const g = c.getContext('2d');
+  const f = { sp, len: L, h, k: 1, x: side / 2, y: side / 2, angle: 0, phase: F, tail: 1, excite: 0.7 };
+  window.ReefArt.drawFish(g, f, F, 1);
+  const d = g.getImageData(0, 0, side, side).data;
+  let n = 0, minX = 1e9, maxX = -1e9, minY = 1e9, maxY = -1e9;
+  for (let y = 0; y < side; y++) {
+    for (let x = 0; x < side; x++) {
+      const a = d[(y * side + x) * 4 + 3];
+      if (a > 8) {
+        n++;
+        if (x < minX) minX = x; if (x > maxX) maxX = x;
+        if (y < minY) minY = y; if (y > maxY) maxY = y;
+      }
+    }
+  }
+  const cx = side / 2, cy = side / 2;
+  const cc = components(d, side);
+  rows.push({
+    id: sp.id, L: L,
+    blobs: cc.count,
+    blobSizes: cc.blobs,
+    inked: +(100 * n / (side * side)).toFixed(2),
+    left: +((minX - cx) / L).toFixed(2), right: +((maxX - cx) / L).toFixed(2),
+    top: +((minY - cy) / (h * 0.5)).toFixed(2), bot: +((maxY - cy) / (h * 0.5)).toFixed(2),
+    tailPixels: n > 0 ? 'ok' : 'EMPTY'
+  });
+}
+}
+out.textContent = JSON.stringify(rows, null, 1);
+</script>
+</body>
+</html>

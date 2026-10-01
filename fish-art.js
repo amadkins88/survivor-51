@@ -107,6 +107,10 @@
     flat: {
       top: [[.50, .02], [.40, -.44], [.24, -.78], [.02, -.86], [-.20, -.78], [-.34, -.56], [-.42, -.26]],
       bot: [[.50, .02], [.42, .42], [.26, .74], [.04, .82], [-.18, .76], [-.32, .54], [-.42, .24]]
+    },
+    whale: {
+      top: [[.50, -.08], [.47, -.32], [.42, -.54], [.34, -.72], [.22, -.85], [.06, -.91], [-.06, -.90], [-.16, -.84], [-.26, -.72], [-.38, -.50], [-.50, -.22]],
+      bot: [[.50, .08], [.49, .26], [.45, .46], [.36, .66], [.22, .77], [.04, .81], [-.12, .77], [-.26, .67], [-.38, .50], [-.46, .32], [-.50, .22]]
     }
   };
 
@@ -232,6 +236,22 @@
       pectoral: { at: [.16, .08], a0: -.25, a1: 1.00, r: .26, rays: 7 },
       tail: { len: .22, spread: .60, concavity: 0, pow: 2.0, rays: 10 },
       eye: [.38, -.20, .22]
+    },
+    {
+      id: 'whale', name: 'Humpback whale', kind: 'whale',
+      len: 340, h: 136,
+      back: '#7e9cba', mid: '#9cb8d4', belly: '#d3e2ef',
+      fin: '#8fb0cb', finEdge: '#6a87a3',
+      pecFill: '#dbe8f2', pecEdge: '#a4c0d2',
+      flukeFill: '#9cb8d4', flukeEdge: '#cadbe8',
+      edge: '#5d7a97',
+      shape: 'whale',
+      dorsal: { from: -.04, to: -.32, edge: [[-.04, -.96], [-.13, -1.38], [-.20, -1.20], [-.32, -.80]] },
+      fluke: { len: .30, spread: .58, notch: .46, pow: 1.6, tipExt: .14 },
+      pec: { at: [.20, .26], a0: 2.00, a1: 2.46, r: .44, rays: 6 },
+      blow: [.30, -.74],
+      blowSize: [5.0, 2.2],
+      eye: [.37, -.24, .11]
     }
   ];
 
@@ -376,6 +396,158 @@
     g.lineWidth = 1.6;
     g.stroke();
     g.globalAlpha = 1;
+  }
+
+  /* Smooth notched fluke, no ray lines: whale tail. */
+  function flukeFin(g, spec, L, hh, fill, edgeCol) {
+    const N = 30, pts = [];
+    for (let i = 0; i <= N; i++) {
+      const u = -1 + (2 * i) / N;
+      const r = spec.len * (1 - spec.notch * (1 - Math.pow(Math.abs(u), spec.pow)))
+              + (spec.tipExt || 0) * Math.pow(Math.abs(u), 6);
+      const a = u * spec.spread;
+      pts.push([-Math.cos(a) * r * L, Math.sin(a) * r * hh]);
+    }
+    g.beginPath();
+    g.moveTo(0, 0);
+    for (const p of pts) g.lineTo(p[0], p[1]);
+    g.closePath();
+    const tg = g.createLinearGradient(0, 0, -spec.len * L, 0);
+    tg.addColorStop(0, rgba(fill, 0.55));
+    tg.addColorStop(1, rgba(fill, 0.95));
+    g.fillStyle = tg;
+    g.fill();
+    g.beginPath();
+    g.moveTo(pts[0][0], pts[0][1]);
+    for (let i = 1; i < pts.length; i++) g.lineTo(pts[i][0], pts[i][1]);
+    g.strokeStyle = edgeCol;
+    g.globalAlpha = 0.45;
+    g.lineWidth = 1.6;
+    g.stroke();
+    g.globalAlpha = 1;
+  }
+
+  /* ---------------- the whale ---------------- */
+
+  function paintWhale(g, f, sp, time) {
+    const L = f.len, hh = f.h * 0.5;
+    const q = time * 0.55 + f.phase;
+    const amp = L * 0.020 * (1 + f.excite * 0.8);
+    const bend = (xu) => {
+      const back = Math.max(0, 0.5 - xu);
+      return amp * Math.pow(back, 1.5) * Math.sin(q - back * 2.0);
+    };
+    const T = (p) => [p[0] * L, p[1] * hh + bend(p[0])];
+    const bodyPx = sp.bodyPts.map(T);
+
+    /* fluke, behind the body */
+    g.save();
+    g.translate(-0.44 * L, bend(-0.44));
+    g.rotate(-Math.atan2(bend(-0.40) - bend(-0.52), 0.12 * L) + Math.sin(q - 0.9) * 0.10 * (1 + f.excite));
+    flukeFin(g, sp.fluke, L, hh, sp.flukeFill, sp.flukeEdge);
+    g.restore();
+
+    /* small hooked dorsal fin */
+    const dorsBase = railBetween(sp.top, sp.dorsal.from, sp.dorsal.to).map(T);
+    ribbedFin(g, dorsBase, sp.dorsal.edge.map(T), 0, sp.fin, sp.finEdge,
+              { rayAlpha: 0, baseAlpha: 0.92, tipAlpha: 0.70 });
+
+    /* body with countershading */
+    g.save();
+    g.beginPath();
+    smoothPath(g, bodyPx);
+    const bg = g.createLinearGradient(0, -hh * 1.06, 0, hh * 1.06);
+    bg.addColorStop(0, sp.back);
+    bg.addColorStop(0.45, sp.mid);
+    bg.addColorStop(1, sp.belly);
+    g.fillStyle = bg;
+    g.fill();
+
+    g.save();
+    g.clip();
+
+    /* throat pleats, the baleen whale giveaway */
+    g.strokeStyle = 'rgba(255,255,255,0.28)';
+    g.lineWidth = 1.6;
+    for (let i = 0; i < 5; i++) {
+      const y = hh * (0.28 + i * 0.115);
+      g.beginPath();
+      g.moveTo((0.46 - i * 0.012) * L, y + bend(0.4));
+      g.quadraticCurveTo(0.26 * L, y + hh * 0.12 + bend(0.26), 0.04 * L, y * 0.86 + bend(0.04));
+      g.stroke();
+    }
+
+    /* jaw line */
+    g.strokeStyle = 'rgba(0,0,0,0.22)';
+    g.lineWidth = 1.4;
+    g.beginPath();
+    g.moveTo(0.48 * L, 0.14 * hh + bend(0.48));
+    g.quadraticCurveTo(0.34 * L, 0.28 * hh + bend(0.34), 0.20 * L, 0.44 * hh + bend(0.20));
+    g.stroke();
+
+    /* pale belly */
+    const bg2 = g.createLinearGradient(0, hh * 0.02, 0, hh * 0.95);
+    bg2.addColorStop(0, 'rgba(255,255,255,0)');
+    bg2.addColorStop(1, 'rgba(255,255,255,0.20)');
+    g.fillStyle = bg2;
+    g.fill();
+
+    /* white throat patch and a soft mottle on the back */
+    g.fillStyle = 'rgba(255,255,255,0.18)';
+    g.beginPath();
+    g.ellipse(0.34 * L, 0.30 * hh + bend(0.34), 0.12 * L, 0.22 * hh, 0, 0, TAU);
+    g.fill();
+    g.globalAlpha = 0.09;
+    g.fillStyle = '#ffffff';
+    g.beginPath();
+    g.ellipse(0.04 * L, -0.44 * hh + bend(0.04), 0.22 * L, 0.10 * hh, 0, 0, TAU);
+    g.fill();
+    g.globalAlpha = 1;
+
+    g.restore();   /* end body clip */
+
+    g.strokeStyle = sp.edge;
+    g.globalAlpha = 0.40;
+    g.lineWidth = 1.4;
+    g.beginPath();
+    smoothPath(g, bodyPx);
+    g.stroke();
+    g.globalAlpha = 1;
+    g.restore();   /* end body save */
+
+    /* long pectoral fin over the flank */
+    const pec = sp.pec;
+    g.save();
+    g.translate(pec.at[0] * L, pec.at[1] * hh + bend(pec.at[0]));
+    g.rotate(Math.sin(time * 0.66 + f.phase) * 0.10);
+    fanFin(g, null, pec.a0, pec.a1, pec.r * L, pec.rays, sp.pecFill,
+           { alpha: 0.80, rayCol: sp.pecEdge });
+    g.restore();
+
+    /* blowhole */
+    g.fillStyle = 'rgba(0,0,0,0.40)';
+    g.beginPath();
+    g.ellipse(sp.blow[0] * L, sp.blow[1] * hh + bend(sp.blow[0]), sp.blowSize[0], sp.blowSize[1], 0, 0, TAU);
+    g.fill();
+
+    /* eye */
+    const ex = sp.eye[0] * L, ey = sp.eye[1] * hh + bend(sp.eye[0]), er = sp.eye[2] * hh;
+    g.fillStyle = '#eef4f9';
+    g.beginPath(); g.arc(ex, ey, er, 0, TAU); g.fill();
+    g.fillStyle = '#1a2430';
+    g.beginPath(); g.arc(ex + er * 0.12, ey, er * 0.62, 0, TAU); g.fill();
+    g.fillStyle = 'rgba(255,255,255,0.85)';
+    g.beginPath(); g.arc(ex - er * 0.30, ey - er * 0.30, er * 0.24, 0, TAU); g.fill();
+
+    /* mouth line */
+    g.strokeStyle = 'rgba(0,0,0,0.35)';
+    g.lineWidth = 1.6;
+    g.beginPath();
+    const m0 = [0.40 * L, 0.30 * hh + bend(0.40)];
+    const m1 = [0.50 * L, 0.14 * hh + bend(0.50)];
+    g.moveTo(m0[0], m0[1]);
+    g.quadraticCurveTo(0.47 * L, 0.34 * hh + bend(0.47), m1[0], m1[1]);
+    g.stroke();
   }
 
   /* ---------------- the fish ---------------- */
@@ -586,7 +758,8 @@
     g.clearRect(0, 0, s.width, s.height);
     g.setTransform(SPRITE_DPR, 0, 0, SPRITE_DPR, s.width / 2, s.height / 2);
     g.globalAlpha = 1;
-    paint(g, f, f.sp, time);
+    if (f.sp.kind === 'whale') paintWhale(g, f, f.sp, time);
+    else paint(g, f, f.sp, time);
 
     const alpha = (0.19 + Math.min(0.17, f.k * 0.14)) * (alphaScale === undefined ? 1 : alphaScale);
     ctx.save();

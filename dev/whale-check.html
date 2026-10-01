@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Whale check</title>
+<style>html,body{margin:0;background:#0B1512}canvas{display:block}</style>
+</head>
+<body>
+<canvas id="c" width="1240" height="640"></canvas>
+<script src="../fish-art.js"></script>
+<script>
+/* ?dir=l flips it. Draws ONE whale large at full alpha for inspection. */
+const q = new URLSearchParams(location.search);
+const ctx = document.getElementById('c').getContext('2d');
+const sp = window.ReefArt.SPECIES.find(s => s.id === 'whale');
+const dir = q.get('dir') === 'l' ? Math.PI : 0;
+const w = { sp, len: 980, h: 392, k: 0, x: 620, y: 320, angle: dir, phase: 0.6, excite: 0 };
+window.ReefArt.drawFish(ctx, w, 1.4, 1);
+</script>
+</body>
+</html>

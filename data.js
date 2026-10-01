@@ -12,7 +12,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Savu"
    ],
-   "status": "In Game",
+   "status": "Eliminated",
    "points": 4,
    "id": "3e6db8f4-3f83-81d3-a5c9-f329eadb2dd2",
    "breakdown": {
@@ -28,12 +28,12 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 4,
+   "points": 5,
    "id": "3e6db8f4-3f83-8181-8450-f9e3f3879d4c",
    "breakdown": {
     "Immunity": 2,
     "Reward": 1,
-    "Survival": 1
+    "Survival": 2
    },
    "tribe1": "Savu"
   },
@@ -43,12 +43,12 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 4,
+   "points": 5,
    "id": "3e6db8f4-3f83-8185-9c7b-d762c3a25893",
    "breakdown": {
     "Immunity": 2,
     "Reward": 1,
-    "Survival": 1
+    "Survival": 2
    },
    "tribe1": "Savu"
   },
@@ -58,12 +58,12 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 4,
+   "points": 5,
    "id": "3e6db8f4-3f83-8114-89a8-f702b5a4237c",
    "breakdown": {
     "Immunity": 2,
     "Reward": 1,
-    "Survival": 1
+    "Survival": 2
    },
    "tribe1": "Savu"
   },
@@ -73,12 +73,12 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 4,
+   "points": 5,
    "id": "3e6db8f4-3f83-81d6-8bfe-e529ff913a98",
    "breakdown": {
     "Immunity": 2,
     "Reward": 1,
-    "Survival": 1
+    "Survival": 2
    },
    "tribe1": "Savu"
   },
@@ -88,12 +88,12 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 4,
+   "points": 5,
    "id": "3e6db8f4-3f83-81c2-99fd-fc8be739c106",
    "breakdown": {
     "Immunity": 2,
     "Reward": 1,
-    "Survival": 1
+    "Survival": 2
    },
    "tribe1": "Savu"
   },
@@ -103,12 +103,12 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 4,
+   "points": 5,
    "id": "3e6db8f4-3f83-8104-a839-f0fd0a9f1891",
    "breakdown": {
     "Immunity": 2,
     "Reward": 1,
-    "Survival": 1
+    "Survival": 2
    },
    "tribe1": "Savu"
   },
@@ -118,12 +118,12 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 4,
+   "points": 5,
    "id": "3e6db8f4-3f83-81f4-8dfe-de304eeff75c",
    "breakdown": {
     "Immunity": 2,
     "Reward": 1,
-    "Survival": 1
+    "Survival": 2
    },
    "tribe1": "Savu"
   },
@@ -133,12 +133,12 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 4,
+   "points": 5,
    "id": "3e6db8f4-3f83-811b-ad98-e7bde804c142",
    "breakdown": {
     "Immunity": 2,
     "Reward": 1,
-    "Survival": 1
+    "Survival": 2
    },
    "tribe1": "Savu"
   },
@@ -148,13 +148,13 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 9,
+   "points": 10,
    "id": "3e6db8f4-3f83-813c-8fd0-e26f6efe09f5",
    "breakdown": {
     "Immunity": 2,
     "Reward": 1,
     "Idols": 5,
-    "Survival": 1
+    "Survival": 2
    },
    "tribe1": "Savu"
   },
@@ -164,11 +164,12 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 2,
+   "points": 6,
    "id": "3e6db8f4-3f83-81fd-bdef-ecda1c1a5a8d",
    "breakdown": {
-    "Reward": 1,
-    "Survival": 1
+    "Immunity": 2,
+    "Reward": 2,
+    "Survival": 2
    },
    "tribe1": "Toka"
   },
@@ -178,11 +179,12 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 2,
+   "points": 6,
    "id": "3e6db8f4-3f83-8106-a5ed-f2dde1aa9fb0",
    "breakdown": {
-    "Reward": 1,
-    "Survival": 1
+    "Immunity": 2,
+    "Reward": 2,
+    "Survival": 2
    },
    "tribe1": "Toka"
   },
@@ -192,11 +194,12 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 2,
+   "points": 6,
    "id": "3e6db8f4-3f83-81ff-b290-f7b530a85786",
    "breakdown": {
-    "Reward": 1,
-    "Survival": 1
+    "Immunity": 2,
+    "Reward": 2,
+    "Survival": 2
    },
    "tribe1": "Toka"
   },
@@ -206,11 +209,12 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 2,
+   "points": 6,
    "id": "3e6db8f4-3f83-8182-b79d-c9266f473738",
    "breakdown": {
-    "Reward": 1,
-    "Survival": 1
+    "Immunity": 2,
+    "Reward": 2,
+    "Survival": 2
    },
    "tribe1": "Toka"
   },
@@ -220,11 +224,13 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 2,
+   "points": 11,
    "id": "3e6db8f4-3f83-8190-b95d-fb493d42ab61",
    "breakdown": {
-    "Reward": 1,
-    "Survival": 1
+    "Immunity": 2,
+    "Reward": 2,
+    "Idols": 5,
+    "Survival": 2
    },
    "tribe1": "Toka"
   },
@@ -234,11 +240,12 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 2,
+   "points": 6,
    "id": "3e6db8f4-3f83-81cc-97a3-d6de6d6402ff",
    "breakdown": {
-    "Reward": 1,
-    "Survival": 1
+    "Immunity": 2,
+    "Reward": 2,
+    "Survival": 2
    },
    "tribe1": "Toka"
   },
@@ -248,10 +255,12 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 2,
+   "points": 6,
    "id": "3e6db8f4-3f83-81d4-8148-ebb50fe694ed",
    "breakdown": {
-    "Survival": 1,
+    "Immunity": 2,
+    "Reward": 1,
+    "Survival": 2,
     "Journeys": 1
    },
    "tribe1": "Toka"
@@ -262,12 +271,13 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 3,
+   "points": 7,
    "id": "3e6db8f4-3f83-81b7-91a4-e05e42369343",
    "breakdown": {
-    "Reward": 1,
+    "Immunity": 2,
+    "Reward": 2,
     "Shots": 1,
-    "Survival": 1
+    "Survival": 2
    },
    "tribe1": "Toka"
   },
@@ -277,11 +287,12 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 2,
+   "points": 6,
    "id": "3e6db8f4-3f83-818a-956e-f72d42fd34b5",
    "breakdown": {
-    "Reward": 1,
-    "Survival": 1
+    "Immunity": 2,
+    "Reward": 2,
+    "Survival": 2
    },
    "tribe1": "Toka"
   },
@@ -291,11 +302,12 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 2,
+   "points": 6,
    "id": "3e6db8f4-3f83-8190-907e-fefb98f328b2",
    "breakdown": {
-    "Reward": 1,
-    "Survival": 1
+    "Immunity": 2,
+    "Reward": 2,
+    "Survival": 2
    },
    "tribe1": "Toka"
   },
@@ -549,6 +561,86 @@ window.SURVIVOR51 = {
  ],
  "events": [
   {
+   "num": "E02D",
+   "type": "Survives Episode",
+   "points": 1,
+   "players": [
+    "Brady Booker",
+    "An \u201cThien An\u201d Nguyen",
+    "Angelica \u201cJelly\u201d Loblack",
+    "Danny \u201cKilby\u201d Kilby",
+    "Devin Way",
+    "Jenna Doore",
+    "Lewis Kelly",
+    "Maggie Nestor",
+    "Mike Pinsky",
+    "Patt Cannaday",
+    "Rob Antonson",
+    "Linnea Capobianco",
+    "Cristian Chavez",
+    "Sharonda Cox",
+    "Kristin Flickinger",
+    "Ori Jean-Charles",
+    "Carter Krull",
+    "Alexis Levine",
+    "Eric Macksoud"
+   ],
+   "episode": [
+    "3ecdb8f4-3f83-81b2-a904-ee4aa3865c79"
+   ]
+  },
+  {
+   "num": "E02C",
+   "type": "Finds Idol",
+   "points": 5,
+   "players": [
+    "Angelica \u201cJelly\u201d Loblack"
+   ],
+   "episode": [
+    "3ecdb8f4-3f83-81b2-a904-ee4aa3865c79"
+   ]
+  },
+  {
+   "num": "E02B",
+   "type": "Tribal Immunity",
+   "points": 2,
+   "players": [
+    "Brady Booker",
+    "An \u201cThien An\u201d Nguyen",
+    "Angelica \u201cJelly\u201d Loblack",
+    "Danny \u201cKilby\u201d Kilby",
+    "Devin Way",
+    "Jenna Doore",
+    "Lewis Kelly",
+    "Maggie Nestor",
+    "Mike Pinsky",
+    "Patt Cannaday"
+   ],
+   "episode": [
+    "3ecdb8f4-3f83-81b2-a904-ee4aa3865c79"
+   ]
+  },
+  {
+   "num": "E02A",
+   "type": "Tribal Reward",
+   "points": 1,
+   "players": [
+    "Brady Booker",
+    "An \u201cThien An\u201d Nguyen",
+    "Angelica \u201cJelly\u201d Loblack",
+    "Danny \u201cKilby\u201d Kilby",
+    "Devin Way",
+    "Jenna Doore",
+    "Lewis Kelly",
+    "Maggie Nestor",
+    "Mike Pinsky",
+    "Patt Cannaday"
+   ],
+   "episode": [
+    "3ecdb8f4-3f83-81b2-a904-ee4aa3865c79"
+   ]
+  },
+  {
    "num": "E01H",
    "type": "Survives Episode",
    "points": 1,
@@ -700,9 +792,37 @@ window.SURVIVOR51 = {
    ],
    "id": "3e6db8f4-3f83-81d6-a1b9-f087b9984478",
    "events": 8
+  },
+  {
+   "title": "Episode 2",
+   "num": 2,
+   "epTitle": "Weaponized Honesty",
+   "air": "2026-09-30",
+   "elim": "Voted Out",
+   "voteCount": "6-4",
+   "immunityType": "Tribal",
+   "recapStatus": "Drafted",
+   "recap": "Survivor 51 Episode 2, Weaponized Honesty, opened on Day 3 with Toka back from Tribal Council. Jenna Doore said there were no hard feelings, and Brady Booker and Devin Way cleared the air about their rivalry. Devin said he would keep leaning on his weaponized honesty. Lewis Kelly returned to Toka from Exile Island and the tribe reacted to seeing him still in the game. He walked through what happened to him on Exile and the mast, and some players did not believe the account. At Savu, Ana Sani and Alexis Levine talked about working together, and they named Linnea Capobianco as highly strategic and Sharonda Cox as a threat. Ana then carried the talk to other players, including Carter Krull, and the conversation turned to Alexis. When Alexis walked up, Ana panicked and started talking about popcorn, which tipped Alexis off that she had been the subject. Ana told Carter she was trying to create some chaos, and the talk circled back to Alexis. Ana fumbled it again when Alexis came near. Alexis went to Linnea, who told Sharonda that Ana did not want to target Eric Macksoud, and wanted the two of them out instead. Linnea and Sharonda agreed Ana was playing too hard, too soon. At Toka, the tribe spent time getting to know each other. Lewis and Maggie Nestor bonded over their farms, and Lewis said he was unsure about his future in the game because he still had no buff. Brady sliced part of his thumb off while cutting wood with an axe, and the episode showed the injury in close detail. He was not pulled from the game and kept playing. The first challenge was for comfort items, an obstacle course with half of each tribe blindfolded. Kristin Flickinger took a hard fall and hurt her foot. Savu fell behind, and Toka won its first challenge of the season. Back at Savu, Kristin said she thought she may have torn tendons or broken a bone, and said she would use whatever was available on the island to stay in the game. Rob Antonson criticized Eric and Linnea over how the blindfolded portion was handled, and his delivery rubbed several people the wrong way. At Toka, the tribe enjoyed the reward, and Jelly Loblack, who knew she was on the outside after the first vote, searched for and found a regular hidden immunity idol. On Day 4, Devin, Jelly, and Patt Cannaday talked about working together, and Jelly warned Devin that his honesty could be a double edged sword. Jelly told Patt about her idol, and the group aligned with Mike Pinsky and Brady. At Savu, Eric taught Rob about improv while Sharonda voiced her frustration with him. The immunity challenge was a water race in the rain, with each tribe hauling a 500 pound whale over a large obstacle and onto the beach. Toka took an early lead, and Devin and Mike finished their portion quickly. Carter stepped up for Savu and closed the gap, but Savu could not catch up, and Maggie sealed the win for Toka. At Tribal Council, Rob tried a move to save Eric by putting his own name down, and learned that a player cannot vote for themselves. The votes came in 6-4, and Ana Sani became the second person voted out of Survivor 51, on Day 5.",
+   "points": 9,
+   "votedOff": [
+    "Ana Sani"
+   ],
+   "id": "3ecdb8f4-3f83-81b2-a904-ee4aa3865c79",
+   "events": 4
   }
  ],
  "viewers": [
+  {
+   "name": "Carolyn",
+   "picks": [
+    "Mike Pinsky",
+    "Sharonda Cox",
+    "Danny \u201cKilby\u201d Kilby",
+    "Patt Cannaday",
+    "Angelica \u201cJelly\u201d Loblack"
+   ],
+   "total": 34
+  },
   {
    "name": "Stacy",
    "picks": [
@@ -712,7 +832,7 @@ window.SURVIVOR51 = {
     "An \u201cThien An\u201d Nguyen",
     "Cristian Chavez"
    ],
-   "total": 22
+   "total": 33
   },
   {
    "name": "Andrew",
@@ -723,7 +843,7 @@ window.SURVIVOR51 = {
     "Alexis Levine",
     "Devin Way"
    ],
-   "total": 16
+   "total": 27
   },
   {
    "name": "Anne-Marie",
@@ -734,18 +854,7 @@ window.SURVIVOR51 = {
     "Maggie Nestor",
     "Ana Sani"
    ],
-   "total": 16
-  },
-  {
-   "name": "Carolyn",
-   "picks": [
-    "Mike Pinsky",
-    "Sharonda Cox",
-    "Danny \u201cKilby\u201d Kilby",
-    "Patt Cannaday",
-    "Angelica \u201cJelly\u201d Loblack"
-   ],
-   "total": 12
+   "total": 26
   }
  ],
  "cats": [
@@ -760,8 +869,8 @@ window.SURVIVOR51 = {
   "Endgame"
  ],
  "tribeTotals": {
-  "Savu": 45,
-  "Toka": 23
+  "Savu": 54,
+  "Toka": 68
  },
  "scale": [
   {

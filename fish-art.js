@@ -591,6 +591,210 @@
     g.stroke();
   }
 
+  /* Breaching humpback, drawn to match the reference photo: body arced up out
+     of the water, head down, wide spread fluke at the top, a long pale
+     pectoral, spray. The pose is the whole point: a spread fluke cannot be
+     mistaken for a fish tail, which is exactly what the side-on swimmer kept
+     getting read as. f.breach runs 0 (settled) to 1 (fully out). */
+  function paintWhaleBreach(g, f, sp, time) {
+    const L = f.len;
+    const u = Math.max(0, Math.min(1, f.breach || 0));
+    const env = Math.sin(Math.PI * u);          /* 0 at the edges, 1 at the apex */
+
+    /* spine, snout (lower right) up to the tail stock (upper left), with a
+       half-thickness per point so the body comes out thick and chunky */
+    const spine = [
+      [ 0.43,  0.54], [ 0.32,  0.36], [ 0.20,  0.19], [ 0.06,  0.02],
+      [-0.08, -0.14], [-0.20, -0.29], [-0.29, -0.43], [-0.34, -0.55]
+    ];
+    const thick = [0.090, 0.148, 0.166, 0.163, 0.145, 0.120, 0.092, 0.052];
+    const N = spine.length;
+    const P = spine.map(p => [p[0] * L, p[1] * L]);
+    const top = [], bot = [], nrm = [];
+    for (let i = 0; i < N; i++) {
+      const a = P[Math.max(0, i - 1)], b = P[Math.min(N - 1, i + 1)];
+      let tx = b[0] - a[0], ty = b[1] - a[1];
+      const m = Math.hypot(tx, ty) || 1; tx /= m; ty /= m;
+      const nx = -ty, ny = tx;                 /* points to the dorsal (outer) side */
+      nrm.push([nx, ny]);
+      const t = thick[i] * L;
+      top.push([P[i][0] + nx * t, P[i][1] + ny * t]);
+      bot.push([P[i][0] - nx * t, P[i][1] - ny * t]);
+    }
+    const mid = Math.floor(N / 2);
+
+    g.save();
+    g.rotate(-0.14 + 0.05 * Math.sin(time * 0.7 + f.phase) - 0.10 * (1 - env));
+
+    /* ---- fluke, behind the body ---- */
+    const sX = P[N - 1][0], sY = P[N - 1][1];
+    const backA = Math.atan2(sY - P[N - 2][1], sX - P[N - 2][0]);
+    const flap = Math.sin(time * 1.05 + f.phase) * 0.06 * (0.5 + env);
+    g.save();
+    g.translate(sX, sY);
+    g.rotate(backA - Math.PI + flap);
+    flukeFin(g, sp.fluke, 0.82 * L, 0.48 * L, sp.flukeFill, sp.flukeEdge);
+    g.restore();
+
+    /* ---- body ---- */
+    const body = top.concat(bot.slice().reverse());
+    g.beginPath();
+    smoothPath(g, body);
+    const bg = g.createLinearGradient(top[mid][0], top[mid][1], bot[mid][0], bot[mid][1]);
+    bg.addColorStop(0, sp.back);
+    bg.addColorStop(0.44, sp.mid);
+    bg.addColorStop(1, sp.belly);
+    g.fillStyle = bg;
+    g.fill();
+
+    g.save();
+    g.clip();
+    const wash = g.createLinearGradient(bot[mid][0], bot[mid][1], top[mid][0], top[mid][1]);
+    wash.addColorStop(0, 'rgba(255,255,255,0.34)');
+    wash.addColorStop(0.55, 'rgba(255,255,255,0.06)');
+    wash.addColorStop(1, 'rgba(255,255,255,0)');
+    g.fillStyle = wash;
+    g.fill();
+    /* speckle on the pale flank */
+    g.fillStyle = 'rgba(255,255,255,0.18)';
+    for (let i = 4; i <= 15; i++) {
+      const s = i / 16;
+      const pt = along(P, s);
+      const n = nrm[Math.round(s * (N - 1))];
+      const r = 0.6 + ((i * 7) % 5) * 0.16;
+      g.beginPath();
+      g.ellipse(pt[0] - n[0] * 0.55 * (thick[Math.round(s * (N - 1))] * L), pt[1] - n[1] * 0.55 * (thick[Math.round(s * (N - 1))] * L), 3.2 * r, 2.1 * r, 0, 0, TAU);
+      g.fill();
+    }
+    /* throat pleats, low on the jaw so they cannot read as gills */
+    g.strokeStyle = 'rgba(28,44,60,0.28)';
+    g.lineWidth = 1.4;
+    for (let i = 0; i < 4; i++) {
+      const a = along(P, 0.03 + i * 0.05);
+      const b = along(bot, 0.03 + i * 0.05);
+      g.beginPath();
+      g.moveTo(a[0], a[1]);
+      g.quadraticCurveTo((a[0] + b[0]) / 2 + 3, (a[1] + b[1]) / 2, b[0], b[1]);
+      g.stroke();
+    }
+    g.restore();
+
+    /* outline */
+    g.strokeStyle = sp.edge;
+    g.globalAlpha = 0.42;
+    g.lineWidth = 1.5;
+    g.beginPath();
+    smoothPath(g, body);
+    g.stroke();
+    g.globalAlpha = 1;
+
+    /* small hooked dorsal, set on the hump near the tail stock, attached
+       along the back rail so it cannot read as a stray speck */
+    {
+      const a = along(top, 0.74), b = along(top, 0.90);
+      const nn = nrm[6];
+      const h = 0.105 * L;
+      const ax = (a[0] + b[0]) / 2, ay = (a[1] + b[1]) / 2;
+      g.beginPath();
+      g.moveTo(a[0], a[1]);
+      g.quadraticCurveTo(ax + nn[0] * h * 0.7, ay + nn[1] * h * 0.7,
+                         ax + nn[0] * h * 0.9 + nn[1] * h * 0.5, ay + nn[1] * h * 0.9 - nn[0] * h * 0.5);
+      g.quadraticCurveTo(b[0] + nn[0] * h * 0.5, b[1] + nn[1] * h * 0.5, b[0], b[1]);
+      g.closePath();
+      g.fillStyle = sp.fin;
+      g.fill();
+      g.strokeStyle = sp.finEdge; g.globalAlpha = 0.5; g.lineWidth = 1.1; g.stroke();
+      g.globalAlpha = 1;
+    }
+
+    /* long pale pectoral flipper, out toward the belly side */
+    {
+      const i = 2, p = P[i], n = nrm[i];
+      const dir = Math.atan2(-n[1], -n[0]) + 0.6 + Math.sin(time * 0.8 + f.phase) * 0.10;
+      g.save();
+      g.translate(p[0] - n[0] * thick[i] * L * 0.3, p[1] - n[1] * thick[i] * L * 0.3);
+      g.rotate(dir);
+      const pl = 0.66 * L;
+      g.beginPath();
+      g.moveTo(0, 0);
+      g.quadraticCurveTo(0.16 * pl, -0.16 * pl, 0.48 * pl, -0.34 * pl);
+      g.quadraticCurveTo(0.68 * pl, -0.46 * pl, 0.86 * pl, -0.48 * pl);
+      g.quadraticCurveTo(0.72 * pl, -0.30 * pl, 0.62 * pl, -0.10 * pl);
+      g.quadraticCurveTo(0.40 * pl, 0.02 * pl, 0.12 * pl, 0.04 * pl);
+      g.closePath();
+      const pg = g.createLinearGradient(0, 0, 0.8 * pl, -0.4 * pl);
+      pg.addColorStop(0, rgba(sp.mid, 0.95));
+      pg.addColorStop(1, rgba(sp.pecFill, 0.98));
+      g.fillStyle = pg;
+      g.fill();
+      g.strokeStyle = sp.pecEdge; g.globalAlpha = 0.6; g.lineWidth = 1.2; g.stroke();
+      g.globalAlpha = 1;
+      g.fillStyle = 'rgba(255,255,255,0.55)';
+      for (let k = 1; k <= 4; k++) {
+        const s = k / 5;
+        g.beginPath(); g.arc(0.44 * pl * s, -0.22 * pl * s, 1.7, 0, TAU); g.fill();
+      }
+      g.restore();
+    }
+
+    /* head details: eye low on the head, blowhole and tubercles on top, gape line */
+    {
+      const he = along(P, 0.13);
+      const en = nrm[1];
+      const ex = he[0] - en[0] * thick[1] * L * 0.42;
+      const ey = he[1] - en[1] * thick[1] * L * 0.42;
+      g.fillStyle = '#f2f7fb';
+      g.beginPath(); g.arc(ex, ey, 5.0, 0, TAU); g.fill();
+      g.fillStyle = '#132030';
+      g.beginPath(); g.arc(ex + 0.8, ey, 3.2, 0, TAU); g.fill();
+      g.fillStyle = 'rgba(255,255,255,0.9)';
+      g.beginPath(); g.arc(ex - 1.3, ey - 1.5, 1.3, 0, TAU); g.fill();
+
+      /* blowhole on the top of the head */
+      const bpr = along(top, 0.10);
+      const bpi = Math.round(0.10 * (N - 1));
+      const bp = [bpr[0] - nrm[bpi][0] * thick[bpi] * L * 0.35,
+                  bpr[1] - nrm[bpi][1] * thick[bpi] * L * 0.35];
+      g.fillStyle = 'rgba(15,25,35,0.42)';
+      g.beginPath(); g.ellipse(bp[0], bp[1], 3.0, 1.6, -0.6, 0, TAU); g.fill();
+
+      /* tubercles (the knobs on a humpback snout), tucked just inside the rail */
+      g.fillStyle = 'rgba(30,50,70,0.22)';
+      for (let i = 0; i < 4; i++) {
+        const si = 0.05 + i * 0.035;
+        const p = along(P, si);
+        const j = Math.round(si * (N - 1));
+        const kx = p[0] + nrm[j][0] * thick[j] * L * 0.55;
+        const ky = p[1] + nrm[j][1] * thick[j] * L * 0.55;
+        g.beginPath(); g.arc(kx, ky, 1.7, 0, TAU); g.fill();
+      }
+
+      const m0 = P[0], m1 = along(bot, 0.13);
+      g.strokeStyle = 'rgba(16,28,40,0.42)';
+      g.lineWidth = 1.8;
+      g.beginPath();
+      g.moveTo(m0[0], m0[1]);
+      g.quadraticCurveTo((m0[0] + m1[0]) / 2 + 8, (m0[1] + m1[1]) / 2, m1[0], m1[1]);
+      g.stroke();
+    }
+
+    g.restore();
+
+    /* spray, only while it is out of the water */
+    if (env > 0.02) {
+      const base = along(P, 0.06);
+      for (let i = 0; i < 24; i++) {
+        const a = (i / 24) * TAU + time * 0.5;
+        const rad = (0.08 + 0.16 * (((i * 7) % 5) / 5)) * L * (0.5 + env * 0.8);
+        const px = base[0] + Math.cos(a) * rad * 0.9;
+        const py = base[1] + Math.sin(a) * rad * 0.55 - env * 0.14 * L;
+        const r = (1.6 + ((i * 3) % 4)) * (0.5 + env);
+        g.fillStyle = 'rgba(232,242,250,' + (0.15 * env).toFixed(3) + ')';
+        g.beginPath(); g.arc(px, py, r, 0, TAU); g.fill();
+      }
+    }
+  }
+
   /* Top-down humpback: broad back, long pectorals, wide notched fluke.
      Seen from above, because the side-on view kept reading as a big fish. */
   function paintWhaleTop(g, f, sp, time) {
@@ -842,7 +1046,9 @@
   let SPRITE_DPR = 1;
 
   function spriteFor(f) {
-    const side = Math.ceil(f.len * 1.9 * SPRITE_DPR / 2) * 2;
+    /* the breaching pose is tall, so whales get a roomier sprite */
+    const pad = f.sp && f.sp.kind === 'whale' ? 2.7 : 1.9;
+    const side = Math.ceil(f.len * pad * SPRITE_DPR / 2) * 2;
     let s = f._sprite;
     if (!s || s.width !== side) {
       s = document.createElement('canvas');
@@ -1045,8 +1251,10 @@
     g.clearRect(0, 0, s.width, s.height);
     g.setTransform(SPRITE_DPR, 0, 0, SPRITE_DPR, s.width / 2, s.height / 2);
     g.globalAlpha = 1;
-    if (f.sp.kind === 'whale') paintWhale(g, f, f.sp, time);
-    else paint(g, f, f.sp, time);
+    if (f.sp.kind === 'whale') {
+      if (f.breach > 0.001) paintWhaleBreach(g, f, f.sp, time);
+      else paintWhale(g, f, f.sp, time);
+    } else paint(g, f, f.sp, time);
 
     const alpha = (0.19 + Math.min(0.17, f.k * 0.14)) * (alphaScale === undefined ? 1 : alphaScale);
     ctx.save();

@@ -23,10 +23,6 @@
       f.x = Math.min(Math.max(f.x, 12), W - 12);
       f.y = Math.min(Math.max(f.y, 12), H - 12);
     }
-    for (const w of whales) {
-      w.x = Math.min(Math.max(w.x, 12), W - 12);
-      w.y = Math.min(Math.max(w.y, 12), H - 12);
-    }
   }
 
   const fishes = [];
@@ -38,8 +34,11 @@
      here, so bringing one back is a one-line change. */
   const POOL = ART.SPECIES.filter(s => ['clown', 'bluetang', 'anthias'].includes(s.id));
 
-  /* One humpback, always. Big, slow, and faint, so it reads as a shadow behind the school. */
+  /* One humpback, and it no longer swims with the school. A whale silhouette
+     on rails kept reading as a big fish, so it now breaches every couple of
+     minutes: body arced up out of the water, wide fluke, spray, then gone. */
   const WHALE = ART.SPECIES.find(s => s.id === 'whale');
+  const BREACH_DUR = 5.6;
 
   function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
@@ -92,90 +91,56 @@
   }
 
   function makeWhale() {
-    const sp = WHALE;
-    const k = S * (1.50 + Math.random() * 0.30);
     return {
-      sp: sp,
-      len: sp.len * k, h: sp.h * k, k: 0,
-      x: Math.random() * W,
-      y: H * 0.22 + Math.random() * H * 0.46,
-      angle: Math.random() < 0.5 ? 0 : Math.PI,
-      speed: (9 + Math.random() * 6) * S,
-      ix: 0, iy: 0, excite: 0,
+      sp: WHALE,
+      len: 0, h: 0, k: 0,
+      x: 0, y: 0, ry: 0, angle: 0,
       phase: Math.random() * Math.PI * 2,
-      bob: Math.random() * Math.PI * 2,
-      spout: 0, nextSpout: 8 + Math.random() * 14,
-      pitch: 0, surface: 0, surfaceT: 0, nextSurface: 30 + Math.random() * 40,
-      ry: 0
+      breach: 0, breachT: 0, active: false,
+      nextBreach: 8 + Math.random() * 8,
+      cx: 0, cy: 0
     };
   }
 
-  function updateWhale(w, dt, time) {
-    const decay = Math.exp(-dt * 1.5);
-    w.ix *= decay; w.iy *= decay;
-    w.excite *= Math.exp(-dt * 0.6);
-    w.x += (Math.cos(w.angle) * w.speed * (1 + w.excite * 1.6) + w.ix) * dt;
-    w.y += (Math.sin(w.angle) * w.speed * 0.2 + Math.sin(time * 0.11 + w.bob) * 3.2 * S + w.iy) * dt;
-
-    const m = w.len * 0.75;
-    if (Math.cos(w.angle) >= 0 && w.x > W + m) w.x = -m;
-    else if (Math.cos(w.angle) < 0 && w.x < -m) w.x = W + m;
-
-    const y0 = H * 0.14, y1 = H * 0.86;
-    if (w.y < y0) w.y += (y0 - w.y) * Math.min(1, dt * 0.8);
-    if (w.y > y1) w.y -= (w.y - y1) * Math.min(1, dt * 0.8);
-
-    w.ry = w.y;
-
-    /* slow rise and fall, and a rare stronger surfacing tilt */
-    if (w.surfaceT > 0) {
-      w.surfaceT = Math.max(0, w.surfaceT - dt);
-      w.surface = Math.sin(Math.PI * (1 - w.surfaceT / 4));
-    } else {
-      w.surface = 0;
-      w.nextSurface -= dt;
-      if (w.nextSurface <= 0) { w.surfaceT = 4; w.nextSurface = 45 + Math.random() * 45; }
-    }
-    const pitchTarget = Math.sin(time * 0.05 + w.bob) * 0.10 - 0.30 * w.surface;
-    w.pitch += (pitchTarget - (w.pitch || 0)) * Math.min(1, dt * 1.4);
-
-    if (w.spout > 0) {
-      w.spout = Math.max(0, w.spout - dt);
-    } else {
-      w.nextSpout -= dt;
-      if (w.nextSpout <= 0) { w.spout = 1.8; w.nextSpout = 16 + Math.random() * 18; }
-      else if (w.surface > 0.4 && Math.random() < dt * 1.6) { w.spout = 1.8; }
-    }
+  function sizeWhale(w) {
+    const L = Math.min(W * 0.62, Math.min(W, H) * 0.62);
+    w.len = L;
+    w.h = WHALE.h * (L / WHALE.len);
   }
 
-  function drawSpout(ctx, w, t) {
-    if (w.spout <= 0) return;
-    const prog = (1.8 - w.spout) / 1.8;
-    const env = Math.sin(Math.PI * prog);
-    if (env <= 0.01) return;
+  function startBreach(w) {
+    sizeWhale(w);
+    const L = w.len;
+    w.cx = W * 0.54 + (Math.random() - 0.5) * W * 0.28;
+    w.cx = Math.max(L * 0.55, Math.min(W - L * 0.55, w.cx));
+    w.cy = Math.min(H * 0.06 + 0.95 * L, H * 0.98 - 0.55 * L);
+    if (w.cy < H * 0.06 + 0.55 * L) w.cy = Math.min(H * 0.60, H - 0.55 * L);
+    w.angle = 0;
+    w.breachT = 0;
+    w.breach = 0;
+    w.active = true;
+    w.x = w.cx; w.y = w.cy; w.ry = w.cy;
+  }
 
-    const bx = w.sp.blow[0] * w.len, by = w.sp.blow[1] * (w.h * 0.5);
-    const rot = w.angle + (w.pitch || 0);
-    const ca = Math.cos(rot), sa = Math.sin(rot);
-    const flip = Math.cos(w.angle) < 0 ? -1 : 1;
-    const hx = w.x + bx * ca - (by * flip) * sa;
-    const hy = w.ry + bx * sa + (by * flip) * ca;
-    const boost = 1 + 0.9 * (w.surface || 0);
-
-    ctx.save();
-    ctx.fillStyle = '#e8f2fa';
-    for (let i = 0; i < 7; i++) {
-      const u = i / 6;
-      const rise = prog * (26 + i * 15) * S * boost;
-      const spread = ((i - 3) * 5.5 * S + Math.sin(t * 1.5 + i * 1.7) * 2.2 * S) * boost;
-      const r = (3.0 + i * 1.8) * S * (0.6 + prog * 0.7) * boost;
-      ctx.globalAlpha = 0.17 * env * (1 - u * 0.5);
-      ctx.beginPath();
-      ctx.arc(hx + spread, hy - rise, r, 0, Math.PI * 2);
-      ctx.fill();
+  function stepWhale(w, dt) {
+    if (!w.active) {
+      w.nextBreach -= dt;
+      if (w.nextBreach <= 0) startBreach(w);
+      return;
     }
-    ctx.restore();
-    ctx.globalAlpha = 1;
+    w.breachT += dt;
+    const p = Math.min(1, w.breachT / BREACH_DUR);
+    w.breach = p;
+    const env = Math.sin(Math.PI * p);
+    w.x = w.cx;
+    /* dips low at the edges, rides up to full height at the apex */
+    w.y = w.cy + (1 - env) * 0.34 * w.len;
+    w.ry = w.y;
+    if (p >= 1) {
+      w.active = false;
+      w.breach = 0;
+      w.nextBreach = 75 + Math.random() * 75;
+    }
   }
 
   function angleLerp(a, b, t) {
@@ -223,11 +188,6 @@
 
   window.addEventListener('pointerdown', (e) => {
     if (reduce || e.button) return;
-    for (const w of whales) {
-      const dx = e.clientX - w.x, dy = e.clientY - w.ry;
-      const rad = w.len * 0.42;
-      if (dx * dx + dy * dy <= rad * rad) { w.spout = 1.8; w.excite = Math.min(1.2, w.excite + 0.9); return; }
-    }
     for (const f of fishes) {
       const dx = e.clientX - f.x, dy = e.clientY - f.ry;
       const rad = f.len * 0.6 + 16;
@@ -242,7 +202,7 @@
     last = now;
     t += dt;
     ctx.clearRect(0, 0, W, H);
-    for (const w of whales) { updateWhale(w, dt, t); ART.drawFish(ctx, w, t, 0.78); drawSpout(ctx, w, t); }
+    for (const w of whales) { stepWhale(w, dt); if (w.active) ART.drawFish(ctx, w, t, 1.4); }
     for (const f of fishes) { update(f, dt, t); ART.drawFish(ctx, f, t); }
     if (running) raf = requestAnimationFrame(frame);
   }
@@ -259,7 +219,12 @@
 
   if (reduce) {
     ctx.clearRect(0, 0, W, H);
-    for (const w of whales) ART.drawFish(ctx, w, 0, 0.78);
+    for (const w of whales) {
+      sizeWhale(w);
+      w.cx = W * 0.66; w.cy = Math.min(H * 0.06 + 0.95 * w.len, H * 0.98 - 0.55 * w.len);
+      w.x = w.cx; w.y = w.cy; w.breach = 0.5;
+      ART.drawFish(ctx, w, 0, 1.4);
+    }
     for (const f of fishes.slice(0, 8)) { update(f, 0.016, 0); ART.drawFish(ctx, f, 0, 0.85); }
   } else {
     raf = requestAnimationFrame(frame);

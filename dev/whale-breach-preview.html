@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Whale breach preview</title>
+<style>html,body{margin:0;background:#0B1512}canvas{display:block}</style>
+</head>
+<body>
+<canvas id="c" width="1440" height="900"></canvas>
+<script src="../fish-art.js"></script>
+<script>
+/* Page-scale mock: the breach over mock copy, plus the three fish at their
+   normal alpha, to judge crowding and whether the whale reads. */
+const q = new URLSearchParams(location.search);
+const ctx = document.getElementById('c').getContext('2d');
+const S = Math.max(0.72, Math.min(1.25, 1440 / 1100));
+const byId = id => window.ReefArt.SPECIES.find(s => s.id === id);
+const p = q.has('u') ? parseFloat(q.get('u')) : 0.5;
+
+ctx.fillStyle = '#EFE9DB';
+ctx.font = '600 13px Archivo, sans-serif';
+ctx.fillText('SURVIVOR 51 · THE OPEN ERA', 90, 120);
+ctx.font = '400 64px Archivo, sans-serif';
+ctx.fillText('Leader Board', 90, 200);
+ctx.fillStyle = '#93A79C';
+ctx.font = '400 17px Archivo, sans-serif';
+ctx.fillText('The pool. Four of us drafted players, and each roster is the sum of its players.', 90, 240);
+
+const L = Math.min(1440 * 0.62, 900 * 0.62);
+const whale = { sp: byId('whale'), len: L, h: byId('whale').h * (L / byId('whale').len), k: 0,
+  x: 1440 * 0.66, y: Math.min(900 * 0.06 + 0.95 * L, 900 * 0.98 - 0.55 * L),
+  angle: 0, phase: 0.6, excite: 0, breach: p };
+window.ReefArt.drawFish(ctx, whale, 1.2, 1.4);
+
+const fish = [
+  { id: 'clown', x: 320, y: 620, angle: 0.2, phase: 0 },
+  { id: 'bluetang', x: 1150, y: 700, angle: Math.PI - 0.2, phase: 1.1 },
+  { id: 'anthias', x: 640, y: 800, angle: 0.1, phase: 2.0 }
+];
+for (const f of fish) {
+  const sp = byId(f.id), k = S * 1.1;
+  window.ReefArt.drawFish(ctx, { sp, len: sp.len * k, h: sp.h * k, k: k, x: f.x, y: f.y, angle: f.angle, phase: f.phase, excite: 0, tail: 5 }, 1.4);
+}
+</script>
+</body>
+</html>

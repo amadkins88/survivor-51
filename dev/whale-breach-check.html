@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Whale breach check</title>
+<style>html,body{margin:0;background:#0B1512}canvas{display:block}</style>
+</head>
+<body>
+<canvas id="c" width="1240" height="820"></canvas>
+<script src="../fish-art.js"></script>
+<script>
+/* Draws the breaching pose at full opacity so the anatomy can be inspected.
+   ?u=0.5 sets the breach progress; ?dir=l mirrors it. */
+const q = new URLSearchParams(location.search);
+const ctx = document.getElementById('c').getContext('2d');
+const sp = window.ReefArt.SPECIES.find(s => s.id === 'whale');
+const u = q.has('u') ? parseFloat(q.get('u')) : 0.5;
+const len = 560;
+const f = { sp, len: len, h: sp.h * (len / sp.len), k: 0, x: 620, y: 430,
+            angle: q.get('dir') === 'l' ? Math.PI : 0, phase: 0.6, excite: 0, breach: u };
+/* alphaScale ~5.3 pushes the sprite to roughly full opacity for review */
+window.ReefArt.drawFish(ctx, f, 1.2, 5.3);
+</script>
+</body>
+</html>

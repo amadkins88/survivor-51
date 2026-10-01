@@ -10,9 +10,10 @@
 <script src="../fish-art.js"></script>
 <script>
 /* Draws the breaching pose at full opacity so the anatomy can be inspected.
-   ?u=0.5 sets the breach progress; ?dir=l mirrors it. */
+   ?u=0.5 sets the breach progress; ?dir=l mirrors it; ?bg=light uses a pale backdrop. */
 const q = new URLSearchParams(location.search);
 const ctx = document.getElementById('c').getContext('2d');
+if (q.get('bg') === 'light') { ctx.fillStyle = '#f2f0ea'; ctx.fillRect(0, 0, 1240, 820); }
 const sp = window.ReefArt.SPECIES.find(s => s.id === 'whale');
 const u = q.has('u') ? parseFloat(q.get('u')) : 0.5;
 const len = 560;

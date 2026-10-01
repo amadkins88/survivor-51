@@ -633,7 +633,27 @@
     g.save();
     g.translate(sX, sY);
     g.rotate(backA - Math.PI + flap);
-    flukeFin(g, sp.fluke, 0.82 * L, 0.48 * L, sp.flukeFill, sp.flukeEdge);
+    const Lf = 0.82 * L, Hf = 0.48 * L;
+    flukeFin(g, sp.fluke, Lf, Hf, sp.flukeFill, sp.flukeEdge);
+    /* fluke detail, clipped to the fluke so nothing floats off it */
+    const fpoly = [[0.04, 0], [-0.06, -0.34], [-0.16, -0.72], [-0.24, -1.02], [-0.16, -0.60],
+                   [-0.13, -0.06], [-0.16, 0.60], [-0.24, 1.02], [-0.16, 0.72], [-0.06, 0.34]]
+                  .map(p => [p[0] * Lf, p[1] * Hf]);
+    g.save();
+    g.beginPath(); smoothPath(g, fpoly); g.clip();
+    g.fillStyle = 'rgba(255,255,255,0.28)';
+    for (const s of [-1, 1]) {
+      g.beginPath();
+      g.ellipse(-0.15 * Lf, s * 0.72 * Hf, 0.09 * Lf, 0.30 * Hf, s * 0.35, 0, TAU);
+      g.fill();
+    }
+    g.fillStyle = 'rgba(226,221,206,0.6)';
+    for (let i = 0; i < 6; i++) {
+      const s = i < 3 ? -1 : 1;
+      const u = 0.05 + (i % 3) * 0.06;
+      g.beginPath(); g.arc(-u * Lf, s * (0.30 + (i % 3) * 0.16) * Hf, 1.3, 0, TAU); g.fill();
+    }
+    g.restore();
     g.restore();
 
     /* ---- body ---- */
@@ -649,34 +669,74 @@
 
     g.save();
     g.clip();
+
+    /* pale throat and belly wash; humpbacks are white underneath */
     const wash = g.createLinearGradient(bot[mid][0], bot[mid][1], top[mid][0], top[mid][1]);
-    wash.addColorStop(0, 'rgba(255,255,255,0.34)');
-    wash.addColorStop(0.55, 'rgba(255,255,255,0.06)');
+    wash.addColorStop(0, 'rgba(255,255,255,0.42)');
+    wash.addColorStop(0.45, 'rgba(255,255,255,0.12)');
     wash.addColorStop(1, 'rgba(255,255,255,0)');
     g.fillStyle = wash;
     g.fill();
-    /* speckle on the pale flank */
-    g.fillStyle = 'rgba(255,255,255,0.18)';
-    for (let i = 4; i <= 15; i++) {
-      const s = i / 16;
+
+    /* skin noise. irregular specks, not fish scales, so it reads as hide */
+    for (let i = 0; i < 52; i++) {
+      const s = 0.06 + (i / 52) * 0.86;
       const pt = along(P, s);
-      const n = nrm[Math.round(s * (N - 1))];
-      const r = 0.6 + ((i * 7) % 5) * 0.16;
+      const j = Math.round(s * (N - 1));
+      const t = thick[j] * L;
+      const side = (((i * 37) % 11) / 11) * 2 - 1;
+      const rr = 1.6 + ((i * 13) % 5) * 0.7;
+      g.fillStyle = side > 0 ? 'rgba(40,62,86,0.15)' : 'rgba(255,255,255,0.10)';
       g.beginPath();
-      g.ellipse(pt[0] - n[0] * 0.55 * (thick[Math.round(s * (N - 1))] * L), pt[1] - n[1] * 0.55 * (thick[Math.round(s * (N - 1))] * L), 3.2 * r, 2.1 * r, 0, 0, TAU);
+      g.ellipse(pt[0] + nrm[j][0] * t * side * 0.72, pt[1] + nrm[j][1] * t * side * 0.72,
+                rr, rr * 0.7, 0, 0, TAU);
       g.fill();
     }
-    /* throat pleats, low on the jaw so they cannot read as gills */
-    g.strokeStyle = 'rgba(28,44,60,0.28)';
-    g.lineWidth = 1.4;
-    for (let i = 0; i < 4; i++) {
-      const a = along(P, 0.03 + i * 0.05);
-      const b = along(bot, 0.03 + i * 0.05);
+
+    /* pale pigment blotches, the humpback mottle */
+    g.fillStyle = 'rgba(255,255,255,0.15)';
+    for (let i = 0; i < 10; i++) {
+      const s = 0.20 + (i / 10) * 0.68;
+      const pt = along(P, s);
+      const j = Math.round(s * (N - 1));
+      const t = thick[j] * L;
+      const side = (((i * 29) % 7) / 7) * 1.6 - 0.8;
+      const rr = 4.0 + ((i * 17) % 6) * 1.2;
+      g.beginPath();
+      g.ellipse(pt[0] + nrm[j][0] * t * side, pt[1] + nrm[j][1] * t * side, rr, rr * 0.6, 0, 0, TAU);
+      g.fill();
+    }
+
+    /* ventral throat pleats, the long grooves from chin to belly */
+    g.strokeStyle = 'rgba(46,68,92,0.30)';
+    g.lineWidth = 1.3;
+    for (let i = 0; i < 9; i++) {
+      const s0 = 0.05 + i * 0.085;
+      const s1 = Math.min(0.92, s0 + 0.20);
+      const a = along(P, s0);
+      const b = along(bot, s0);
+      const c = along(bot, s1);
       g.beginPath();
       g.moveTo(a[0], a[1]);
-      g.quadraticCurveTo((a[0] + b[0]) / 2 + 3, (a[1] + b[1]) / 2, b[0], b[1]);
+      g.quadraticCurveTo(b[0], b[1], c[0], c[1]);
       g.stroke();
     }
+    g.restore();
+
+    /* wet sheen running along the back */
+    g.save();
+    g.strokeStyle = 'rgba(255,255,255,0.20)';
+    g.lineWidth = 3.0;
+    g.lineCap = 'round';
+    g.beginPath();
+    for (let i = 0; i <= 6; i++) {
+      const s = 0.08 + i * 0.10;
+      const p = along(top, s);
+      const j = Math.round(s * (N - 1));
+      const q = [p[0] - nrm[j][0] * thick[j] * L * 0.30, p[1] - nrm[j][1] * thick[j] * L * 0.30];
+      if (i === 0) g.moveTo(q[0], q[1]); else g.lineTo(q[0], q[1]);
+    }
+    g.stroke();
     g.restore();
 
     /* outline */
@@ -705,6 +765,13 @@
       g.fill();
       g.strokeStyle = sp.finEdge; g.globalAlpha = 0.5; g.lineWidth = 1.1; g.stroke();
       g.globalAlpha = 1;
+      /* light leading edge on the fin */
+      g.strokeStyle = 'rgba(255,255,255,0.30)'; g.lineWidth = 1.0;
+      g.beginPath();
+      g.moveTo(a[0], a[1]);
+      g.quadraticCurveTo(ax + nn[0] * h * 0.7, ay + nn[1] * h * 0.7,
+                         ax + nn[0] * h * 0.9 + nn[1] * h * 0.5, ay + nn[1] * h * 0.9 - nn[0] * h * 0.5);
+      g.stroke();
     }
 
     /* long pale pectoral flipper, out toward the belly side */
@@ -715,25 +782,46 @@
       g.translate(p[0] - n[0] * thick[i] * L * 0.3, p[1] - n[1] * thick[i] * L * 0.3);
       g.rotate(dir);
       const pl = 0.66 * L;
-      g.beginPath();
-      g.moveTo(0, 0);
-      g.quadraticCurveTo(0.16 * pl, -0.16 * pl, 0.48 * pl, -0.34 * pl);
-      g.quadraticCurveTo(0.68 * pl, -0.46 * pl, 0.86 * pl, -0.48 * pl);
-      g.quadraticCurveTo(0.72 * pl, -0.30 * pl, 0.62 * pl, -0.10 * pl);
-      g.quadraticCurveTo(0.40 * pl, 0.02 * pl, 0.12 * pl, 0.04 * pl);
-      g.closePath();
+      const pecPath = () => {
+        g.beginPath();
+        g.moveTo(0, 0);
+        g.quadraticCurveTo(0.16 * pl, -0.16 * pl, 0.48 * pl, -0.34 * pl);
+        g.quadraticCurveTo(0.68 * pl, -0.46 * pl, 0.86 * pl, -0.48 * pl);
+        g.quadraticCurveTo(0.72 * pl, -0.30 * pl, 0.62 * pl, -0.10 * pl);
+        g.quadraticCurveTo(0.40 * pl, 0.02 * pl, 0.12 * pl, 0.04 * pl);
+        g.closePath();
+      };
+      pecPath();
       const pg = g.createLinearGradient(0, 0, 0.8 * pl, -0.4 * pl);
       pg.addColorStop(0, rgba(sp.mid, 0.95));
       pg.addColorStop(1, rgba(sp.pecFill, 0.98));
       g.fillStyle = pg;
       g.fill();
-      g.strokeStyle = sp.pecEdge; g.globalAlpha = 0.6; g.lineWidth = 1.2; g.stroke();
-      g.globalAlpha = 1;
-      g.fillStyle = 'rgba(255,255,255,0.55)';
+      g.save();
+      pecPath();
+      g.clip();
+      /* white blade with a faint dark top edge */
+      g.fillStyle = 'rgba(255,255,255,0.24)';
+      g.beginPath();
+      g.moveTo(0, 0);
+      g.quadraticCurveTo(0.30 * pl, 0.06 * pl, 0.70 * pl, 0.16 * pl);
+      g.lineTo(0.70 * pl, -0.14 * pl);
+      g.quadraticCurveTo(0.34 * pl, -0.18 * pl, 0, 0);
+      g.fill();
+      /* knobbly leading edge, the humpback pec tubercles */
+      g.fillStyle = 'rgba(255,255,255,0.7)';
+      for (let k = 1; k <= 7; k++) {
+        const s = k / 8;
+        g.beginPath(); g.arc(0.80 * pl * s, -0.44 * pl * s, 1.9, 0, TAU); g.fill();
+      }
+      g.fillStyle = 'rgba(255,255,255,0.40)';
       for (let k = 1; k <= 4; k++) {
         const s = k / 5;
-        g.beginPath(); g.arc(0.44 * pl * s, -0.22 * pl * s, 1.7, 0, TAU); g.fill();
+        g.beginPath(); g.arc(0.44 * pl * s, -0.20 * pl * s, 1.6, 0, TAU); g.fill();
       }
+      g.restore();
+      g.strokeStyle = sp.pecEdge; g.globalAlpha = 0.6; g.lineWidth = 1.2; pecPath(); g.stroke();
+      g.globalAlpha = 1;
       g.restore();
     }
 
@@ -750,23 +838,26 @@
       g.fillStyle = 'rgba(255,255,255,0.9)';
       g.beginPath(); g.arc(ex - 1.3, ey - 1.5, 1.3, 0, TAU); g.fill();
 
-      /* blowhole on the top of the head */
+      /* blowhole on the top of the head, raised rim */
       const bpr = along(top, 0.10);
       const bpi = Math.round(0.10 * (N - 1));
       const bp = [bpr[0] - nrm[bpi][0] * thick[bpi] * L * 0.35,
                   bpr[1] - nrm[bpi][1] * thick[bpi] * L * 0.35];
-      g.fillStyle = 'rgba(15,25,35,0.42)';
-      g.beginPath(); g.ellipse(bp[0], bp[1], 3.0, 1.6, -0.6, 0, TAU); g.fill();
+      g.fillStyle = 'rgba(15,25,35,0.45)';
+      g.beginPath(); g.ellipse(bp[0], bp[1], 3.2, 1.7, -0.6, 0, TAU); g.fill();
+      g.strokeStyle = 'rgba(255,255,255,0.35)';
+      g.lineWidth = 0.9;
+      g.beginPath(); g.ellipse(bp[0] - 0.6, bp[1] - 0.6, 3.2, 1.7, -0.6, 0, TAU); g.stroke();
 
       /* tubercles (the knobs on a humpback snout), tucked just inside the rail */
       g.fillStyle = 'rgba(30,50,70,0.22)';
-      for (let i = 0; i < 4; i++) {
-        const si = 0.05 + i * 0.035;
+      for (let i = 0; i < 6; i++) {
+        const si = 0.03 + i * 0.028;
         const p = along(P, si);
         const j = Math.round(si * (N - 1));
         const kx = p[0] + nrm[j][0] * thick[j] * L * 0.55;
         const ky = p[1] + nrm[j][1] * thick[j] * L * 0.55;
-        g.beginPath(); g.arc(kx, ky, 1.7, 0, TAU); g.fill();
+        g.beginPath(); g.arc(kx, ky, 1.6, 0, TAU); g.fill();
       }
 
       const m0 = P[0], m1 = along(bot, 0.13);

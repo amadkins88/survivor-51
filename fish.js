@@ -105,6 +105,7 @@
       phase: Math.random() * Math.PI * 2,
       bob: Math.random() * Math.PI * 2,
       spout: 0, nextSpout: 8 + Math.random() * 14,
+      pitch: 0, surface: 0, surfaceT: 0, nextSurface: 30 + Math.random() * 40,
       ry: 0
     };
   }
@@ -126,11 +127,24 @@
 
     w.ry = w.y;
 
+    /* slow rise and fall, and a rare stronger surfacing tilt */
+    if (w.surfaceT > 0) {
+      w.surfaceT = Math.max(0, w.surfaceT - dt);
+      w.surface = Math.sin(Math.PI * (1 - w.surfaceT / 4));
+    } else {
+      w.surface = 0;
+      w.nextSurface -= dt;
+      if (w.nextSurface <= 0) { w.surfaceT = 4; w.nextSurface = 45 + Math.random() * 45; }
+    }
+    const pitchTarget = Math.sin(time * 0.05 + w.bob) * 0.10 - 0.30 * w.surface;
+    w.pitch += (pitchTarget - (w.pitch || 0)) * Math.min(1, dt * 1.4);
+
     if (w.spout > 0) {
       w.spout = Math.max(0, w.spout - dt);
     } else {
       w.nextSpout -= dt;
       if (w.nextSpout <= 0) { w.spout = 1.8; w.nextSpout = 16 + Math.random() * 18; }
+      else if (w.surface > 0.4 && Math.random() < dt * 1.6) { w.spout = 1.8; }
     }
   }
 
@@ -140,19 +154,21 @@
     const env = Math.sin(Math.PI * prog);
     if (env <= 0.01) return;
 
-    const bx = 0.30 * w.len, by = -0.70 * (w.h * 0.5);
-    const ca = Math.cos(w.angle), sa = Math.sin(w.angle);
-    const flip = ca < 0 ? -1 : 1;
+    const bx = w.sp.blow[0] * w.len, by = w.sp.blow[1] * (w.h * 0.5);
+    const rot = w.angle + (w.pitch || 0);
+    const ca = Math.cos(rot), sa = Math.sin(rot);
+    const flip = Math.cos(w.angle) < 0 ? -1 : 1;
     const hx = w.x + bx * ca - (by * flip) * sa;
     const hy = w.ry + bx * sa + (by * flip) * ca;
+    const boost = 1 + 0.9 * (w.surface || 0);
 
     ctx.save();
     ctx.fillStyle = '#e8f2fa';
     for (let i = 0; i < 7; i++) {
       const u = i / 6;
-      const rise = prog * (26 + i * 15) * S;
-      const spread = (i - 3) * 5.5 * S + Math.sin(t * 1.5 + i * 1.7) * 2.2 * S;
-      const r = (3.0 + i * 1.8) * S * (0.6 + prog * 0.7);
+      const rise = prog * (26 + i * 15) * S * boost;
+      const spread = ((i - 3) * 5.5 * S + Math.sin(t * 1.5 + i * 1.7) * 2.2 * S) * boost;
+      const r = (3.0 + i * 1.8) * S * (0.6 + prog * 0.7) * boost;
       ctx.globalAlpha = 0.17 * env * (1 - u * 0.5);
       ctx.beginPath();
       ctx.arc(hx + spread, hy - rise, r, 0, Math.PI * 2);
@@ -226,7 +242,7 @@
     last = now;
     t += dt;
     ctx.clearRect(0, 0, W, H);
-    for (const w of whales) { updateWhale(w, dt, t); ART.drawFish(ctx, w, t, 0.62); drawSpout(ctx, w, t); }
+    for (const w of whales) { updateWhale(w, dt, t); ART.drawFish(ctx, w, t, 0.78); drawSpout(ctx, w, t); }
     for (const f of fishes) { update(f, dt, t); ART.drawFish(ctx, f, t); }
     if (running) raf = requestAnimationFrame(frame);
   }
@@ -243,7 +259,7 @@
 
   if (reduce) {
     ctx.clearRect(0, 0, W, H);
-    for (const w of whales) ART.drawFish(ctx, w, 0, 0.62);
+    for (const w of whales) ART.drawFish(ctx, w, 0, 0.78);
     for (const f of fishes.slice(0, 8)) { update(f, 0.016, 0); ART.drawFish(ctx, f, 0, 0.85); }
   } else {
     raf = requestAnimationFrame(frame);

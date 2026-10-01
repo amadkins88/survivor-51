@@ -93,7 +93,7 @@
 
   function makeWhale() {
     const sp = WHALE;
-    const k = S * (0.94 + Math.random() * 0.22);
+    const k = S * (1.50 + Math.random() * 0.30);
     return {
       sp: sp,
       len: sp.len * k, h: sp.h * k, k: 0,

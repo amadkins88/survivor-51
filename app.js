@@ -10,6 +10,13 @@
   D.viewers.forEach(function (v) {
     (v.picks || []).forEach(function (n) { (PICKERS[n] = PICKERS[n] || []).push(v.name); });
   });
+  // anyone no longer in the game reads as "out" (voted out, jury, quit, medevac)
+  var STATUS = {};
+  D.contestants.forEach(function (p) { STATUS[p.name] = p.status || ""; });
+  var isOut = function (n) {
+    var s = STATUS[n] || "";
+    return s !== "" && s !== "In Game" && s !== "Winner";
+  };
   var el = function (id) { return document.getElementById(id); };
   var esc = function (s) {
     return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
@@ -126,7 +133,7 @@
       return '<div class="tribe ' + t.toLowerCase() + '"><h3>' + t + '</h3>' +
         '<p class="tot">' + (D.tribeTotals[t] || 0) + '</p><p class="lede">' + mem.length + ' players</p>' +
         '<ul>' + mem.map(function (m) {
-          var out = m.status === "Eliminated" ? ' class="out"' : "";
+          var out = isOut(m.name) ? ' class="out"' : "";
           return '<li' + out + '>' + esc(m.name) + ' <b>' + m.points + '</b></li>';
         }).join("") + '</ul></div>';
     }).join("");
@@ -140,7 +147,7 @@
     });
     el("cast").innerHTML = cast.map(function (c) {
       var p = D.contestants.filter(function (x) { return x.name === c.name; })[0];
-      var out = p && p.status === "Eliminated";
+      var out = isOut(c.name);
       var t = c.tribe[0] || "";
       var owners = PICKERS[c.name] || [];
       return '<article class="card' + (out ? " out" : "") + '">' +
@@ -163,7 +170,9 @@
     });
     el("pool").innerHTML = rosters.map(function (v) {
       var picks = (v.picks && v.picks.length)
-        ? '<ul class="picks">' + v.picks.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul>"
+        ? '<ul class="picks">' + v.picks.map(function (p) {
+            return '<li' + (isOut(p) ? ' class="out"' : "") + '>' + esc(p) + '</li>';
+          }).join("") + "</ul>"
         : '<p class="pend">picks pending</p>';
       return '<div class="viewer"><h3>' + esc(v.name) + '</h3>' +
         '<p class="v-tot">' + v.total + '</p>' + picks + '</div>';

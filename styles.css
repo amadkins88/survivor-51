@@ -229,6 +229,8 @@ footer{max-width:var(--max);margin:0 auto;padding:34px var(--pad) 60px;color:var
 .more a{color:var(--ember);text-decoration:none}
 .picks{list-style:none;margin-top:4px;display:flex;flex-wrap:wrap;gap:6px}
 .picks li{font-size:12.5px;border:1px solid var(--line-strong);padding:2px 7px;border-radius:3px;color:var(--dim)}
+/* leader board pool: picks who are out of the game read red */
+.picks li.out{border-color:#D9634E;background:rgba(217,99,78,.16);color:#FFD6C9}
 .eps{display:grid;gap:26px}
 .recap{margin-top:24px;border-top:1px solid var(--line);padding-top:20px;max-width:76ch}
 .recap h4{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ember);font-weight:700;margin-bottom:10px}

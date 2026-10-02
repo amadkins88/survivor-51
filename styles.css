@@ -229,8 +229,9 @@ footer{max-width:var(--max);margin:0 auto;padding:34px var(--pad) 60px;color:var
 .more a{color:var(--ember);text-decoration:none}
 .picks{list-style:none;margin-top:4px;display:flex;flex-wrap:wrap;gap:6px}
 .picks li{font-size:12.5px;border:1px solid var(--line-strong);padding:2px 7px;border-radius:3px;color:var(--dim)}
-/* leader board pool: picks who are out of the game read red */
+/* leader board pool: picks who are out of the game read red, jury reads blue */
 .picks li.out{border-color:#D9634E;background:rgba(217,99,78,.16);color:#FFD6C9}
+.picks li.jury{border-color:#4A90E2;background:rgba(74,144,226,.18);color:#BFDCF7}
 .eps{display:grid;gap:26px}
 .recap{margin-top:24px;border-top:1px solid var(--line);padding-top:20px;max-width:76ch}
 .recap h4{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ember);font-weight:700;margin-bottom:10px}
@@ -315,13 +316,17 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
   .lede{font-size:13.5px}
 }
 
-/* eliminated players read red in the tribe lists */
+/* eliminated players read red in the tribe lists, jury reads blue */
 .tribe li.out{background:rgba(224,90,74,.18);border-color:rgba(240,162,140,.55);color:#F3B4A4}
 .tribe li.out b{color:#FFD6C9}
+.tribe li.jury{background:rgba(74,144,226,.2);border-color:rgba(143,179,245,.6);color:#BFDCF7}
+.tribe li.jury b{color:#DCEBFF}
 
-/* cast page: voted out players get a red border */
+/* cast page: voted out players get a red border, jury gets a blue one */
 .card.out{opacity:1;border-color:#D9634E;background:linear-gradient(rgba(217,99,78,.07),rgba(217,99,78,.07)),var(--ink-2)}
 .card.out .who h3{color:#FFD6C9}
+.card.jury{opacity:1;border-color:#4A90E2;background:linear-gradient(rgba(74,144,226,.09),rgba(74,144,226,.09)),var(--ink-2)}
+.card.jury .who h3{color:#BFDCF7}
 
 /* one horizontal line, always */
 .topnav .sm{display:none}

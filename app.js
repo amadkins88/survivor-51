@@ -10,12 +10,15 @@
   D.viewers.forEach(function (v) {
     (v.picks || []).forEach(function (n) { (PICKERS[n] = PICKERS[n] || []).push(v.name); });
   });
-  // anyone no longer in the game reads as "out" (voted out, jury, quit, medevac)
+  // anyone no longer in the game reads as "out" (voted out, quit, medevac);
+  // jury members read as "jury" and get their own blue treatment
   var STATUS = {};
   D.contestants.forEach(function (p) { STATUS[p.name] = p.status || ""; });
-  var isOut = function (n) {
+  var outClass = function (n) {
     var s = STATUS[n] || "";
-    return s !== "" && s !== "In Game" && s !== "Winner";
+    if (s === "Jury") return "jury";
+    if (s !== "" && s !== "In Game" && s !== "Winner") return "out";
+    return "";
   };
   var el = function (id) { return document.getElementById(id); };
   var esc = function (s) {
@@ -133,8 +136,8 @@
       return '<div class="tribe ' + t.toLowerCase() + '"><h3>' + t + '</h3>' +
         '<p class="tot">' + (D.tribeTotals[t] || 0) + '</p><p class="lede">' + mem.length + ' players</p>' +
         '<ul>' + mem.map(function (m) {
-          var out = isOut(m.name) ? ' class="out"' : "";
-          return '<li' + out + '>' + esc(m.name) + ' <b>' + m.points + '</b></li>';
+          var oc = outClass(m.name);
+          return '<li' + (oc ? ' class="' + oc + '"' : "") + '>' + esc(m.name) + ' <b>' + m.points + '</b></li>';
         }).join("") + '</ul></div>';
     }).join("");
   }
@@ -147,10 +150,10 @@
     });
     el("cast").innerHTML = cast.map(function (c) {
       var p = D.contestants.filter(function (x) { return x.name === c.name; })[0];
-      var out = isOut(c.name);
+      var oc = outClass(c.name);
       var t = c.tribe[0] || "";
       var owners = PICKERS[c.name] || [];
-      return '<article class="card' + (out ? " out" : "") + '">' +
+      return '<article class="card' + (oc ? " " + oc : "") + '">' +
         '<div class="who"><h3>' + esc(c.name) + '</h3><span class="age">' + esc(c.age) + '</span></div>' +
         '<span class="chip ' + t.toLowerCase() + '">' + esc(t) + '</span>' +
         '<p class="owner">' + (owners.length
@@ -171,7 +174,8 @@
     el("pool").innerHTML = rosters.map(function (v) {
       var picks = (v.picks && v.picks.length)
         ? '<ul class="picks">' + v.picks.map(function (p) {
-            return '<li' + (isOut(p) ? ' class="out"' : "") + '>' + esc(p) + '</li>';
+            var oc = outClass(p);
+            return '<li' + (oc ? ' class="' + oc + '"' : "") + '>' + esc(p) + '</li>';
           }).join("") + "</ul>"
         : '<p class="pend">picks pending</p>';
       return '<div class="viewer"><h3>' + esc(v.name) + '</h3>' +

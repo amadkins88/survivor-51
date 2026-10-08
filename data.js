@@ -59,11 +59,12 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 6,
+   "points": 8,
    "id": "3e6db8f4-3f83-8114-89a8-f702b5a4237c",
    "breakdown": {
     "Immunity": 2,
     "Reward": 1,
+    "Advantages": 2,
     "Survival": 3
    },
    "tribe1": "Savu"
@@ -564,6 +565,17 @@ window.SURVIVOR51 = {
  ],
  "events": [
   {
+   "num": "E03F",
+   "type": "Gains Advantage",
+   "points": 2,
+   "players": [
+    "Carter Krull"
+   ],
+   "episode": [
+    "3f3db8f4-3f83-8128-a466-f04d8b1acd8f"
+   ]
+  },
+  {
    "num": "E03E",
    "type": "Survives Episode",
    "points": 1,
@@ -906,12 +918,12 @@ window.SURVIVOR51 = {
    "immunityType": "Tribal",
    "recapStatus": "Drafted",
    "recap": "Survivor 51 Episode 3, What I'm Smellin' Is Stinky, opened on Day 6 with Savu back from Tribal Council. Carter Krull called himself the worst player in the game for not seeing the Ana Sani vote coming, and Ori Jean-Charles said his Helicopter Alliance with Sharonda Cox was still intact. Rob Antonson had spent the night alone on the beach, still upset about Tribal Council and now complaining about a cut on his foot that he believed was infected. Eric Macksoud tried to comfort him. Jeff Probst and the show's doctor examined Rob and found nothing wrong beyond a small cut, though the doctor allowed that any cut carries some risk. Rob said he would not risk his health and chose to quit the game. Before he left on Day 6, he gave his hidden immunity idol to Carter.\n\nTree Mail announced that one player from each tribe would visit the other camp. Savu drew Carter, who did not want to go. Devin Way volunteered from Toka. On the boat, both learned that an advantage was hidden at their destination and that they could mutiny and stay with the new tribe if they chose.\n\nDevin reached Savu and told them about Toka's politics, then declined to mutiny. He and Sharonda renewed their Helicopter Alliance and together found a secret extra vote hidden at the water well. Devin shared word of the advantage with Ori, then spent the rest of his visit spreading doubts about Danny Kilby.Carter reached Toka and told them that Linnea Capobianco and Sharonda were the power at Savu. While Carter was away with Mike Pinsky, the rest of Toka searched his bag and found the note about the advantage hidden in one of their boat's oars. The tribe ran for the boat, Brady Booker chopped the oars apart, and he and Maggie Nestor found the advantage together. Brady took it first, then handed it to Maggie when she asked, on her word that she would vote with him. Brady then pitched Carter on staying and joining him. Carter went to collect the advantage before his ride back, but the oars were gone, and the boat left without him. He stayed on Toka by missing his ride.\n\nAt the combined Reward and Immunity Challenge, Savu had seven players to Toka's eleven. Maggie, Kilby, Mike and Jelly Loblack sat out for Toka. Toka built a lead on the human ladder but lost it when Jenna Doore and Thien An Nguyen stalled on the puzzle. Cristian Chavez and Kristin Flickinger finished fast for Savu, which won immunity and four egg-laying hens. Toka went to Tribal Council.\n\nBack at camp, Kilby was angry that Devin had kept him out of the puzzle, and the two argued. Kilby told Devin that Patt Cannaday, Jelly and Brady had said Devin called him a liar. The alliance of Devin, Brady, Jelly, Mike and Patt planned to blindside Kilby. Kilby and Maggie first aimed at Mike, but Thien An pushed for Patt instead and told Brady the vote might be moving to Patt. Lewis Kelly and Carter knew they were the swing votes.\n\nAt Tribal Council, five votes went to Kilby. The last two, from Carter and Lewis, went to Patt. Patt Cannaday was voted out 6 to 5 on Day 7. Devin and Jelly ended up on the wrong side of the Tribal Council vote for the second episode in a row.",
-   "points": 8,
+   "points": 10,
    "votedOff": [
     "Patt Cannaday"
    ],
    "id": "3f3db8f4-3f83-8128-a466-f04d8b1acd8f",
-   "events": 5
+   "events": 6
   }
  ],
  "viewers": [
@@ -957,7 +969,7 @@ window.SURVIVOR51 = {
     "Maggie Nestor",
     "Ana Sani"
    ],
-   "total": 35
+   "total": 37
   }
  ],
  "cats": [
@@ -972,7 +984,7 @@ window.SURVIVOR51 = {
   "Endgame"
  ],
  "tribeTotals": {
-  "Savu": 83,
+  "Savu": 85,
   "Toka": 81
  },
  "scale": [

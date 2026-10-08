@@ -28,12 +28,12 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 5,
+   "points": 9,
    "id": "3e6db8f4-3f83-8181-8450-f9e3f3879d4c",
    "breakdown": {
-    "Immunity": 2,
-    "Reward": 1,
-    "Survival": 2
+    "Immunity": 4,
+    "Reward": 2,
+    "Survival": 3
    },
    "tribe1": "Savu"
   },
@@ -43,27 +43,28 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 5,
+   "points": 9,
    "id": "3e6db8f4-3f83-8185-9c7b-d762c3a25893",
    "breakdown": {
-    "Immunity": 2,
-    "Reward": 1,
-    "Survival": 2
+    "Immunity": 4,
+    "Reward": 2,
+    "Survival": 3
    },
    "tribe1": "Savu"
   },
   {
    "name": "Carter Krull",
    "tribe": [
-    "Savu"
+    "Savu",
+    "Toka"
    ],
    "status": "In Game",
-   "points": 5,
+   "points": 6,
    "id": "3e6db8f4-3f83-8114-89a8-f702b5a4237c",
    "breakdown": {
     "Immunity": 2,
     "Reward": 1,
-    "Survival": 2
+    "Survival": 3
    },
    "tribe1": "Savu"
   },
@@ -73,12 +74,12 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 5,
+   "points": 9,
    "id": "3e6db8f4-3f83-81d6-8bfe-e529ff913a98",
    "breakdown": {
-    "Immunity": 2,
-    "Reward": 1,
-    "Survival": 2
+    "Immunity": 4,
+    "Reward": 2,
+    "Survival": 3
    },
    "tribe1": "Savu"
   },
@@ -88,12 +89,12 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 5,
+   "points": 9,
    "id": "3e6db8f4-3f83-81c2-99fd-fc8be739c106",
    "breakdown": {
-    "Immunity": 2,
-    "Reward": 1,
-    "Survival": 2
+    "Immunity": 4,
+    "Reward": 2,
+    "Survival": 3
    },
    "tribe1": "Savu"
   },
@@ -103,12 +104,12 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 5,
+   "points": 9,
    "id": "3e6db8f4-3f83-8104-a839-f0fd0a9f1891",
    "breakdown": {
-    "Immunity": 2,
-    "Reward": 1,
-    "Survival": 2
+    "Immunity": 4,
+    "Reward": 2,
+    "Survival": 3
    },
    "tribe1": "Savu"
   },
@@ -118,12 +119,12 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 5,
+   "points": 9,
    "id": "3e6db8f4-3f83-81f4-8dfe-de304eeff75c",
    "breakdown": {
-    "Immunity": 2,
-    "Reward": 1,
-    "Survival": 2
+    "Immunity": 4,
+    "Reward": 2,
+    "Survival": 3
    },
    "tribe1": "Savu"
   },
@@ -133,12 +134,12 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
-   "points": 5,
+   "points": 9,
    "id": "3e6db8f4-3f83-811b-ad98-e7bde804c142",
    "breakdown": {
-    "Immunity": 2,
-    "Reward": 1,
-    "Survival": 2
+    "Immunity": 4,
+    "Reward": 2,
+    "Survival": 3
    },
    "tribe1": "Savu"
   },
@@ -147,7 +148,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Savu"
    ],
-   "status": "In Game",
+   "status": "Eliminated",
    "points": 10,
    "id": "3e6db8f4-3f83-813c-8fd0-e26f6efe09f5",
    "breakdown": {
@@ -164,12 +165,13 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 6,
+   "points": 9,
    "id": "3e6db8f4-3f83-81fd-bdef-ecda1c1a5a8d",
    "breakdown": {
     "Immunity": 2,
     "Reward": 2,
-    "Survival": 2
+    "Advantages": 2,
+    "Survival": 3
    },
    "tribe1": "Toka"
   },
@@ -179,12 +181,12 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 6,
+   "points": 7,
    "id": "3e6db8f4-3f83-8106-a5ed-f2dde1aa9fb0",
    "breakdown": {
     "Immunity": 2,
     "Reward": 2,
-    "Survival": 2
+    "Survival": 3
    },
    "tribe1": "Toka"
   },
@@ -194,12 +196,12 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 6,
+   "points": 7,
    "id": "3e6db8f4-3f83-81ff-b290-f7b530a85786",
    "breakdown": {
     "Immunity": 2,
     "Reward": 2,
-    "Survival": 2
+    "Survival": 3
    },
    "tribe1": "Toka"
   },
@@ -209,12 +211,13 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 6,
+   "points": 9,
    "id": "3e6db8f4-3f83-8182-b79d-c9266f473738",
    "breakdown": {
     "Immunity": 2,
     "Reward": 2,
-    "Survival": 2
+    "Advantages": 2,
+    "Survival": 3
    },
    "tribe1": "Toka"
   },
@@ -224,13 +227,13 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 11,
+   "points": 12,
    "id": "3e6db8f4-3f83-8190-b95d-fb493d42ab61",
    "breakdown": {
     "Immunity": 2,
     "Reward": 2,
     "Idols": 5,
-    "Survival": 2
+    "Survival": 3
    },
    "tribe1": "Toka"
   },
@@ -240,12 +243,12 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 6,
+   "points": 7,
    "id": "3e6db8f4-3f83-81cc-97a3-d6de6d6402ff",
    "breakdown": {
     "Immunity": 2,
     "Reward": 2,
-    "Survival": 2
+    "Survival": 3
    },
    "tribe1": "Toka"
   },
@@ -255,12 +258,12 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 6,
+   "points": 7,
    "id": "3e6db8f4-3f83-81d4-8148-ebb50fe694ed",
    "breakdown": {
     "Immunity": 2,
     "Reward": 1,
-    "Survival": 2,
+    "Survival": 3,
     "Journeys": 1
    },
    "tribe1": "Toka"
@@ -271,13 +274,13 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 7,
+   "points": 8,
    "id": "3e6db8f4-3f83-81b7-91a4-e05e42369343",
    "breakdown": {
     "Immunity": 2,
     "Reward": 2,
     "Shots": 1,
-    "Survival": 2
+    "Survival": 3
    },
    "tribe1": "Toka"
   },
@@ -286,7 +289,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Toka"
    ],
-   "status": "In Game",
+   "status": "Eliminated",
    "points": 6,
    "id": "3e6db8f4-3f83-818a-956e-f72d42fd34b5",
    "breakdown": {
@@ -302,12 +305,12 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
-   "points": 6,
+   "points": 7,
    "id": "3e6db8f4-3f83-8190-907e-fefb98f328b2",
    "breakdown": {
     "Immunity": 2,
     "Reward": 2,
-    "Survival": 2
+    "Survival": 3
    },
    "tribe1": "Toka"
   },
@@ -369,7 +372,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Savu"
    ],
-   "notes": "Livestock farmer from Iowa."
+   "notes": "Livestock farmer from Iowa. Ep 3: stayed on Toka after missing the boat back to Savu; received Rob's hidden immunity idol."
   },
   {
    "name": "Ori Jean-Charles",
@@ -435,7 +438,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Savu"
    ],
-   "notes": "Ep 1: found the first hidden immunity idol of the season at Savu, no Beware requirement, usable through the final five."
+   "notes": "Ep 1: found the first hidden immunity idol of the season at Savu, no Beware requirement, usable through the final five. Ep 3: quit on Day 6 over a foot cut that medical found no infection in, and left his hidden immunity idol to Carter."
   },
   {
    "name": "Devin Way",
@@ -446,7 +449,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Toka"
    ],
-   "notes": "Actor, credits include Grey's Anatomy and Queer as Folk. Ep 1: one of the two Toka votes for Jenna, with Jelly."
+   "notes": "Actor, credits include Grey's Anatomy and Queer as Folk. Ep 1: one of the two Toka votes for Jenna, with Jelly. Ep 3: found a secret extra vote at Savu and declined the chance to mutiny."
   },
   {
    "name": "Mike Pinsky",
@@ -479,7 +482,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Toka"
    ],
-   "notes": "Farmer from West Virginia."
+   "notes": "Farmer from West Virginia. Ep 3: found a secret extra vote at Toka."
   },
   {
    "name": "Angelica \u201cJelly\u201d Loblack",
@@ -534,7 +537,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Toka"
    ],
-   "notes": "Federal prosecutor."
+   "notes": "Federal prosecutor. Ep 3: voted out 6-5 on Day 7."
   },
   {
    "name": "Brady Booker",
@@ -560,6 +563,89 @@ window.SURVIVOR51 = {
   }
  ],
  "events": [
+  {
+   "num": "E03E",
+   "type": "Survives Episode",
+   "points": 1,
+   "players": [
+    "Eric Macksoud",
+    "Alexis Levine",
+    "Ori Jean-Charles",
+    "Kristin Flickinger",
+    "Sharonda Cox",
+    "Cristian Chavez",
+    "Linnea Capobianco",
+    "Devin Way",
+    "Mike Pinsky",
+    "An \u201cThien An\u201d Nguyen",
+    "Maggie Nestor",
+    "Angelica \u201cJelly\u201d Loblack",
+    "Danny \u201cKilby\u201d Kilby",
+    "Lewis Kelly",
+    "Jenna Doore",
+    "Brady Booker",
+    "Carter Krull"
+   ],
+   "episode": [
+    "3f3db8f4-3f83-8128-a466-f04d8b1acd8f"
+   ]
+  },
+  {
+   "num": "E03D",
+   "type": "Gains Advantage",
+   "points": 2,
+   "players": [
+    "Maggie Nestor"
+   ],
+   "episode": [
+    "3f3db8f4-3f83-8128-a466-f04d8b1acd8f"
+   ]
+  },
+  {
+   "num": "E03C",
+   "type": "Gains Advantage",
+   "points": 2,
+   "players": [
+    "Devin Way"
+   ],
+   "episode": [
+    "3f3db8f4-3f83-8128-a466-f04d8b1acd8f"
+   ]
+  },
+  {
+   "num": "E03B",
+   "type": "Tribal Immunity",
+   "points": 2,
+   "players": [
+    "Eric Macksoud",
+    "Alexis Levine",
+    "Ori Jean-Charles",
+    "Kristin Flickinger",
+    "Sharonda Cox",
+    "Cristian Chavez",
+    "Linnea Capobianco"
+   ],
+   "episode": [
+    "3f3db8f4-3f83-8128-a466-f04d8b1acd8f"
+   ]
+  },
+  {
+   "num": "E03A",
+   "type": "Tribal Reward",
+   "points": 1,
+   "players": [
+    "Eric Macksoud",
+    "Alexis Levine",
+    "Ori Jean-Charles",
+    "Kristin Flickinger",
+    "Sharonda Cox",
+    "Cristian Chavez",
+    "Linnea Capobianco"
+   ],
+   "episode": [
+    "3f3db8f4-3f83-8128-a466-f04d8b1acd8f"
+   ]
+  },
   {
    "num": "E02D",
    "type": "Survives Episode",
@@ -809,19 +895,36 @@ window.SURVIVOR51 = {
    ],
    "id": "3ecdb8f4-3f83-81b2-a904-ee4aa3865c79",
    "events": 4
+  },
+  {
+   "title": "Episode 3",
+   "num": 3,
+   "epTitle": "What I'm Smellin' Is Stinky",
+   "air": "2026-10-07",
+   "elim": "Voted Out",
+   "voteCount": "6-5",
+   "immunityType": "Tribal",
+   "recapStatus": "Drafted",
+   "recap": "Survivor 51 Episode 3, What I'm Smellin' Is Stinky, opened on Day 6 with Savu back from Tribal Council. Carter Krull called himself the worst player in the game for not seeing the Ana Sani vote coming, and Ori Jean-Charles said his Helicopter Alliance with Sharonda Cox was still intact. Rob Antonson had spent the night alone on the beach, still upset about Tribal Council and now complaining about a cut on his foot that he believed was infected. Eric Macksoud tried to comfort him. Jeff Probst and the show's doctor examined Rob and found nothing wrong beyond a small cut, though the doctor allowed that any cut carries some risk. Rob said he would not risk his health and chose to quit the game. Before he left on Day 6, he gave his hidden immunity idol to Carter.\n\nTree Mail announced that one player from each tribe would visit the other camp. Savu drew Carter, who did not want to go. Devin Way volunteered from Toka. On the boat, both learned that an advantage was hidden at their destination and that they could mutiny and stay with the new tribe if they chose.\n\nDevin reached Savu and told them about Toka's politics, then declined to mutiny. He and Sharonda renewed their Helicopter Alliance and together found a secret extra vote hidden at the water well. Devin shared word of the advantage with Ori, then spent the rest of his visit spreading doubts about Danny Kilby.Carter reached Toka and told them that Linnea Capobianco and Sharonda were the power at Savu. While Carter was away with Mike Pinsky, the rest of Toka searched his bag and found the note about the advantage hidden in one of their boat's oars. The tribe ran for the boat, Brady Booker chopped the oars apart, and he and Maggie Nestor found the advantage together. Brady took it first, then handed it to Maggie when she asked, on her word that she would vote with him. Brady then pitched Carter on staying and joining him. Carter went to collect the advantage before his ride back, but the oars were gone, and the boat left without him. He stayed on Toka by missing his ride.\n\nAt the combined Reward and Immunity Challenge, Savu had seven players to Toka's eleven. Maggie, Kilby, Mike and Jelly Loblack sat out for Toka. Toka built a lead on the human ladder but lost it when Jenna Doore and Thien An Nguyen stalled on the puzzle. Cristian Chavez and Kristin Flickinger finished fast for Savu, which won immunity and four egg-laying hens. Toka went to Tribal Council.\n\nBack at camp, Kilby was angry that Devin had kept him out of the puzzle, and the two argued. Kilby told Devin that Patt Cannaday, Jelly and Brady had said Devin called him a liar. The alliance of Devin, Brady, Jelly, Mike and Patt planned to blindside Kilby. Kilby and Maggie first aimed at Mike, but Thien An pushed for Patt instead and told Brady the vote might be moving to Patt. Lewis Kelly and Carter knew they were the swing votes.\n\nAt Tribal Council, five votes went to Kilby. The last two, from Carter and Lewis, went to Patt. Patt Cannaday was voted out 6 to 5 on Day 7. Devin and Jelly ended up on the wrong side of the Tribal Council vote for the second episode in a row.",
+   "points": 8,
+   "votedOff": [
+    "Patt Cannaday"
+   ],
+   "id": "3f3db8f4-3f83-8128-a466-f04d8b1acd8f",
+   "events": 5
   }
  ],
  "viewers": [
   {
-   "name": "Carolyn",
+   "name": "Andrew",
    "picks": [
-    "Mike Pinsky",
-    "Sharonda Cox",
-    "Danny \u201cKilby\u201d Kilby",
-    "Patt Cannaday",
-    "Angelica \u201cJelly\u201d Loblack"
+    "Ori Jean-Charles",
+    "Brady Booker",
+    "Eric Macksoud",
+    "Alexis Levine",
+    "Devin Way"
    ],
-   "total": 34
+   "total": 43
   },
   {
    "name": "Stacy",
@@ -832,18 +935,18 @@ window.SURVIVOR51 = {
     "An \u201cThien An\u201d Nguyen",
     "Cristian Chavez"
    ],
-   "total": 33
+   "total": 43
   },
   {
-   "name": "Andrew",
+   "name": "Carolyn",
    "picks": [
-    "Ori Jean-Charles",
-    "Brady Booker",
-    "Eric Macksoud",
-    "Alexis Levine",
-    "Devin Way"
+    "Mike Pinsky",
+    "Sharonda Cox",
+    "Danny \u201cKilby\u201d Kilby",
+    "Patt Cannaday",
+    "Angelica \u201cJelly\u201d Loblack"
    ],
-   "total": 27
+   "total": 41
   },
   {
    "name": "Anne-Marie",
@@ -854,7 +957,7 @@ window.SURVIVOR51 = {
     "Maggie Nestor",
     "Ana Sani"
    ],
-   "total": 26
+   "total": 35
   }
  ],
  "cats": [
@@ -869,8 +972,8 @@ window.SURVIVOR51 = {
   "Endgame"
  ],
  "tribeTotals": {
-  "Savu": 54,
-  "Toka": 68
+  "Savu": 83,
+  "Toka": 81
  },
  "scale": [
   {

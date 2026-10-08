@@ -53,9 +53,11 @@
     var lim = parseInt(el("race").dataset.limit || "0", 10) || rows.length;
     el("race").innerHTML = rows.slice(0, lim).map(function (p, i) {
       var t = p.tribe1 || "";
-      var st = p.status === "Eliminated"
-        ? '<span class="tag out">Voted out</span>'
-        : '<span class="tag">' + esc(p.status || "") + '</span>';
+      var st = p.elimType
+        ? '<span class="tag out">' + esc(p.elimType) + '</span>'
+        : (p.status === "Eliminated"
+            ? '<span class="tag out">Eliminated</span>'
+            : '<span class="tag">' + esc(p.status || "") + '</span>');
       var who = (PICKERS[p.name] || []).map(function (w) {
         return '<span class="who-pick">' + esc(w) + '</span>';
       }).join("");

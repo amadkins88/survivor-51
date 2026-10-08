@@ -13,6 +13,7 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "Eliminated",
+   "elimType": "Voted Out",
    "points": 4,
    "id": "3e6db8f4-3f83-81d3-a5c9-f329eadb2dd2",
    "breakdown": {
@@ -28,6 +29,7 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 9,
    "id": "3e6db8f4-3f83-8181-8450-f9e3f3879d4c",
    "breakdown": {
@@ -43,6 +45,7 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 9,
    "id": "3e6db8f4-3f83-8185-9c7b-d762c3a25893",
    "breakdown": {
@@ -59,6 +62,7 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 8,
    "id": "3e6db8f4-3f83-8114-89a8-f702b5a4237c",
    "breakdown": {
@@ -75,6 +79,7 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 9,
    "id": "3e6db8f4-3f83-81d6-8bfe-e529ff913a98",
    "breakdown": {
@@ -90,6 +95,7 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 9,
    "id": "3e6db8f4-3f83-81c2-99fd-fc8be739c106",
    "breakdown": {
@@ -105,6 +111,7 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 9,
    "id": "3e6db8f4-3f83-8104-a839-f0fd0a9f1891",
    "breakdown": {
@@ -120,6 +127,7 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 9,
    "id": "3e6db8f4-3f83-81f4-8dfe-de304eeff75c",
    "breakdown": {
@@ -135,6 +143,7 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 9,
    "id": "3e6db8f4-3f83-811b-ad98-e7bde804c142",
    "breakdown": {
@@ -150,6 +159,7 @@ window.SURVIVOR51 = {
     "Savu"
    ],
    "status": "Eliminated",
+   "elimType": "Quit",
    "points": 10,
    "id": "3e6db8f4-3f83-813c-8fd0-e26f6efe09f5",
    "breakdown": {
@@ -166,6 +176,7 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 9,
    "id": "3e6db8f4-3f83-81fd-bdef-ecda1c1a5a8d",
    "breakdown": {
@@ -182,6 +193,7 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 7,
    "id": "3e6db8f4-3f83-8106-a5ed-f2dde1aa9fb0",
    "breakdown": {
@@ -197,6 +209,7 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 7,
    "id": "3e6db8f4-3f83-81ff-b290-f7b530a85786",
    "breakdown": {
@@ -212,6 +225,7 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 9,
    "id": "3e6db8f4-3f83-8182-b79d-c9266f473738",
    "breakdown": {
@@ -228,6 +242,7 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 12,
    "id": "3e6db8f4-3f83-8190-b95d-fb493d42ab61",
    "breakdown": {
@@ -244,6 +259,7 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 7,
    "id": "3e6db8f4-3f83-81cc-97a3-d6de6d6402ff",
    "breakdown": {
@@ -259,6 +275,7 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 7,
    "id": "3e6db8f4-3f83-81d4-8148-ebb50fe694ed",
    "breakdown": {
@@ -275,6 +292,7 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 8,
    "id": "3e6db8f4-3f83-81b7-91a4-e05e42369343",
    "breakdown": {
@@ -291,6 +309,7 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "Eliminated",
+   "elimType": "Voted Out",
    "points": 6,
    "id": "3e6db8f4-3f83-818a-956e-f72d42fd34b5",
    "breakdown": {
@@ -306,6 +325,7 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "In Game",
+   "elimType": "",
    "points": 7,
    "id": "3e6db8f4-3f83-8190-907e-fefb98f328b2",
    "breakdown": {
@@ -321,6 +341,7 @@ window.SURVIVOR51 = {
     "Toka"
    ],
    "status": "Eliminated",
+   "elimType": "Voted Out",
    "points": 2,
    "id": "3e6db8f4-3f83-81fb-b8a2-f88c5fb2e105",
    "breakdown": {

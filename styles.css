@@ -9,6 +9,7 @@
   --ember:#E5623A;
   --toka:#E8B430;
   --savu:#8B5FBF;
+  --dina:#D2453A;
   --c-immunity:#2E8B8B;
   --c-reward:#C9A227;
   --c-idols:#E5623A;
@@ -110,6 +111,7 @@ h2{
   transition:width 900ms cubic-bezier(.16,1,.3,1)}
 .row.toka .bar i{background:var(--toka)}
 .row.savu .bar i{background:var(--savu)}
+.row.dina .bar i{background:var(--dina)}
 
 /* ---------- legend + stacks ---------- */
 .legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-bottom:22px}
@@ -172,6 +174,8 @@ h2{
   font-weight:700;padding:3px 8px;border-radius:3px;color:#0B1512}
 .chip.toka{background:var(--toka)}
 .chip.savu{background:var(--savu);color:var(--bone)}
+.chip.dina{background:var(--dina);color:var(--bone)}
+.chip em{font-style:normal;opacity:.72;font-weight:600;letter-spacing:.06em}
 .card.out{opacity:.62}
 
 /* ---------- pool ---------- */
@@ -242,7 +246,7 @@ footer{max-width:var(--max);margin:0 auto;padding:34px var(--pad) 60px;color:var
   --ink:#08131F; --ink-2:#0E2134; --ink-3:#15304A;
   --bone:#FFF8E7; --dim:#9DB4C6;
   --line:rgba(255,248,231,.14); --line-strong:rgba(255,248,231,.30);
-  --ember:#FF8C00; --gold:#FFD700; --toka:#E8B430; --savu:#8B5FBF;
+  --ember:#FF8C00; --gold:#FFD700; --toka:#E8B430; --savu:#8B5FBF; --dina:#D2453A;
   --c-immunity:#4A90E2; --c-reward:#FFD700; --c-idols:#FF8C00; --c-advantages:#3A8F5F;
   --c-shots:#C0574F; --c-survival:#8FB3F5; --c-journeys:#D98E4A; --c-twists:#A52A2A;
   --c-endgame:#FFF8E7;
@@ -291,7 +295,7 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
 /* home: sections stacked, items within each row side by side */
 @media (min-width:760px){
   .pool{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .tribes{grid-template-columns:1fr 1fr}
+  .tribes{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 
 /* tribe colors: proper buff hues */
@@ -304,7 +308,7 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
 /* mobile: keep the home rows horizontal */
 @media (max-width:759px){
   .pool{grid-template-columns:1fr 1fr;gap:10px}
-  .tribes{grid-template-columns:1fr 1fr;gap:10px}
+  .tribes{grid-template-columns:1fr;gap:10px}
   .viewer{padding:13px}
   .viewer h3{font-size:14px}
   .viewer .v-tot{font-size:26px}
@@ -346,10 +350,13 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
 /* tribe face-off: make each tribe read in its own buff color */
 .tribe.toka h3{color:var(--toka)}
 .tribe.savu h3{color:#A87BD8}
+.tribe.dina h3{color:#EF7A6E}
 .tribe.toka{border-color:rgba(232,180,48,.55);background:linear-gradient(rgba(232,180,48,.09),rgba(232,180,48,.09)),var(--ink-2)}
 .tribe.savu{border-color:rgba(139,95,191,.6);background:linear-gradient(rgba(139,95,191,.13),rgba(139,95,191,.13)),var(--ink-2)}
+.tribe.dina{border-color:rgba(210,69,58,.6);background:linear-gradient(rgba(210,69,58,.12),rgba(210,69,58,.12)),var(--ink-2)}
 .tribe.toka::before{background:var(--toka)}
 .tribe.savu::before{background:var(--savu)}
+.tribe.dina::before{background:var(--dina)}
 
 /* legend stays on one line on phones */
 @media (max-width:759px){

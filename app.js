@@ -5,7 +5,7 @@
     Shots: "#C0574F", Survival: "#8FB3F5", Journeys: "#D98E4A", Twists: "#A52A2A",
     Endgame: "#FFF8E7"
   };
-  var TRIBE_COLOR = { Toka: "#E8B430", Savu: "#8B5FBF" };
+  var TRIBE_COLOR = { Toka: "#E8B430", Savu: "#8B5FBF", Dina: "#D2453A" };
   var PICKERS = {};
   D.viewers.forEach(function (v) {
     (v.picks || []).forEach(function (n) { (PICKERS[n] = PICKERS[n] || []).push(v.name); });
@@ -14,6 +14,9 @@
   // jury members read as "jury" and get their own blue treatment
   var STATUS = {};
   D.contestants.forEach(function (p) { STATUS[p.name] = p.status || ""; });
+  // current tribe (the last one a player has been on) drives every tribe-coloured thing
+  var TRIBE_OF = {};
+  D.contestants.forEach(function (p) { TRIBE_OF[p.name] = p.tribeCur || p.tribe1 || ""; });
   var outClass = function (n) {
     var s = STATUS[n] || "";
     if (s === "Jury") return "jury";
@@ -52,7 +55,7 @@
   if (el("race")) {
     var lim = parseInt(el("race").dataset.limit || "0", 10) || rows.length;
     el("race").innerHTML = rows.slice(0, lim).map(function (p, i) {
-      var t = p.tribe1 || "";
+      var t = p.tribeCur || p.tribe1 || "";
       var st = p.elimType
         ? '<span class="tag out">' + esc(p.elimType) + '</span>'
         : (p.status === "Eliminated"
@@ -100,15 +103,24 @@
   };
 
   // ---- episodes
+  var labelFor = function (e, which) {
+    var names = e[which + "Winners"] || [];
+    if (!names.length) return "none";
+    if (e.immunityType === "Individual") return names.join(", ");
+    var tribes = e[which + "Tribes"] || [];
+    return tribes.length ? tribes.join(" + ") : names.join(", ");
+  };
   if (el("episode")) {
     el("episode").innerHTML = D.episodes.map(function (e) {
       var evs = D.events.filter(function (x) { return x.episode && x.episode.indexOf(e.id) > -1; })
         .sort(byEvNum);
+      var paid = evs.reduce(function (a, x) { return a + x.points * x.players.length; }, 0);
       var facts = [
         ["Voted out", (e.votedOff && e.votedOff[0]) || "none", e.elim || ""],
         ["Vote", e.voteCount || "n/a", ""],
-        ["Immunity", e.immunityType || "n/a", "won by Savu"],
-        ["Points paid", String(e.points), evs.length + " events"]
+        ["Immunity", labelFor(e, "immunity"), e.immunityType || "n/a"],
+        ["Reward", labelFor(e, "reward"), ""],
+        ["Points paid", String(paid), evs.length + (evs.length === 1 ? " event" : " events")]
       ].map(function (f) {
         return "<div><dt>" + esc(f[0]) + "</dt><dd>" + esc(f[1]) +
           (f[2] ? "<small>" + esc(f[2]) + "</small>" : "") + "</dd></div>";
@@ -130,10 +142,11 @@
     }).join("");
   }
 
-  // ---- tribes
+  // ---- tribes (three of them after the swap)
   if (el("tribes")) {
-    el("tribes").innerHTML = ["Toka", "Savu"].map(function (t) {
-      var mem = D.contestants.filter(function (p) { return p.tribe1 === t; })
+    var order = D.tribeOrder && D.tribeOrder.length ? D.tribeOrder : ["Toka", "Savu", "Dina"];
+    el("tribes").innerHTML = order.map(function (t) {
+      var mem = D.contestants.filter(function (p) { return (p.tribeCur || p.tribe1) === t; })
         .sort(function (a, b) { return b.points - a.points; });
       return '<div class="tribe ' + t.toLowerCase() + '"><h3>' + t + '</h3>' +
         '<p class="tot">' + (D.tribeTotals[t] || 0) + '</p><p class="lede">' + mem.length + ' players</p>' +
@@ -146,18 +159,23 @@
 
   // ---- cast
   if (el("cast")) {
+    var curOf = function (name) {
+      var p = D.contestants.filter(function (x) { return x.name === name; })[0];
+      return p ? (p.tribeCur || p.tribe1 || "") : "";
+    };
     var cast = D.cast.slice().sort(function (a, b) {
-      var t = (a.tribe[0] || "").localeCompare(b.tribe[0] || "");
+      var t = curOf(a.name).localeCompare(curOf(b.name));
       return t !== 0 ? t : a.name.localeCompare(b.name);
     });
     el("cast").innerHTML = cast.map(function (c) {
       var p = D.contestants.filter(function (x) { return x.name === c.name; })[0];
       var oc = outClass(c.name);
-      var t = c.tribe[0] || "";
+      var t = curOf(c.name);
+      var from = (p && p.tribe && p.tribe[0] !== t) ? p.tribe[0] : "";
       var owners = PICKERS[c.name] || [];
       return '<article class="card' + (oc ? " " + oc : "") + '">' +
         '<div class="who"><h3>' + esc(c.name) + '</h3><span class="age">' + esc(c.age) + '</span></div>' +
-        '<span class="chip ' + t.toLowerCase() + '">' + esc(t) + '</span>' +
+        '<span class="chip ' + t.toLowerCase() + '">' + esc(t) + (from ? ' <em>from ' + esc(from) + '</em>' : '') + '</span>' +
         '<p class="owner">' + (owners.length
           ? 'Picked by ' + owners.map(function (o) { return '<span class="who-pick">' + esc(o) + '</span>'; }).join(" ")
           : '<span class="pend">Not picked</span>') + '</p>' +

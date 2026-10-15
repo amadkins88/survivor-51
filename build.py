@@ -46,7 +46,7 @@ def page(name, title, page_id, body, home=False):
   </div>
   <div class="mast-right">
     <p class="era">The Open Era</p>
-    <p class="era-note">Two tribes. Everything from fifty seasons back in play, no warning, any order.</p>
+    <p class="era-note">Three tribes after the swap. Everything from fifty seasons back in play, no warning, any order.</p>
     <dl class="meta" id="meta"></dl>
   </div>
 </header>
@@ -76,7 +76,7 @@ def block(head, lede, inner, bid=None):
 HOME = "\n".join([
     block("Leader Board", "The pool. Four of us drafted players, and each roster's points are the sum of its players.",
           '<div class="pool" id="pool"></div><p class="callout" id="poolnote"></p>'),
-    block("Tribe Face-Off", "Points per starting tribe, counting every player's season total so far.",
+    block("Tribe Face-Off", "Points per tribe, counting every player's season total so far. Three tribes since the Episode 4 swap.",
           '<div class="tribes" id="tribes"></div>'),
 ])
 

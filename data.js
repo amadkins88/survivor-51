@@ -1321,10 +1321,18 @@ window.SURVIVOR51 = {
   "Savu",
   "Dina"
  ],
+ "startOrder": [
+  "Toka",
+  "Savu"
+ ],
  "tribeTotals": {
   "Savu": 65,
   "Dina": 74,
   "Toka": 79
+ },
+ "startTotals": {
+  "Savu": 111,
+  "Toka": 107
  },
  "scale": [
   {

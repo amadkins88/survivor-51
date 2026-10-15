@@ -142,20 +142,30 @@
     }).join("");
   }
 
-  // ---- tribes (three of them after the swap)
-  if (el("tribes")) {
-    var order = D.tribeOrder && D.tribeOrder.length ? D.tribeOrder : ["Toka", "Savu", "Dina"];
-    el("tribes").innerHTML = order.map(function (t) {
-      var mem = D.contestants.filter(function (p) { return (p.tribeCur || p.tribe1) === t; })
-        .sort(function (a, b) { return b.points - a.points; });
-      return '<div class="tribe ' + t.toLowerCase() + '"><h3>' + t + '</h3>' +
-        '<p class="tot">' + (D.tribeTotals[t] || 0) + '</p><p class="lede">' + mem.length + ' players</p>' +
+  // ---- tribes: current lineup (three) and starting lineup (two). Active players only.
+  var isActive = function (name) {
+    var s = STATUS[name] || "";
+    return s === "In Game" || s === "Winner";
+  };
+  var tribeCards = function (elId, key, order) {
+    var node = el(elId);
+    if (!node) return;
+    var list = (order && order.length) ? order : ["Toka", "Savu", "Dina"];
+    node.innerHTML = list.map(function (t) {
+      var mem = D.contestants.filter(function (p) {
+        return (p[key] || "") === t && isActive(p.name);
+      }).sort(function (a, b) { return b.points - a.points || a.name.localeCompare(b.name); });
+      var tot = mem.reduce(function (a, p) { return a + p.points; }, 0);
+      return '<div class="tribe ' + t.toLowerCase() + '"><h3>' + esc(t) + '</h3>' +
+        '<p class="tot">' + tot + '</p>' +
+        '<p class="lede">' + mem.length + (mem.length === 1 ? " player" : " players") + '</p>' +
         '<ul>' + mem.map(function (m) {
-          var oc = outClass(m.name);
-          return '<li' + (oc ? ' class="' + oc + '"' : "") + '>' + esc(m.name) + ' <b>' + m.points + '</b></li>';
+          return '<li>' + esc(m.name) + ' <b>' + m.points + '</b></li>';
         }).join("") + '</ul></div>';
     }).join("");
-  }
+  };
+  tribeCards("tribesNow", "tribeCur", D.tribeOrder);
+  tribeCards("tribesStart", "tribe1", D.startOrder);
 
   // ---- cast
   if (el("cast")) {

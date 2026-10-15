@@ -295,7 +295,8 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
 /* home: sections stacked, items within each row side by side */
 @media (min-width:760px){
   .pool{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .tribes{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .tribes.now{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .tribes.start{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
 /* tribe colors: proper buff hues */

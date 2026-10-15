@@ -147,7 +147,7 @@
     var s = STATUS[name] || "";
     return s === "In Game" || s === "Winner";
   };
-  var tribeCards = function (elId, key, order) {
+  var tribeCards = function (elId, key, order, totals) {
     var node = el(elId);
     if (!node) return;
     var list = (order && order.length) ? order : ["Toka", "Savu", "Dina"];
@@ -155,17 +155,21 @@
       var mem = D.contestants.filter(function (p) {
         return (p[key] || "") === t && isActive(p.name);
       }).sort(function (a, b) { return b.points - a.points || a.name.localeCompare(b.name); });
-      var tot = mem.reduce(function (a, p) { return a + p.points; }, 0);
+      // the number is every point the tribe has banked (eliminated players included);
+      // the list underneath is only the players still in the game
+      var tot = (totals && typeof totals[t] === "number")
+        ? totals[t]
+        : mem.reduce(function (a, p) { return a + p.points; }, 0);
       return '<div class="tribe ' + t.toLowerCase() + '"><h3>' + esc(t) + '</h3>' +
         '<p class="tot">' + tot + '</p>' +
-        '<p class="lede">' + mem.length + (mem.length === 1 ? " player" : " players") + '</p>' +
+        '<p class="lede">' + mem.length + ' in the game</p>' +
         '<ul>' + mem.map(function (m) {
           return '<li>' + esc(m.name) + ' <b>' + m.points + '</b></li>';
         }).join("") + '</ul></div>';
     }).join("");
   };
-  tribeCards("tribesNow", "tribeCur", D.tribeOrder);
-  tribeCards("tribesStart", "tribe1", D.startOrder);
+  tribeCards("tribesNow", "tribeCur", D.tribeOrder, D.tribeTotals);
+  tribeCards("tribesStart", "tribe1", D.startOrder, D.startTotals);
 
   // ---- cast
   if (el("cast")) {

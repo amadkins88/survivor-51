@@ -76,9 +76,9 @@ def block(head, lede, inner, bid=None):
 HOME = "\n".join([
     block("Leader Board", "The pool. Four of us drafted players, and each roster's points are the sum of its players.",
           '<div class="pool" id="pool"></div><p class="callout" id="poolnote"></p>'),
-    block("The Three Tribes", "The lineup after the Episode 4 swap. Only players still in the game count here.",
+    block("The Three Tribes", "The lineup after the Episode 4 swap. The number is every point the tribe has banked so far, eliminated players included; the members listed are the players still in the game.",
           '<div class="tribes now" id="tribesNow"></div>'),
-    block("Tribe Face-Off", "The two starting tribes, running all season. Only players still in the game count here.",
+    block("Tribe Face-Off", "The two starting tribes, all season. The number is every point the tribe has banked so far, eliminated players included; the members listed are the players still in the game.",
           '<div class="tribes start" id="tribesStart"></div>'),
 ])
 

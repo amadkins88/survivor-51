@@ -116,7 +116,7 @@
         .sort(byEvNum);
       var paid = evs.reduce(function (a, x) { return a + x.points * x.players.length; }, 0);
       var facts = [
-        ["Voted out", (e.votedOff && e.votedOff[0]) || "none", e.elim || ""],
+        ["Voted out", (e.votedOff && e.votedOff.length ? e.votedOff.join(" & ") : "none"), e.elim || ""],
         ["Vote", e.voteCount || "n/a", ""],
         ["Immunity", labelFor(e, "immunity"), e.immunityType || "n/a"],
         ["Reward", labelFor(e, "reward"), ""],

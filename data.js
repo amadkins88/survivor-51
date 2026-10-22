@@ -32,12 +32,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 13,
+   "points": 14,
    "id": "3e6db8f4-3f83-8181-8450-f9e3f3879d4c",
    "breakdown": {
     "Immunity": 6,
     "Reward": 3,
-    "Survival": 4
+    "Survival": 5
    },
    "tribe1": "Savu",
    "tribeCur": "Dina"
@@ -47,8 +47,8 @@ window.SURVIVOR51 = {
    "tribe": [
     "Savu"
    ],
-   "status": "In Game",
-   "elimType": "",
+   "status": "Eliminated",
+   "elimType": "Voted Out",
    "points": 10,
    "id": "3e6db8f4-3f83-8185-9c7b-d762c3a25893",
    "breakdown": {
@@ -67,13 +67,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 12,
+   "points": 16,
    "id": "3e6db8f4-3f83-8114-89a8-f702b5a4237c",
    "breakdown": {
-    "Immunity": 4,
-    "Reward": 2,
+    "Immunity": 6,
+    "Reward": 3,
     "Advantages": 2,
-    "Survival": 4
+    "Survival": 5
    },
    "tribe1": "Savu",
    "tribeCur": "Toka"
@@ -85,12 +85,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 10,
+   "points": 11,
    "id": "3e6db8f4-3f83-81d6-8bfe-e529ff913a98",
    "breakdown": {
     "Immunity": 4,
     "Reward": 2,
-    "Survival": 4
+    "Survival": 5
    },
    "tribe1": "Savu",
    "tribeCur": "Savu"
@@ -103,12 +103,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 13,
+   "points": 17,
    "id": "3e6db8f4-3f83-81c2-99fd-fc8be739c106",
    "breakdown": {
-    "Immunity": 6,
-    "Reward": 3,
-    "Survival": 4
+    "Immunity": 8,
+    "Reward": 4,
+    "Survival": 5
    },
    "tribe1": "Savu",
    "tribeCur": "Toka"
@@ -121,12 +121,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 13,
+   "points": 14,
    "id": "3e6db8f4-3f83-8104-a839-f0fd0a9f1891",
    "breakdown": {
     "Immunity": 6,
     "Reward": 3,
-    "Survival": 4
+    "Survival": 5
    },
    "tribe1": "Savu",
    "tribeCur": "Dina"
@@ -139,12 +139,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 13,
+   "points": 14,
    "id": "3e6db8f4-3f83-81f4-8dfe-de304eeff75c",
    "breakdown": {
     "Immunity": 6,
     "Reward": 3,
-    "Survival": 4
+    "Survival": 5
    },
    "tribe1": "Savu",
    "tribeCur": "Dina"
@@ -155,8 +155,8 @@ window.SURVIVOR51 = {
     "Savu",
     "Dina"
    ],
-   "status": "In Game",
-   "elimType": "",
+   "status": "Eliminated",
+   "elimType": "Voted Out",
    "points": 13,
    "id": "3e6db8f4-3f83-811b-ad98-e7bde804c142",
    "breakdown": {
@@ -193,13 +193,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 10,
+   "points": 11,
    "id": "3e6db8f4-3f83-81fd-bdef-ecda1c1a5a8d",
    "breakdown": {
     "Immunity": 2,
     "Reward": 2,
     "Advantages": 2,
-    "Survival": 4
+    "Survival": 5
    },
    "tribe1": "Toka",
    "tribeCur": "Savu"
@@ -211,12 +211,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 11,
+   "points": 15,
    "id": "3e6db8f4-3f83-8106-a5ed-f2dde1aa9fb0",
    "breakdown": {
-    "Immunity": 4,
-    "Reward": 3,
-    "Survival": 4
+    "Immunity": 6,
+    "Reward": 4,
+    "Survival": 5
    },
    "tribe1": "Toka",
    "tribeCur": "Toka"
@@ -228,12 +228,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 11,
+   "points": 15,
    "id": "3e6db8f4-3f83-81ff-b290-f7b530a85786",
    "breakdown": {
-    "Immunity": 4,
-    "Reward": 3,
-    "Survival": 4
+    "Immunity": 6,
+    "Reward": 4,
+    "Survival": 5
    },
    "tribe1": "Toka",
    "tribeCur": "Toka"
@@ -245,13 +245,14 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 13,
+   "points": 20,
    "id": "3e6db8f4-3f83-8182-b79d-c9266f473738",
    "breakdown": {
-    "Immunity": 4,
-    "Reward": 3,
-    "Advantages": 2,
-    "Survival": 4
+    "Immunity": 6,
+    "Reward": 4,
+    "Advantages": 4,
+    "Survival": 5,
+    "Journeys": 1
    },
    "tribe1": "Toka",
    "tribeCur": "Toka"
@@ -264,13 +265,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 13,
+   "points": 14,
    "id": "3e6db8f4-3f83-8190-b95d-fb493d42ab61",
    "breakdown": {
     "Immunity": 2,
     "Reward": 2,
     "Idols": 5,
-    "Survival": 4
+    "Survival": 5
    },
    "tribe1": "Toka",
    "tribeCur": "Savu"
@@ -283,12 +284,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 11,
+   "points": 17,
    "id": "3e6db8f4-3f83-81cc-97a3-d6de6d6402ff",
    "breakdown": {
     "Immunity": 4,
     "Reward": 3,
-    "Survival": 4
+    "Advantages": 5,
+    "Survival": 5
    },
    "tribe1": "Toka",
    "tribeCur": "Dina"
@@ -301,12 +303,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 11,
+   "points": 17,
    "id": "3e6db8f4-3f83-81d4-8148-ebb50fe694ed",
    "breakdown": {
     "Immunity": 4,
     "Reward": 2,
-    "Survival": 4,
+    "Advantages": 5,
+    "Survival": 5,
     "Journeys": 1
    },
    "tribe1": "Toka",
@@ -355,12 +358,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 11,
+   "points": 15,
    "id": "3e6db8f4-3f83-8190-907e-fefb98f328b2",
    "breakdown": {
-    "Immunity": 4,
-    "Reward": 3,
-    "Survival": 4
+    "Immunity": 6,
+    "Reward": 4,
+    "Survival": 5
    },
    "tribe1": "Toka",
    "tribeCur": "Toka"
@@ -404,7 +407,7 @@ window.SURVIVOR51 = {
     "Savu",
     "Dina"
    ],
-   "notes": "Mental health counselor. Ep 4: swapped to Dina and bonded with Kilby."
+   "notes": "Mental health counselor. Ep 4: swapped to Dina and bonded with Kilby. Ep 5: voted Lewis, then agreed to send Linnea home."
   },
   {
    "name": "Alexis Levine",
@@ -415,7 +418,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Savu"
    ],
-   "notes": "Criminal defense attorney in Atlanta. Ep 4: swapped to Savu and survived a 4-1 vote."
+   "notes": "Criminal defense attorney in Atlanta. Ep 4: swapped to Savu and survived a 4-1 vote. Ep 5: voted out 3-1 at Savu on Day 10."
   },
   {
    "name": "Carter Krull",
@@ -426,7 +429,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Savu"
    ],
-   "notes": "Livestock farmer from Iowa. Ep 3: stayed on Toka after missing the boat back to Savu; received Rob's hidden immunity idol. Ep 4: kept on Toka, now with four original Toka plus Kristin."
+   "notes": "Livestock farmer from Iowa. Ep 3: stayed on Toka after missing the boat back to Savu; received Rob's hidden immunity idol. Ep 4: kept on Toka, now with four original Toka plus Kristin. Ep 5: safe with Toka."
   },
   {
    "name": "Ori Jean-Charles",
@@ -437,7 +440,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Savu"
    ],
-   "notes": "Personal trainer from Spring Valley, New York. Ep 4: stayed on Savu after the three-tribe swap."
+   "notes": "Personal trainer from Spring Valley, New York. Ep 4: stayed on Savu after the three-tribe swap. Ep 5: chose the Helicopter Alliance over Alexis."
   },
   {
    "name": "Kristin Flickinger",
@@ -449,7 +452,7 @@ window.SURVIVOR51 = {
     "Savu",
     "Toka"
    ],
-   "notes": "Ep 1: won the opening supply negotiation thumb war against Kilby and took the pot, flint, and machete bundle plus fishing gear for Savu. Ep 4: swapped to Toka as the only original Savu player there."
+   "notes": "Ep 1: won the opening supply negotiation thumb war against Kilby and took the pot, flint, and machete bundle plus fishing gear for Savu. Ep 4: swapped to Toka as the only original Savu player there. Ep 5: volunteered for the reward trip but Maggie was drawn."
   },
   {
    "name": "Sharonda Cox",
@@ -461,7 +464,7 @@ window.SURVIVOR51 = {
     "Savu",
     "Dina"
    ],
-   "notes": "OBGYN resident. Ep 4: swapped to Dina."
+   "notes": "OBGYN resident. Ep 4: swapped to Dina. Ep 5: saw through the Blood Ring bluff and agreed to send Linnea home."
   },
   {
    "name": "Cristian Chavez",
@@ -473,7 +476,7 @@ window.SURVIVOR51 = {
     "Savu",
     "Dina"
    ],
-   "notes": "Head of HR in Salt Lake City. Ep 4: swapped to Dina."
+   "notes": "Head of HR in Salt Lake City. Ep 4: swapped to Dina. Ep 5: recognized Lewis's ring and called the Blood Ring bluff."
   },
   {
    "name": "Linnea Capobianco",
@@ -485,7 +488,7 @@ window.SURVIVOR51 = {
     "Savu",
     "Dina"
    ],
-   "notes": "Entrepreneur from Jersey City. Ep 4: swapped to Dina."
+   "notes": "Entrepreneur from Jersey City. Ep 4: swapped to Dina. Ep 5: voted out by consensus after two 4-4 ties on Day 10."
   },
   {
    "name": "Rob Antonson",
@@ -508,7 +511,7 @@ window.SURVIVOR51 = {
     "Toka",
     "Savu"
    ],
-   "notes": "Actor, credits include Grey's Anatomy and Queer as Folk. Ep 1: one of the two Toka votes for Jenna, with Jelly. Ep 3: found a secret extra vote at Savu and declined the chance to mutiny. Ep 4: swapped to Savu and held the Helicopter Alliance together."
+   "notes": "Actor, credits include Grey's Anatomy and Queer as Folk. Ep 1: one of the two Toka votes for Jenna, with Jelly. Ep 3: found a secret extra vote at Savu and declined the chance to mutiny. Ep 4: swapped to Savu and held the Helicopter Alliance together. Ep 5: held the Helicopter Alliance and voted Alexis out."
   },
   {
    "name": "Mike Pinsky",
@@ -519,7 +522,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Toka"
    ],
-   "notes": "Baseball executive with the New York Yankees. Ep 4: kept on Toka after the three-tribe swap."
+   "notes": "Baseball executive with the New York Yankees. Ep 4: kept on Toka after the three-tribe swap. Ep 5: threw the winning challenge for Toka."
   },
   {
    "name": "An \u201cThien An\u201d Nguyen",
@@ -530,7 +533,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Toka"
    ],
-   "notes": "Medical student. Goes by Thien An. Ep 4: kept on Toka after the three-tribe swap."
+   "notes": "Medical student. Goes by Thien An. Ep 4: kept on Toka after the three-tribe swap. Ep 5: safe with Toka."
   },
   {
    "name": "Maggie Nestor",
@@ -541,7 +544,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Toka"
    ],
-   "notes": "Farmer from West Virginia. Ep 3: found a secret extra vote at Toka. Ep 4: kept on Toka after the three-tribe swap."
+   "notes": "Farmer from West Virginia. Ep 3: found a secret extra vote at Toka. Ep 4: kept on Toka after the three-tribe swap. Ep 5: won the Alliance Builder Extra Vote, visited Dina, and gave two extra votes to Kilby and Lewis."
   },
   {
    "name": "Angelica \u201cJelly\u201d Loblack",
@@ -553,7 +556,7 @@ window.SURVIVOR51 = {
     "Toka",
     "Savu"
    ],
-   "notes": "Ep 1: one of the two Toka votes for Jenna, with Devin. Ep 4: swapped to Savu and voted Jenna out."
+   "notes": "Ep 1: one of the two Toka votes for Jenna, with Devin. Ep 4: swapped to Savu and voted Jenna out. Ep 5: stayed with Devin and Ori and voted Alexis out."
   },
   {
    "name": "Danny \u201cKilby\u201d Kilby",
@@ -565,7 +568,7 @@ window.SURVIVOR51 = {
     "Toka",
     "Dina"
    ],
-   "notes": "Ep 1: lost the opening supply negotiation thumb war to Kristin and took the building and shelter supplies back to Toka. Ep 4: swapped to Dina and pitched himself to the Savu majority."
+   "notes": "Ep 1: lost the opening supply negotiation thumb war to Kristin and took the building and shelter supplies back to Toka. Ep 4: swapped to Dina and pitched himself to the Savu majority. Ep 5: used an extra vote on Linnea, forced a 4-4 tie and revote, then refused to budge on Lewis in the deadlock."
   },
   {
    "name": "Lewis Kelly",
@@ -577,7 +580,7 @@ window.SURVIVOR51 = {
     "Toka",
     "Dina"
    ],
-   "notes": "Ep 1: volunteered for the season's solitary journey, spent about 30 hours on exile, failed the timed idol task, and joined Toka after its first vote. Ep 4: swapped to Dina."
+   "notes": "Ep 1: volunteered for the season's solitary journey, spent about 30 hours on exile, failed the timed idol task, and joined Toka after its first vote. Ep 4: swapped to Dina. Ep 5: used an extra vote on Linnea and pitched a fake Blood Ring to Sharonda."
   },
   {
    "name": "Jenna Doore",
@@ -611,7 +614,7 @@ window.SURVIVOR51 = {
    "tribe": [
     "Toka"
    ],
-   "notes": "Former WWE NXT wrestler. Ep 4: kept on Toka after the three-tribe swap."
+   "notes": "Former WWE NXT wrestler. Ep 4: kept on Toka after the three-tribe swap. Ep 5: safe with Toka."
   },
   {
    "name": "Aaliyah Puglia",
@@ -626,6 +629,128 @@ window.SURVIVOR51 = {
   }
  ],
  "events": [
+  {
+   "num": "E05I",
+   "type": "Successful Advantage",
+   "points": 3,
+   "players": [
+    "Lewis Kelly"
+   ],
+   "episode": [
+    "401db8f4-3f83-814c-bcfd-f6005714dabe"
+   ]
+  },
+  {
+   "num": "E05H",
+   "type": "Successful Advantage",
+   "points": 3,
+   "players": [
+    "Danny \u201cKilby\u201d Kilby"
+   ],
+   "episode": [
+    "401db8f4-3f83-814c-bcfd-f6005714dabe"
+   ]
+  },
+  {
+   "num": "E05G",
+   "type": "Gains Advantage",
+   "points": 2,
+   "players": [
+    "Lewis Kelly"
+   ],
+   "episode": [
+    "401db8f4-3f83-814c-bcfd-f6005714dabe"
+   ]
+  },
+  {
+   "num": "E05F",
+   "type": "Gains Advantage",
+   "points": 2,
+   "players": [
+    "Danny \u201cKilby\u201d Kilby"
+   ],
+   "episode": [
+    "401db8f4-3f83-814c-bcfd-f6005714dabe"
+   ]
+  },
+  {
+   "num": "E05E",
+   "type": "Took Journey",
+   "points": 1,
+   "players": [
+    "Maggie Nestor"
+   ],
+   "episode": [
+    "401db8f4-3f83-814c-bcfd-f6005714dabe"
+   ]
+  },
+  {
+   "num": "E05D",
+   "type": "Gains Advantage",
+   "points": 2,
+   "players": [
+    "Maggie Nestor"
+   ],
+   "episode": [
+    "401db8f4-3f83-814c-bcfd-f6005714dabe"
+   ]
+  },
+  {
+   "num": "E05C",
+   "type": "Survives Episode",
+   "points": 1,
+   "players": [
+    "Brady Booker",
+    "Carter Krull",
+    "Kristin Flickinger",
+    "Maggie Nestor",
+    "An \u201cThien An\u201d Nguyen",
+    "Mike Pinsky",
+    "Ori Jean-Charles",
+    "Angelica \u201cJelly\u201d Loblack",
+    "Devin Way",
+    "Cristian Chavez",
+    "Sharonda Cox",
+    "Lewis Kelly",
+    "Danny \u201cKilby\u201d Kilby",
+    "Eric Macksoud"
+   ],
+   "episode": [
+    "401db8f4-3f83-814c-bcfd-f6005714dabe"
+   ]
+  },
+  {
+   "num": "E05B",
+   "type": "Tribal Immunity",
+   "points": 2,
+   "players": [
+    "Brady Booker",
+    "Carter Krull",
+    "Kristin Flickinger",
+    "Maggie Nestor",
+    "An \u201cThien An\u201d Nguyen",
+    "Mike Pinsky"
+   ],
+   "episode": [
+    "401db8f4-3f83-814c-bcfd-f6005714dabe"
+   ]
+  },
+  {
+   "num": "E05A",
+   "type": "Tribal Reward",
+   "points": 1,
+   "players": [
+    "Brady Booker",
+    "Carter Krull",
+    "Kristin Flickinger",
+    "Maggie Nestor",
+    "An \u201cThien An\u201d Nguyen",
+    "Mike Pinsky"
+   ],
+   "episode": [
+    "401db8f4-3f83-814c-bcfd-f6005714dabe"
+   ]
+  },
   {
    "num": "E04E",
    "type": "Survives Episode",
@@ -1257,30 +1382,71 @@ window.SURVIVOR51 = {
    ],
    "id": "3fadb8f4-3f83-8128-9204-d8958871e95a",
    "events": 5
+  },
+  {
+   "title": "Episode 5",
+   "num": 5,
+   "epTitle": "Not Here to Get a Pedicure",
+   "air": "2026-10-21",
+   "elim": "Voted Out",
+   "voteCount": "3-1 / 4-4, 4-4, consensus",
+   "immunityType": "Tribal",
+   "recapStatus": "Drafted",
+   "recap": "Episode 5, Not Here to Get a Pedicure, covered Days 9 and 10. Two tribes went to Tribal Council and two players left the game.\n\nSavu opened the episode with the four remaining players sharing the reasons they came out to play. Ori Jean-Charles talked about helping his single mother, Alexis Levine talked about her history with substance abuse, and Devin Way talked about the two brothers he lost.\n\nThe Reward and Immunity Challenge was do or die, with only the first tribe safe. Three players from each tribe dove for buoys and carried them over a balance beam, and a fourth threw them into three baskets. Mike Pinsky threw for Toka, Sharonda Cox for Dina, and Ori for Savu. Dina and Savu fell behind while gathering buoys, so Mike was the only thrower who got to work. Toka won the basket of pastries and the only safety in the game. Savu and Dina both went to Tribal Council.\n\nBack at camp, Toka found a note saying one of them was needed somewhere else. That player had to give up the reward and pick a tribe to visit. Mike, Maggie Nestor, and Kristin Flickinger volunteered, and Maggie was drawn. Her second note held the Alliance Builder Extra Vote, which had to be given to a player at the Tribal Council she attended. Maggie picked Dina, where her old Toka allies Danny Kilby and Lewis Kelly were outnumbered four to two. She gave them two extra votes, the new one plus one of her own.\n\nAt Savu, Devin pushed Alexis to join him and Jelly Loblack against Ori. Alexis went the other way and committed to Ori, then worked on Jelly to vote out Devin. Jelly weighed betraying the Helicopter Alliance against sending a fifth woman out of the game. Ori chose the alliance. Devin, Jelly, and Ori voted Alexis out 3 to 1, and Alexis voted Devin. She left in 16th place.At Dina, Lewis tried a bluff before Maggie arrived. He told Sharonda that his Irish wedding ring was a blood ring that tied their games together and would turn into an idol for her later. Sharonda asked to see the paperwork, and Cristian Chavez recognized the ring from an earlier conversation with Lewis. The advantage was invented.\n\nMaggie's extra votes let Kilby and Lewis each write Linnea Capobianco's name twice. Kilby worried about a rock draw, and Lewis was ready. The first vote tied 4 to 4 between Lewis and Linnea, with Cristian, Eric Macksoud, Linnea, and Sharonda voting Lewis, and the two double ballots voting Linnea. The revote tied 4 to 4 again. With a deadlock, Eric, Kilby, Sharonda, and Cristian had to agree on one name or face rocks. Kilby refused to send Lewis home. The other three gave in, and Linnea left by unanimous decision, 15th out of the game. Nobody drew a rock.\n\nFourteen players remain.",
+   "points": 17,
+   "votedOff": [
+    "Alexis Levine",
+    "Linnea Capobianco"
+   ],
+   "immunityWinners": [
+    "Brady Booker",
+    "Carter Krull",
+    "Kristin Flickinger",
+    "Maggie Nestor",
+    "An \u201cThien An\u201d Nguyen",
+    "Mike Pinsky"
+   ],
+   "rewardWinners": [
+    "Brady Booker",
+    "Carter Krull",
+    "Kristin Flickinger",
+    "Maggie Nestor",
+    "An \u201cThien An\u201d Nguyen",
+    "Mike Pinsky"
+   ],
+   "immunityTribes": [
+    "Toka"
+   ],
+   "rewardTribes": [
+    "Toka"
+   ],
+   "tribalCouncil": [
+    "Ori Jean-Charles",
+    "Angelica \u201cJelly\u201d Loblack",
+    "Devin Way",
+    "Alexis Levine",
+    "Linnea Capobianco",
+    "Cristian Chavez",
+    "Sharonda Cox",
+    "Lewis Kelly",
+    "Danny \u201cKilby\u201d Kilby",
+    "Eric Macksoud"
+   ],
+   "id": "401db8f4-3f83-814c-bcfd-f6005714dabe",
+   "events": 9
   }
  ],
  "viewers": [
   {
-   "name": "Stacy",
+   "name": "Anne-Marie",
    "picks": [
-    "Rob Antonson",
-    "Linnea Capobianco",
-    "Jenna Doore",
-    "An \u201cThien An\u201d Nguyen",
-    "Cristian Chavez"
+    "Kristin Flickinger",
+    "Carter Krull",
+    "Lewis Kelly",
+    "Maggie Nestor",
+    "Ana Sani"
    ],
-   "total": 55
-  },
-  {
-   "name": "Andrew",
-   "picks": [
-    "Ori Jean-Charles",
-    "Brady Booker",
-    "Eric Macksoud",
-    "Alexis Levine",
-    "Devin Way"
-   ],
-   "total": 54
+   "total": 74
   },
   {
    "name": "Carolyn",
@@ -1291,18 +1457,29 @@ window.SURVIVOR51 = {
     "Patt Cannaday",
     "Angelica \u201cJelly\u201d Loblack"
    ],
-   "total": 54
+   "total": 66
   },
   {
-   "name": "Anne-Marie",
+   "name": "Andrew",
    "picks": [
-    "Kristin Flickinger",
-    "Carter Krull",
-    "Lewis Kelly",
-    "Maggie Nestor",
-    "Ana Sani"
+    "Ori Jean-Charles",
+    "Brady Booker",
+    "Eric Macksoud",
+    "Alexis Levine",
+    "Devin Way"
    ],
-   "total": 53
+   "total": 61
+  },
+  {
+   "name": "Stacy",
+   "picks": [
+    "Rob Antonson",
+    "Linnea Capobianco",
+    "Jenna Doore",
+    "An \u201cThien An\u201d Nguyen",
+    "Cristian Chavez"
+   ],
+   "total": 60
   }
  ],
  "cats": [
@@ -1326,13 +1503,13 @@ window.SURVIVOR51 = {
   "Savu"
  ],
  "tribeTotals": {
-  "Savu": 65,
-  "Dina": 74,
-  "Toka": 79
+  "Savu": 68,
+  "Dina": 89,
+  "Toka": 106
  },
  "startTotals": {
-  "Savu": 111,
-  "Toka": 107
+  "Savu": 123,
+  "Toka": 140
  },
  "scale": [
   {

@@ -32,12 +32,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 14,
+   "points": 17,
    "id": "3e6db8f4-3f83-8181-8450-f9e3f3879d4c",
    "breakdown": {
-    "Immunity": 6,
+    "Immunity": 8,
     "Reward": 3,
-    "Survival": 5
+    "Survival": 6
    },
    "tribe1": "Savu",
    "tribeCur": "Dina"
@@ -67,13 +67,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 16,
+   "points": 19,
    "id": "3e6db8f4-3f83-8114-89a8-f702b5a4237c",
    "breakdown": {
-    "Immunity": 6,
+    "Immunity": 8,
     "Reward": 3,
     "Advantages": 2,
-    "Survival": 5
+    "Survival": 6
    },
    "tribe1": "Savu",
    "tribeCur": "Toka"
@@ -83,14 +83,16 @@ window.SURVIVOR51 = {
    "tribe": [
     "Savu"
    ],
-   "status": "In Game",
-   "elimType": "",
-   "points": 11,
+   "status": "Eliminated",
+   "elimType": "Voted Out",
+   "points": 13,
    "id": "3e6db8f4-3f83-81d6-8bfe-e529ff913a98",
    "breakdown": {
     "Immunity": 4,
     "Reward": 2,
-    "Survival": 5
+    "Shots": 1,
+    "Survival": 5,
+    "Journeys": 1
    },
    "tribe1": "Savu",
    "tribeCur": "Savu"
@@ -103,12 +105,14 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 17,
+   "points": 26,
    "id": "3e6db8f4-3f83-81c2-99fd-fc8be739c106",
    "breakdown": {
-    "Immunity": 8,
+    "Immunity": 10,
     "Reward": 4,
-    "Survival": 5
+    "Idols": 5,
+    "Survival": 6,
+    "Journeys": 1
    },
    "tribe1": "Savu",
    "tribeCur": "Toka"
@@ -121,12 +125,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 14,
+   "points": 18,
    "id": "3e6db8f4-3f83-8104-a839-f0fd0a9f1891",
    "breakdown": {
-    "Immunity": 6,
+    "Immunity": 8,
     "Reward": 3,
-    "Survival": 5
+    "Survival": 6,
+    "Journeys": 1
    },
    "tribe1": "Savu",
    "tribeCur": "Dina"
@@ -139,12 +144,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 14,
+   "points": 17,
    "id": "3e6db8f4-3f83-81f4-8dfe-de304eeff75c",
    "breakdown": {
-    "Immunity": 6,
+    "Immunity": 8,
     "Reward": 3,
-    "Survival": 5
+    "Survival": 6
    },
    "tribe1": "Savu",
    "tribeCur": "Dina"
@@ -193,13 +198,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 11,
+   "points": 12,
    "id": "3e6db8f4-3f83-81fd-bdef-ecda1c1a5a8d",
    "breakdown": {
     "Immunity": 2,
     "Reward": 2,
     "Advantages": 2,
-    "Survival": 5
+    "Survival": 6
    },
    "tribe1": "Toka",
    "tribeCur": "Savu"
@@ -211,12 +216,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 15,
+   "points": 18,
    "id": "3e6db8f4-3f83-8106-a5ed-f2dde1aa9fb0",
    "breakdown": {
-    "Immunity": 6,
+    "Immunity": 8,
     "Reward": 4,
-    "Survival": 5
+    "Survival": 6
    },
    "tribe1": "Toka",
    "tribeCur": "Toka"
@@ -228,12 +233,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 15,
+   "points": 18,
    "id": "3e6db8f4-3f83-81ff-b290-f7b530a85786",
    "breakdown": {
-    "Immunity": 6,
+    "Immunity": 8,
     "Reward": 4,
-    "Survival": 5
+    "Survival": 6
    },
    "tribe1": "Toka",
    "tribeCur": "Toka"
@@ -245,13 +250,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 20,
+   "points": 23,
    "id": "3e6db8f4-3f83-8182-b79d-c9266f473738",
    "breakdown": {
-    "Immunity": 6,
+    "Immunity": 8,
     "Reward": 4,
     "Advantages": 4,
-    "Survival": 5,
+    "Survival": 6,
     "Journeys": 1
    },
    "tribe1": "Toka",
@@ -265,13 +270,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 14,
+   "points": 15,
    "id": "3e6db8f4-3f83-8190-b95d-fb493d42ab61",
    "breakdown": {
     "Immunity": 2,
     "Reward": 2,
     "Idols": 5,
-    "Survival": 5
+    "Survival": 6
    },
    "tribe1": "Toka",
    "tribeCur": "Savu"
@@ -284,13 +289,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 17,
+   "points": 20,
    "id": "3e6db8f4-3f83-81cc-97a3-d6de6d6402ff",
    "breakdown": {
-    "Immunity": 4,
+    "Immunity": 6,
     "Reward": 3,
     "Advantages": 5,
-    "Survival": 5
+    "Survival": 6
    },
    "tribe1": "Toka",
    "tribeCur": "Dina"
@@ -303,13 +308,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 17,
+   "points": 20,
    "id": "3e6db8f4-3f83-81d4-8148-ebb50fe694ed",
    "breakdown": {
-    "Immunity": 4,
+    "Immunity": 6,
     "Reward": 2,
     "Advantages": 5,
-    "Survival": 5,
+    "Survival": 6,
     "Journeys": 1
    },
    "tribe1": "Toka",
@@ -358,12 +363,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 15,
+   "points": 18,
    "id": "3e6db8f4-3f83-8190-907e-fefb98f328b2",
    "breakdown": {
-    "Immunity": 6,
+    "Immunity": 8,
     "Reward": 4,
-    "Survival": 5
+    "Survival": 6
    },
    "tribe1": "Toka",
    "tribeCur": "Toka"
@@ -629,6 +634,95 @@ window.SURVIVOR51 = {
   }
  ],
  "events": [
+  {
+   "num": "E06F",
+   "type": "Shot Fails",
+   "points": 1,
+   "players": [
+    "Ori Jean-Charles"
+   ],
+   "episode": [
+    "408db8f4-3f83-81d2-ac5a-f61cbf13c9ec"
+   ]
+  },
+  {
+   "num": "E06E",
+   "type": "Finds Idol",
+   "points": 5,
+   "players": [
+    "Kristin Flickinger"
+   ],
+   "episode": [
+    "408db8f4-3f83-81d2-ac5a-f61cbf13c9ec"
+   ]
+  },
+  {
+   "num": "E06D",
+   "type": "Took Journey",
+   "points": 1,
+   "players": [
+    "Ori Jean-Charles",
+    "Kristin Flickinger",
+    "Sharonda Cox"
+   ],
+   "episode": [
+    "408db8f4-3f83-81d2-ac5a-f61cbf13c9ec"
+   ]
+  },
+  {
+   "num": "E06C",
+   "type": "Survives Episode",
+   "points": 1,
+   "players": [
+    "Brady Booker",
+    "Carter Krull",
+    "Kristin Flickinger",
+    "Maggie Nestor",
+    "An \u201cThien An\u201d Nguyen",
+    "Mike Pinsky",
+    "Cristian Chavez",
+    "Sharonda Cox",
+    "Lewis Kelly",
+    "Danny \u201cKilby\u201d Kilby",
+    "Eric Macksoud",
+    "Angelica \u201cJelly\u201d Loblack",
+    "Devin Way"
+   ],
+   "episode": [
+    "408db8f4-3f83-81d2-ac5a-f61cbf13c9ec"
+   ]
+  },
+  {
+   "num": "E06B",
+   "type": "Tribal Immunity",
+   "points": 2,
+   "players": [
+    "Cristian Chavez",
+    "Sharonda Cox",
+    "Lewis Kelly",
+    "Danny \u201cKilby\u201d Kilby",
+    "Eric Macksoud"
+   ],
+   "episode": [
+    "408db8f4-3f83-81d2-ac5a-f61cbf13c9ec"
+   ]
+  },
+  {
+   "num": "E06A",
+   "type": "Tribal Immunity",
+   "points": 2,
+   "players": [
+    "Brady Booker",
+    "Carter Krull",
+    "Kristin Flickinger",
+    "Maggie Nestor",
+    "An \u201cThien An\u201d Nguyen",
+    "Mike Pinsky"
+   ],
+   "episode": [
+    "408db8f4-3f83-81d2-ac5a-f61cbf13c9ec"
+   ]
+  },
   {
    "num": "E05I",
    "type": "Successful Advantage",
@@ -1434,6 +1528,47 @@ window.SURVIVOR51 = {
    ],
    "id": "401db8f4-3f83-814c-bcfd-f6005714dabe",
    "events": 9
+  },
+  {
+   "title": "Episode 6",
+   "num": 6,
+   "epTitle": "I Love Crying",
+   "air": "2026-10-28",
+   "elim": "Voted Out",
+   "voteCount": "2-0",
+   "immunityType": "Tribal",
+   "recapStatus": "Drafted",
+   "recap": "Episode 6, I Love Crying, covered Days 10 through 12. One tribe went to Tribal Council and one player left the game.\n\nDina came back from Tribal Council on night 10. Lewis Kelly could not believe he had survived, and he said the original Savu members had no backbone. Eric Macksoud took Kilby's move as a personal betrayal and told him he wanted nothing to do with him. Eric cried through the conversation. Kilby said he still trusted Eric more than Lewis, and the two of them repaired nothing.\n\nOn Day 11 the three remaining Savu players knew they had to win. Devin Way spent the morning teaching Ori Jean-Charles how to walk a runway.\n\nAt Toka, Mike Pinsky and Kristin Flickinger agreed they were at the bottom and started hunting for an idol or an advantage, which annoyed Brady Booker. Mike told Kristin he would flip to Savu after the merge and asked her to help him survive the next vote. Kristin gave him nothing firm.\n\nAt Dina, Lewis and Kilby knew they needed another miracle. Eric kept crying and called Kilby a rat. He wanted himself, Cristian Chavez, and Sharonda Cox to become the next Tika Three. Cristian was already looking past that, since he thought he needed Kilby and Lewis as numbers against the original Tokas.\n\nTree Mail called a Summit. Each tribe had to send one representative. Dina drew Shots in the Dark, and Cristian ran the draw in a way that kept Lewis and Kilby at camp, so Sharonda went. Savu drew Ori. At Toka, Mike wanted to go, but Thien An Nguyen and Maggie Nestor pushed for Kristin and the tribe sent her.At the Summit, Ori, Kristin, and Sharonda traded information about their tribes. Sharonda blamed Eric for refusing to go to rocks for Linnea Capobianco. A sign told them that two of them would take ribs and corn back to camp while the third spent the night alone on Exile Island with a Tethered Idol. Kristin volunteered to take the idol and the night outside.\n\nThe idol could only be played by Kristin, only for Ori or Sharonda, and it expired at the final five. A second note at Exile added the rest: if both Ori and Sharonda left the game while Kristin was still in it, the idol became a regular one she could play on herself. Kristin built her own shelter and talked about the 25 years she spent trying to get on the show.\n\nAt Savu, Devin and Jelly Loblack had the camp to themselves. Jelly said Ori was not her type and shut down any idea of a showmance, and Devin worried about being seen as one half of a pair. Ori came back with food and news, and he left out the part about Kristin's idol. Jelly was relieved that Sharonda was still in the game and the Helicopter Alliance was intact.\n\nSharonda told Dina about the Summit and also left out the idol. Lewis decided she was hiding something and named her a threat.\n\nAt Toka, Carter Krull built a swing. Maggie thought it was a waste of time, then tried to catch fish with the hammock and failed, so she led the tribe out to forage. Brady said her lack of self-awareness could make her the vote instead of Mike.The Day 12 immunity challenge sent three players from each tribe to untangle themselves from knotted ropes, knock blocks over with sandbags, and finish a puzzle. Jeff Probst told them only one tribe would lose. Savu took the early lead, and Dina caught up when Cristian solved the rope section. Savu then fell apart on the puzzle. Toka finished first and Dina finished second, and there was no reward on the line. Savu went to Tribal Council for the third week in a row.\n\nBack at camp, Devin suggested all three play their Shots in the Dark and let luck decide. Jelly said she had a hidden idol and would use it, and that she was staying with Devin. Ori tried to get Jelly to vote Devin and got nowhere. He then turned to Devin and argued that Jelly would always come first for him. Devin said he would go down for Jelly, then started to waver while holding the extra vote he picked up earlier in the season.\n\nAt Tribal Council, Jelly said she would not be the seventh woman voted out in a row. Devin promised to come back as Devin 2.0 if he survived. Jeff asked Ori what the game would mean if the Shot in the Dark missed, and Ori said he was playing for himself and his mother and needed it to hit. Jeff read the scroll: not safe. Jelly and Devin voted together. Ori left in a 2-0 vote, and Devin never used his extra vote.\n\nThirteen players remain.",
+   "points": 12,
+   "votedOff": [
+    "Ori Jean-Charles"
+   ],
+   "immunityWinners": [
+    "Brady Booker",
+    "Carter Krull",
+    "Kristin Flickinger",
+    "Maggie Nestor",
+    "An \u201cThien An\u201d Nguyen",
+    "Mike Pinsky",
+    "Cristian Chavez",
+    "Sharonda Cox",
+    "Lewis Kelly",
+    "Danny \u201cKilby\u201d Kilby",
+    "Eric Macksoud"
+   ],
+   "rewardWinners": [],
+   "immunityTribes": [
+    "Dina",
+    "Toka"
+   ],
+   "rewardTribes": [],
+   "tribalCouncil": [
+    "Ori Jean-Charles",
+    "Angelica \u201cJelly\u201d Loblack",
+    "Devin Way"
+   ],
+   "id": "408db8f4-3f83-81d2-ac5a-f61cbf13c9ec",
+   "events": 6
   }
  ],
  "viewers": [
@@ -1446,7 +1581,7 @@ window.SURVIVOR51 = {
     "Maggie Nestor",
     "Ana Sani"
    ],
-   "total": 74
+   "total": 92
   },
   {
    "name": "Carolyn",
@@ -1457,7 +1592,7 @@ window.SURVIVOR51 = {
     "Patt Cannaday",
     "Angelica \u201cJelly\u201d Loblack"
    ],
-   "total": 66
+   "total": 77
   },
   {
    "name": "Andrew",
@@ -1468,7 +1603,7 @@ window.SURVIVOR51 = {
     "Alexis Levine",
     "Devin Way"
    ],
-   "total": 61
+   "total": 70
   },
   {
    "name": "Stacy",
@@ -1479,7 +1614,7 @@ window.SURVIVOR51 = {
     "An \u201cThien An\u201d Nguyen",
     "Cristian Chavez"
    ],
-   "total": 60
+   "total": 66
   }
  ],
  "cats": [
@@ -1503,13 +1638,13 @@ window.SURVIVOR51 = {
   "Savu"
  ],
  "tribeTotals": {
-  "Savu": 68,
-  "Dina": 89,
-  "Toka": 106
+  "Savu": 72,
+  "Dina": 105,
+  "Toka": 130
  },
  "startTotals": {
-  "Savu": 123,
-  "Toka": 140
+  "Savu": 147,
+  "Toka": 160
  },
  "scale": [
   {

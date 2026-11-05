@@ -10,6 +10,7 @@
   --toka:#E8B430;
   --savu:#8B5FBF;
   --dina:#D2453A;
+  --tovuto:#2F5FA8;
   --c-immunity:#2E8B8B;
   --c-reward:#C9A227;
   --c-idols:#E5623A;
@@ -175,6 +176,7 @@ h2{
 .chip.toka{background:var(--toka)}
 .chip.savu{background:var(--savu);color:var(--bone)}
 .chip.dina{background:var(--dina);color:var(--bone)}
+.chip.tovuto{background:var(--tovuto);color:var(--bone)}
 .chip em{font-style:normal;opacity:.72;font-weight:600;letter-spacing:.06em}
 .card.out{opacity:.62}
 

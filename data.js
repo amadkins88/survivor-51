@@ -28,19 +28,20 @@ window.SURVIVOR51 = {
    "name": "Eric Macksoud",
    "tribe": [
     "Savu",
-    "Dina"
+    "Dina",
+    "Tovuto"
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 17,
+   "points": 20,
    "id": "3e6db8f4-3f83-8181-8450-f9e3f3879d4c",
    "breakdown": {
     "Immunity": 8,
-    "Reward": 3,
-    "Survival": 6
+    "Reward": 5,
+    "Survival": 7
    },
    "tribe1": "Savu",
-   "tribeCur": "Dina"
+   "tribeCur": "Tovuto"
   },
   {
    "name": "Alexis Levine",
@@ -63,20 +64,21 @@ window.SURVIVOR51 = {
    "name": "Carter Krull",
    "tribe": [
     "Savu",
-    "Toka"
+    "Toka",
+    "Tovuto"
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 19,
+   "points": 22,
    "id": "3e6db8f4-3f83-8114-89a8-f702b5a4237c",
    "breakdown": {
     "Immunity": 8,
-    "Reward": 3,
+    "Reward": 5,
     "Advantages": 2,
-    "Survival": 6
+    "Survival": 7
    },
    "tribe1": "Savu",
-   "tribeCur": "Toka"
+   "tribeCur": "Tovuto"
   },
   {
    "name": "Ori Jean-Charles",
@@ -101,58 +103,61 @@ window.SURVIVOR51 = {
    "name": "Kristin Flickinger",
    "tribe": [
     "Savu",
-    "Toka"
+    "Toka",
+    "Tovuto"
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 26,
+   "points": 27,
    "id": "3e6db8f4-3f83-81c2-99fd-fc8be739c106",
    "breakdown": {
     "Immunity": 10,
     "Reward": 4,
     "Idols": 5,
-    "Survival": 6,
+    "Survival": 7,
     "Journeys": 1
    },
    "tribe1": "Savu",
-   "tribeCur": "Toka"
+   "tribeCur": "Tovuto"
   },
   {
    "name": "Sharonda Cox",
    "tribe": [
     "Savu",
-    "Dina"
+    "Dina",
+    "Tovuto"
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 18,
+   "points": 19,
    "id": "3e6db8f4-3f83-8104-a839-f0fd0a9f1891",
    "breakdown": {
     "Immunity": 8,
     "Reward": 3,
-    "Survival": 6,
+    "Survival": 7,
     "Journeys": 1
    },
    "tribe1": "Savu",
-   "tribeCur": "Dina"
+   "tribeCur": "Tovuto"
   },
   {
    "name": "Cristian Chavez",
    "tribe": [
     "Savu",
-    "Dina"
+    "Dina",
+    "Tovuto"
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 17,
+   "points": 18,
    "id": "3e6db8f4-3f83-81f4-8dfe-de304eeff75c",
    "breakdown": {
     "Immunity": 8,
     "Reward": 3,
-    "Survival": 6
+    "Survival": 7
    },
    "tribe1": "Savu",
-   "tribeCur": "Dina"
+   "tribeCur": "Tovuto"
   },
   {
    "name": "Linnea Capobianco",
@@ -194,131 +199,138 @@ window.SURVIVOR51 = {
    "name": "Devin Way",
    "tribe": [
     "Toka",
-    "Savu"
+    "Savu",
+    "Tovuto"
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 12,
+   "points": 15,
    "id": "3e6db8f4-3f83-81fd-bdef-ecda1c1a5a8d",
    "breakdown": {
     "Immunity": 2,
-    "Reward": 2,
+    "Reward": 4,
     "Advantages": 2,
-    "Survival": 6
+    "Survival": 7
    },
    "tribe1": "Toka",
-   "tribeCur": "Savu"
+   "tribeCur": "Tovuto"
   },
   {
    "name": "Mike Pinsky",
    "tribe": [
-    "Toka"
+    "Toka",
+    "Tovuto"
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 18,
+   "points": 27,
    "id": "3e6db8f4-3f83-8106-a5ed-f2dde1aa9fb0",
    "breakdown": {
-    "Immunity": 8,
-    "Reward": 4,
-    "Survival": 6
+    "Immunity": 14,
+    "Reward": 6,
+    "Survival": 7
    },
    "tribe1": "Toka",
-   "tribeCur": "Toka"
+   "tribeCur": "Tovuto"
   },
   {
    "name": "An \u201cThien An\u201d Nguyen",
    "tribe": [
-    "Toka"
+    "Toka",
+    "Tovuto"
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 18,
+   "points": 21,
    "id": "3e6db8f4-3f83-81ff-b290-f7b530a85786",
    "breakdown": {
     "Immunity": 8,
-    "Reward": 4,
-    "Survival": 6
+    "Reward": 6,
+    "Survival": 7
    },
    "tribe1": "Toka",
-   "tribeCur": "Toka"
+   "tribeCur": "Tovuto"
   },
   {
    "name": "Maggie Nestor",
    "tribe": [
-    "Toka"
+    "Toka",
+    "Tovuto"
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 23,
+   "points": 26,
    "id": "3e6db8f4-3f83-8182-b79d-c9266f473738",
    "breakdown": {
     "Immunity": 8,
-    "Reward": 4,
+    "Reward": 6,
     "Advantages": 4,
-    "Survival": 6,
+    "Survival": 7,
     "Journeys": 1
    },
    "tribe1": "Toka",
-   "tribeCur": "Toka"
+   "tribeCur": "Tovuto"
   },
   {
    "name": "Angelica \u201cJelly\u201d Loblack",
    "tribe": [
     "Toka",
-    "Savu"
+    "Savu",
+    "Tovuto"
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 15,
+   "points": 18,
    "id": "3e6db8f4-3f83-8190-b95d-fb493d42ab61",
    "breakdown": {
     "Immunity": 2,
-    "Reward": 2,
+    "Reward": 4,
     "Idols": 5,
-    "Survival": 6
+    "Survival": 7
    },
    "tribe1": "Toka",
-   "tribeCur": "Savu"
+   "tribeCur": "Tovuto"
   },
   {
    "name": "Danny \u201cKilby\u201d Kilby",
    "tribe": [
     "Toka",
-    "Dina"
+    "Dina",
+    "Tovuto"
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 20,
+   "points": 23,
    "id": "3e6db8f4-3f83-81cc-97a3-d6de6d6402ff",
    "breakdown": {
     "Immunity": 6,
-    "Reward": 3,
+    "Reward": 5,
     "Advantages": 5,
-    "Survival": 6
+    "Survival": 7
    },
    "tribe1": "Toka",
-   "tribeCur": "Dina"
+   "tribeCur": "Tovuto"
   },
   {
    "name": "Lewis Kelly",
    "tribe": [
     "Toka",
-    "Dina"
+    "Dina",
+    "Tovuto"
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 20,
+   "points": 23,
    "id": "3e6db8f4-3f83-81d4-8148-ebb50fe694ed",
    "breakdown": {
     "Immunity": 6,
-    "Reward": 2,
+    "Reward": 4,
     "Advantages": 5,
-    "Survival": 6,
+    "Survival": 7,
     "Journeys": 1
    },
    "tribe1": "Toka",
-   "tribeCur": "Dina"
+   "tribeCur": "Tovuto"
   },
   {
    "name": "Jenna Doore",
@@ -359,19 +371,20 @@ window.SURVIVOR51 = {
   {
    "name": "Brady Booker",
    "tribe": [
-    "Toka"
+    "Toka",
+    "Tovuto"
    ],
-   "status": "In Game",
-   "elimType": "",
-   "points": 18,
+   "status": "Jury",
+   "elimType": "Voted Out",
+   "points": 20,
    "id": "3e6db8f4-3f83-8190-907e-fefb98f328b2",
    "breakdown": {
     "Immunity": 8,
-    "Reward": 4,
+    "Reward": 6,
     "Survival": 6
    },
    "tribe1": "Toka",
-   "tribeCur": "Toka"
+   "tribeCur": "Tovuto"
   },
   {
    "name": "Aaliyah Puglia",
@@ -634,6 +647,59 @@ window.SURVIVOR51 = {
   }
  ],
  "events": [
+  {
+   "num": "E07C",
+   "type": "Survives Episode",
+   "points": 1,
+   "players": [
+    "Carter Krull",
+    "Cristian Chavez",
+    "Devin Way",
+    "Eric Macksoud",
+    "Angelica \u201cJelly\u201d Loblack",
+    "Danny \u201cKilby\u201d Kilby",
+    "Kristin Flickinger",
+    "Lewis Kelly",
+    "Maggie Nestor",
+    "Mike Pinsky",
+    "Sharonda Cox",
+    "An \u201cThien An\u201d Nguyen"
+   ],
+   "episode": [
+    "40fdb8f4-3f83-81fa-a54a-ce4092ce18ea"
+   ]
+  },
+  {
+   "num": "E07B",
+   "type": "First Individual Immunity",
+   "points": 6,
+   "players": [
+    "Mike Pinsky"
+   ],
+   "episode": [
+    "40fdb8f4-3f83-81fa-a54a-ce4092ce18ea"
+   ]
+  },
+  {
+   "num": "E07A",
+   "type": "Individual Reward",
+   "points": 2,
+   "players": [
+    "Brady Booker",
+    "Carter Krull",
+    "Devin Way",
+    "Eric Macksoud",
+    "Angelica \u201cJelly\u201d Loblack",
+    "Danny \u201cKilby\u201d Kilby",
+    "Lewis Kelly",
+    "Maggie Nestor",
+    "Mike Pinsky",
+    "An \u201cThien An\u201d Nguyen"
+   ],
+   "episode": [
+    "40fdb8f4-3f83-81fa-a54a-ce4092ce18ea"
+   ]
+  },
   {
    "num": "E06F",
    "type": "Shot Fails",
@@ -1461,11 +1527,11 @@ window.SURVIVOR51 = {
    ],
    "immunityTribes": [
     "Dina",
-    "Toka"
+    "Tovuto"
    ],
    "rewardTribes": [
     "Dina",
-    "Toka"
+    "Tovuto"
    ],
    "tribalCouncil": [
     "Devin Way",
@@ -1509,10 +1575,12 @@ window.SURVIVOR51 = {
     "Mike Pinsky"
    ],
    "immunityTribes": [
-    "Toka"
+    "Toka",
+    "Tovuto"
    ],
    "rewardTribes": [
-    "Toka"
+    "Toka",
+    "Tovuto"
    ],
    "tribalCouncil": [
     "Ori Jean-Charles",
@@ -1558,8 +1626,7 @@ window.SURVIVOR51 = {
    ],
    "rewardWinners": [],
    "immunityTribes": [
-    "Dina",
-    "Toka"
+    "Tovuto"
    ],
    "rewardTribes": [],
    "tribalCouncil": [
@@ -1569,6 +1636,60 @@ window.SURVIVOR51 = {
    ],
    "id": "408db8f4-3f83-81d2-ac5a-f61cbf13c9ec",
    "events": 6
+  },
+  {
+   "title": "Episode 7",
+   "num": 7,
+   "epTitle": "The Girl at the Prom",
+   "air": "2026-11-04",
+   "elim": "Voted Out",
+   "voteCount": "9-4",
+   "immunityType": "Individual",
+   "recapStatus": "Drafted",
+   "recap": "Episode 7, The Girl at the Prom, covered Days 12 through 14. The three tribes merged into Tovuto, and the first jury member left the game.\n\nNight 12 on Savu came down to two people. Jelly Loblack and Devin Way had survived the vote and had to say goodbye to Ori Jean-Charles. They still had an idol, an Extra Vote, an apparently real-looking fake idol, and no intention of sitting still.\n\nOn Day 13 Jeff Probst gathered all three tribes and dropped the buffs. The new tribe was Tovuto, and the buffs were blue. Jeff promised a classic merge feast, then made them earn it. Only ten spots were available, and the price was two whole grubs each.\n\nBrady Booker and Eric Macksoud ate a grub before the challenge even started, just for fun. Once it began, Kristin Flickinger was the first to bow out, followed by Cristian Chavez and Sharonda Cox. The other ten ate their way into the feast. Eric spent the meal telling everyone his life story, which wore on the group. Brady kept eating.\n\nBack at camp, Kristin walked Sharonda and Cristian through the Toka dynamics, including the fact that Mike Pinsky was on the outs. When Cristian stepped away, Kristin told Sharonda the second half of the Tethered Idol twist: if Sharonda is voted out, the idol becomes a normal idol for Kristin. Then Kristin handed the idol to Sharonda and told her she was in charge of when Kristin plays it for her. Sharonda accepted the trust and said nothing about the Helicopter Alliance.\n\nThe merge settled into an eight against five split, original Toka against original Savu, with Carter Krull folded into Toka after his earlier mutiny. Jelly and Sharonda rebuilt the Helicopter Alliance. Mike told Jelly he was completely on the outs, and the two of them started building a coalition with the original Savus to go after the Tokas. Mike brought in Eric, who agreed immediately. Maggie Nestor and Kilby talked about working together, and Kilby said he could pull in Brady. Brady, Kilby, Thien An Nguyen, Maggie, Carter, and Eric became a group in Kilby's head. Brady also said Mike's days were numbered.\n\nDay 14 brought the first individual immunity challenge of the season. Each player balanced a whale totem on the end of a long pole while standing on a beam that narrowed in stages. Sharonda dropped first, then Thien An. Eric went out at the second stage, then Cristian. Carter fell next, followed by Kilby, Devin, Maggie, Jelly, and Brady. Mike, Kristin, and Lewis Kelly were the last three standing, and Mike won the necklace.\n\nThe scramble after the challenge went in every direction at once. Eric named Brady and Kilby as the leaders of the Toka coalition, then told Brady that Kilby was a liability, which put a target on Eric. Maggie pushed the group toward Kristin and argued that Kristin was too dangerous to keep, especially with whatever she might have brought back from Exile.\n\nJelly and Mike wanted Brady gone. Jelly told Sharonda about her idol and the plan, and Sharonda told Kristin. Kristin was close to agreeing until Mike threatened her, telling her to vote his way or her game would end that night. Kristin hated the threat and went straight to Brady. Brady confronted Mike and told him, \"You broke my heart like I was the girl at the prom.\" The Kristin plan collapsed, and the night came down to Eric or Brady.\n\nTribal Council turned into a room full of side conversations. Jeff admitted he was confused, and the players kept whispering through every question. When the votes were read, Brady went out 9-4 over Eric. Carter, Lewis, and Thien An were the three who did not join the majority. Brady became the first member of the jury.\n\nNo idol was played and no Shot in the Dark was used. The remaining twelve players go into the next round with the merge lines still unsettled and a jury now watching.",
+   "points": 9,
+   "votedOff": [
+    "Brady Booker"
+   ],
+   "immunityWinners": [
+    "Mike Pinsky"
+   ],
+   "rewardWinners": [
+    "Brady Booker",
+    "Carter Krull",
+    "Devin Way",
+    "Eric Macksoud",
+    "Angelica \u201cJelly\u201d Loblack",
+    "Danny \u201cKilby\u201d Kilby",
+    "Lewis Kelly",
+    "Maggie Nestor",
+    "Mike Pinsky",
+    "An \u201cThien An\u201d Nguyen"
+   ],
+   "immunityTribes": [
+    "Toka",
+    "Tovuto"
+   ],
+   "rewardTribes": [
+    "Tovuto"
+   ],
+   "tribalCouncil": [
+    "Brady Booker",
+    "Carter Krull",
+    "Devin Way",
+    "Eric Macksoud",
+    "Angelica \u201cJelly\u201d Loblack",
+    "Danny \u201cKilby\u201d Kilby",
+    "Lewis Kelly",
+    "Maggie Nestor",
+    "Mike Pinsky",
+    "An \u201cThien An\u201d Nguyen",
+    "Cristian Chavez",
+    "Kristin Flickinger",
+    "Sharonda Cox"
+   ],
+   "id": "40fdb8f4-3f83-81fa-a54a-ce4092ce18ea",
+   "events": 3
   }
  ],
  "viewers": [
@@ -1581,7 +1702,7 @@ window.SURVIVOR51 = {
     "Maggie Nestor",
     "Ana Sani"
    ],
-   "total": 92
+   "total": 102
   },
   {
    "name": "Carolyn",
@@ -1592,7 +1713,7 @@ window.SURVIVOR51 = {
     "Patt Cannaday",
     "Angelica \u201cJelly\u201d Loblack"
    ],
-   "total": 77
+   "total": 93
   },
   {
    "name": "Andrew",
@@ -1603,7 +1724,7 @@ window.SURVIVOR51 = {
     "Alexis Levine",
     "Devin Way"
    ],
-   "total": 70
+   "total": 78
   },
   {
    "name": "Stacy",
@@ -1614,7 +1735,7 @@ window.SURVIVOR51 = {
     "An \u201cThien An\u201d Nguyen",
     "Cristian Chavez"
    ],
-   "total": 66
+   "total": 70
   }
  ],
  "cats": [
@@ -1638,13 +1759,14 @@ window.SURVIVOR51 = {
   "Savu"
  ],
  "tribeTotals": {
-  "Savu": 72,
-  "Dina": 105,
-  "Toka": 130
+  "Savu": 45,
+  "Tovuto": 279,
+  "Dina": 13,
+  "Toka": 8
  },
  "startTotals": {
-  "Savu": 147,
-  "Toka": 160
+  "Savu": 156,
+  "Toka": 189
  },
  "scale": [
   {

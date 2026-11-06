@@ -1750,9 +1750,7 @@ window.SURVIVOR51 = {
   "Endgame"
  ],
  "tribeOrder": [
-  "Toka",
-  "Savu",
-  "Dina"
+  "Tovuto"
  ],
  "startOrder": [
   "Toka",

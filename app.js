@@ -5,7 +5,7 @@
     Shots: "#C0574F", Survival: "#8FB3F5", Journeys: "#D98E4A", Twists: "#A52A2A",
     Endgame: "#FFF8E7"
   };
-  var TRIBE_COLOR = { Toka: "#E8B430", Savu: "#8B5FBF", Dina: "#D2453A" };
+  var TRIBE_COLOR = { Toka: "#E8B430", Savu: "#8B5FBF", Dina: "#D2453A", Tovuto: "#2F5FA8" };
   var PICKERS = {};
   D.viewers.forEach(function (v) {
     (v.picks || []).forEach(function (n) { (PICKERS[n] = PICKERS[n] || []).push(v.name); });

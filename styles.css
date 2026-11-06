@@ -113,6 +113,7 @@ h2{
 .row.toka .bar i{background:var(--toka)}
 .row.savu .bar i{background:var(--savu)}
 .row.dina .bar i{background:var(--dina)}
+.row.tovuto .bar i{background:var(--tovuto)}
 
 /* ---------- legend + stacks ---------- */
 .legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-bottom:22px}
@@ -357,9 +358,13 @@ h1,h2,.ep-title,.tribe h3,.pts,.tot,.v-tot,.age,.ev b,.sgroup li b,.topnav .bran
 .tribe.toka{border-color:rgba(232,180,48,.55);background:linear-gradient(rgba(232,180,48,.09),rgba(232,180,48,.09)),var(--ink-2)}
 .tribe.savu{border-color:rgba(139,95,191,.6);background:linear-gradient(rgba(139,95,191,.13),rgba(139,95,191,.13)),var(--ink-2)}
 .tribe.dina{border-color:rgba(210,69,58,.6);background:linear-gradient(rgba(210,69,58,.12),rgba(210,69,58,.12)),var(--ink-2)}
+.tribe.tovuto h3{color:#8FB3F5}
+.tribe.tovuto .tot{color:#8FB3F5}
+.tribe.tovuto{border-color:rgba(47,95,168,.75);background:linear-gradient(rgba(47,95,168,.18),rgba(47,95,168,.18)),var(--ink-2)}
 .tribe.toka::before{background:var(--toka)}
 .tribe.savu::before{background:var(--savu)}
 .tribe.dina::before{background:var(--dina)}
+.tribe.tovuto::before{background:var(--tovuto)}
 
 /* legend stays on one line on phones */
 @media (max-width:759px){

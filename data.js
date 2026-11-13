@@ -33,12 +33,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 20,
+   "points": 23,
    "id": "3e6db8f4-3f83-8181-8450-f9e3f3879d4c",
    "breakdown": {
     "Immunity": 8,
     "Reward": 5,
-    "Survival": 7
+    "Advantages": 2,
+    "Survival": 8
    },
    "tribe1": "Savu",
    "tribeCur": "Tovuto"
@@ -69,13 +70,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 22,
+   "points": 23,
    "id": "3e6db8f4-3f83-8114-89a8-f702b5a4237c",
    "breakdown": {
     "Immunity": 8,
     "Reward": 5,
     "Advantages": 2,
-    "Survival": 7
+    "Survival": 8
    },
    "tribe1": "Savu",
    "tribeCur": "Tovuto"
@@ -106,14 +107,15 @@ window.SURVIVOR51 = {
     "Toka",
     "Tovuto"
    ],
-   "status": "In Game",
+   "status": "Jury",
    "elimType": "",
-   "points": 27,
+   "points": 30,
    "id": "3e6db8f4-3f83-81c2-99fd-fc8be739c106",
    "breakdown": {
     "Immunity": 10,
-    "Reward": 4,
+    "Reward": 6,
     "Idols": 5,
+    "Shots": 1,
     "Survival": 7,
     "Journeys": 1
    },
@@ -129,12 +131,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 19,
+   "points": 28,
    "id": "3e6db8f4-3f83-8104-a839-f0fd0a9f1891",
    "breakdown": {
-    "Immunity": 8,
-    "Reward": 3,
-    "Survival": 7,
+    "Immunity": 14,
+    "Reward": 5,
+    "Survival": 8,
     "Journeys": 1
    },
    "tribe1": "Savu",
@@ -149,12 +151,15 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 18,
+   "points": 26,
    "id": "3e6db8f4-3f83-81f4-8dfe-de304eeff75c",
    "breakdown": {
     "Immunity": 8,
     "Reward": 3,
-    "Survival": 7
+    "Advantages": 2,
+    "Shots": 4,
+    "Survival": 8,
+    "Journeys": 1
    },
    "tribe1": "Savu",
    "tribeCur": "Tovuto"
@@ -204,13 +209,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 15,
+   "points": 16,
    "id": "3e6db8f4-3f83-81fd-bdef-ecda1c1a5a8d",
    "breakdown": {
     "Immunity": 2,
     "Reward": 4,
     "Advantages": 2,
-    "Survival": 7
+    "Survival": 8
    },
    "tribe1": "Toka",
    "tribeCur": "Tovuto"
@@ -223,12 +228,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 27,
+   "points": 28,
    "id": "3e6db8f4-3f83-8106-a5ed-f2dde1aa9fb0",
    "breakdown": {
     "Immunity": 14,
     "Reward": 6,
-    "Survival": 7
+    "Survival": 8
    },
    "tribe1": "Toka",
    "tribeCur": "Tovuto"
@@ -241,12 +246,12 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 21,
+   "points": 22,
    "id": "3e6db8f4-3f83-81ff-b290-f7b530a85786",
    "breakdown": {
     "Immunity": 8,
     "Reward": 6,
-    "Survival": 7
+    "Survival": 8
    },
    "tribe1": "Toka",
    "tribeCur": "Tovuto"
@@ -259,13 +264,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 26,
+   "points": 27,
    "id": "3e6db8f4-3f83-8182-b79d-c9266f473738",
    "breakdown": {
     "Immunity": 8,
     "Reward": 6,
     "Advantages": 4,
-    "Survival": 7,
+    "Survival": 8,
     "Journeys": 1
    },
    "tribe1": "Toka",
@@ -280,13 +285,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 18,
+   "points": 27,
    "id": "3e6db8f4-3f83-8190-b95d-fb493d42ab61",
    "breakdown": {
     "Immunity": 2,
-    "Reward": 4,
-    "Idols": 5,
-    "Survival": 7
+    "Reward": 6,
+    "Idols": 11,
+    "Survival": 8
    },
    "tribe1": "Toka",
    "tribeCur": "Tovuto"
@@ -298,7 +303,7 @@ window.SURVIVOR51 = {
     "Dina",
     "Tovuto"
    ],
-   "status": "In Game",
+   "status": "Jury",
    "elimType": "",
    "points": 23,
    "id": "3e6db8f4-3f83-81cc-97a3-d6de6d6402ff",
@@ -320,13 +325,13 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 23,
+   "points": 32,
    "id": "3e6db8f4-3f83-81d4-8148-ebb50fe694ed",
    "breakdown": {
-    "Immunity": 6,
-    "Reward": 4,
+    "Immunity": 12,
+    "Reward": 6,
     "Advantages": 5,
-    "Survival": 7,
+    "Survival": 8,
     "Journeys": 1
    },
    "tribe1": "Toka",
@@ -374,7 +379,7 @@ window.SURVIVOR51 = {
     "Toka",
     "Tovuto"
    ],
-   "status": "Jury",
+   "status": "Eliminated",
    "elimType": "Voted Out",
    "points": 20,
    "id": "3e6db8f4-3f83-8190-907e-fefb98f328b2",
@@ -647,6 +652,108 @@ window.SURVIVOR51 = {
   }
  ],
  "events": [
+  {
+   "num": "E08H",
+   "type": "Correctly Plays Idol",
+   "points": 6,
+   "players": [
+    "Angelica \u201cJelly\u201d Loblack"
+   ],
+   "episode": [
+    "417db8f4-3f83-8113-9f7f-d5e9cd4e5921"
+   ]
+  },
+  {
+   "num": "E08G",
+   "type": "Shot Survives",
+   "points": 4,
+   "players": [
+    "Cristian Chavez"
+   ],
+   "episode": [
+    "417db8f4-3f83-8113-9f7f-d5e9cd4e5921"
+   ]
+  },
+  {
+   "num": "E08F",
+   "type": "Shot Fails",
+   "points": 1,
+   "players": [
+    "Kristin Flickinger"
+   ],
+   "episode": [
+    "417db8f4-3f83-8113-9f7f-d5e9cd4e5921"
+   ]
+  },
+  {
+   "num": "E08E",
+   "type": "Gains Advantage",
+   "points": 2,
+   "players": [
+    "Cristian Chavez",
+    "Eric Macksoud"
+   ],
+   "episode": [
+    "417db8f4-3f83-8113-9f7f-d5e9cd4e5921"
+   ]
+  },
+  {
+   "num": "E08D",
+   "type": "Took Journey",
+   "points": 1,
+   "players": [
+    "Cristian Chavez"
+   ],
+   "episode": [
+    "417db8f4-3f83-8113-9f7f-d5e9cd4e5921"
+   ]
+  },
+  {
+   "num": "E08C",
+   "type": "Survives Episode",
+   "points": 1,
+   "players": [
+    "Carter Krull",
+    "Cristian Chavez",
+    "Devin Way",
+    "Eric Macksoud",
+    "Angelica \u201cJelly\u201d Loblack",
+    "Lewis Kelly",
+    "Maggie Nestor",
+    "Mike Pinsky",
+    "Sharonda Cox",
+    "An \u201cThien An\u201d Nguyen"
+   ],
+   "episode": [
+    "417db8f4-3f83-8113-9f7f-d5e9cd4e5921"
+   ]
+  },
+  {
+   "num": "E08B",
+   "type": "Individual Reward",
+   "points": 2,
+   "players": [
+    "Lewis Kelly",
+    "Sharonda Cox",
+    "Kristin Flickinger",
+    "Angelica \u201cJelly\u201d Loblack"
+   ],
+   "episode": [
+    "417db8f4-3f83-8113-9f7f-d5e9cd4e5921"
+   ]
+  },
+  {
+   "num": "E08A",
+   "type": "First Individual Immunity",
+   "points": 6,
+   "players": [
+    "Lewis Kelly",
+    "Sharonda Cox"
+   ],
+   "episode": [
+    "417db8f4-3f83-8113-9f7f-d5e9cd4e5921"
+   ]
+  },
   {
    "num": "E07C",
    "type": "Survives Episode",
@@ -1690,6 +1797,53 @@ window.SURVIVOR51 = {
    ],
    "id": "40fdb8f4-3f83-81fa-a54a-ce4092ce18ea",
    "events": 3
+  },
+  {
+   "title": "Episode 8",
+   "num": 8,
+   "epTitle": "Load the Ark, Two by Two",
+   "air": "2026-11-11",
+   "elim": "Voted Out",
+   "voteCount": "1-0",
+   "immunityType": "Individual",
+   "recapStatus": "Drafted",
+   "recap": "Episode 8, Load the Ark, Two by Two, covered the days after the merge vote and ended with two players leaving on a single parchment.\n\nThe tribe came back from Tribal Council with Mike Pinsky at the center of it. He told everyone he had caused unnecessary chaos by warning Kristin Flickinger that she was a backup target, and he invited them to air grievances. Eric Macksoud asked who had voted for him and why. Nobody answered in public. Kilby told Eric that Mike would have been gone without immunity, and that Mike's social game was the problem. The next morning the mood had not improved. Thien An Nguyen was annoyed that Mike had ruined the plan to send Kristin home, and Maggie Nestor told Mike the reason he learns things last is that nobody trusts him. Mike said Brady Booker had spent days telling him he was next, which is why he aimed at Brady. Maggie answered that he had been riding everyone else's coattails.\n\nCarter Krull started a new group he called the Salt Alliance, built around the idea of making a plan and sticking to it. Carter, Lewis Kelly, Kilby, Thien An, and Maggie were in. Cristian Chavez worried they needed one more number until Carter showed him a hidden immunity idol he had received from Rob Antonson. Cristian became the only other player who knew Carter had it.Tree mail told the tribe to split into pairs, with no explanation of what the pairs meant. The pairs were Devin Way with Jelly Loblack, Kristin with Kilby, Thien An with Eric, Carter with Cristian, Lewis with Sharonda Cox, and Mike with Maggie. At the challenge Jeff Probst told them Brady had left the game to deal with his injured thumb, had given up his jury seat, and that the first jury spot was open. He then confirmed the pairs would live and die together: one pair would be voted out that night.\n\nThe challenge ran in three phases of balance beams, balls, boards, and bins. Kristin and Kilby dropped first, then Mike and Maggie. The first phase turned into a 43-minute standoff between Devin and Jelly and Carter and Cristian. Carter and Cristian won it and earned one less bag to carry into the next phase. They sailed through phase two and reached the final balance race first, then their stack came down. Lewis and Sharonda, who had dropped early on purpose so nobody would see them as a threat, won immunity and a spaghetti dinner.\n\nAs the winners, Lewis and Sharonda sent Cristian away on a journey and chose Kristin and Jelly to eat with them. At the meal Jelly said she knew she and Devin were in danger and floated Carter and Cristian as a counter-target. She did not want to go after Mike because of Maggie. Lewis told the group that Jelly and Devin had made a mistake by pairing with each other, since everyone already saw them as a package.\n\nCristian's journey cost him his vote until he earned it back. He cut a rope, collected buoys with letters on them, and solved the phrase \"dig under tree mail.\" Back at camp, with Mike following him, he dug up an extra vote that could only be used that night.The afternoon turned into a scramble. Lewis admitted he was looking at Jelly and Devin. Carter told Jelly and Devin the Salt Alliance was after Kristin and Kilby, which they believed. Sharonda told Thien An she would not vote for Jelly and Devin and warned her not to tell anyone. Thien An told Sharonda the plan was Jelly and Devin, and Sharonda passed the warning to her alliance in time.\n\nAt Tribal Council Cristian handed his extra vote to Eric as a show of trust. Eric kept it in his pocket and never played it, certain the votes were already there. Jelly then played her hidden immunity idol for herself and Devin. Eight votes against them stopped counting. Kristin played her Shot in the Dark and it read Not Safe. Cristian played his and it read Safe, covering himself and Carter, and the only vote left was Devin's for Kristin and Kilby.\n\nKristin Flickinger and Danny Kilby left the game together as the first two members of the jury. Brady Booker watched from home, no longer part of it.",
+   "points": 23,
+   "votedOff": [
+    "Kristin Flickinger",
+    "Danny \u201cKilby\u201d Kilby"
+   ],
+   "immunityWinners": [
+    "Lewis Kelly",
+    "Sharonda Cox"
+   ],
+   "rewardWinners": [
+    "Lewis Kelly",
+    "Sharonda Cox",
+    "Kristin Flickinger",
+    "Angelica \u201cJelly\u201d Loblack"
+   ],
+   "immunityTribes": [
+    "Dina",
+    "Tovuto"
+   ],
+   "rewardTribes": [
+    "Tovuto"
+   ],
+   "tribalCouncil": [
+    "Eric Macksoud",
+    "Carter Krull",
+    "Sharonda Cox",
+    "Cristian Chavez",
+    "Devin Way",
+    "Mike Pinsky",
+    "An \u201cThien An\u201d Nguyen",
+    "Maggie Nestor",
+    "Angelica \u201cJelly\u201d Loblack",
+    "Lewis Kelly"
+   ],
+   "id": "417db8f4-3f83-8113-9f7f-d5e9cd4e5921",
+   "events": 8
   }
  ],
  "viewers": [
@@ -1702,7 +1856,7 @@ window.SURVIVOR51 = {
     "Maggie Nestor",
     "Ana Sani"
    ],
-   "total": 102
+   "total": 116
   },
   {
    "name": "Carolyn",
@@ -1713,7 +1867,7 @@ window.SURVIVOR51 = {
     "Patt Cannaday",
     "Angelica \u201cJelly\u201d Loblack"
    ],
-   "total": 93
+   "total": 112
   },
   {
    "name": "Andrew",
@@ -1724,7 +1878,7 @@ window.SURVIVOR51 = {
     "Alexis Levine",
     "Devin Way"
    ],
-   "total": 78
+   "total": 82
   },
   {
    "name": "Stacy",
@@ -1735,7 +1889,7 @@ window.SURVIVOR51 = {
     "An \u201cThien An\u201d Nguyen",
     "Cristian Chavez"
    ],
-   "total": 70
+   "total": 79
   }
  ],
  "cats": [
@@ -1758,13 +1912,13 @@ window.SURVIVOR51 = {
  ],
  "tribeTotals": {
   "Savu": 45,
-  "Tovuto": 279,
+  "Tovuto": 325,
   "Dina": 13,
   "Toka": 8
  },
  "startTotals": {
-  "Savu": 156,
-  "Toka": 189
+  "Savu": 180,
+  "Toka": 211
  },
  "scale": [
   {

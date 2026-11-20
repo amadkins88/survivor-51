@@ -33,11 +33,11 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 25,
+   "points": 26,
    "id": "3e6db8f4-3f83-8181-8450-f9e3f3879d4c",
    "breakdown": {
     "Immunity": 8,
-    "Reward": 6,
+    "Reward": 7,
     "Advantages": 2,
     "Survival": 9
    },
@@ -209,11 +209,11 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 19,
+   "points": 20,
    "id": "3e6db8f4-3f83-81fd-bdef-ecda1c1a5a8d",
    "breakdown": {
     "Immunity": 2,
-    "Reward": 5,
+    "Reward": 6,
     "Idols": 1,
     "Advantages": 2,
     "Survival": 9
@@ -229,11 +229,11 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 30,
+   "points": 31,
    "id": "3e6db8f4-3f83-8106-a5ed-f2dde1aa9fb0",
    "breakdown": {
     "Immunity": 14,
-    "Reward": 7,
+    "Reward": 8,
     "Survival": 9
    },
    "tribe1": "Toka",
@@ -247,11 +247,11 @@ window.SURVIVOR51 = {
    ],
    "status": "In Game",
    "elimType": "",
-   "points": 24,
+   "points": 25,
    "id": "3e6db8f4-3f83-81ff-b290-f7b530a85786",
    "breakdown": {
     "Immunity": 8,
-    "Reward": 7,
+    "Reward": 8,
     "Survival": 9
    },
    "tribe1": "Toka",
@@ -326,11 +326,11 @@ window.SURVIVOR51 = {
    ],
    "status": "Jury",
    "elimType": "Coin Flip",
-   "points": 33,
+   "points": 34,
    "id": "3e6db8f4-3f83-81d4-8148-ebb50fe694ed",
    "breakdown": {
     "Immunity": 12,
-    "Reward": 7,
+    "Reward": 8,
     "Advantages": 5,
     "Survival": 8,
     "Journeys": 1
@@ -696,8 +696,8 @@ window.SURVIVOR51 = {
   },
   {
    "num": "E09A",
-   "type": "Tribal Reward",
-   "points": 1,
+   "type": "Individual Reward",
+   "points": 2,
    "players": [
     "Mike Pinsky",
     "Devin Way",
@@ -1912,7 +1912,7 @@ window.SURVIVOR51 = {
    "immunityType": "Individual",
    "recapStatus": "Drafted",
    "recap": "Episode 9, Wilder Than a Cat in a Bathtub, ran from Day 16 into Day 17 and ended without a single vote being cast.\n\nDevin Way and Jelly Loblack opened the episode enjoying the fallout from the previous Tribal Council. Jelly's idol had wiped out eight votes aimed at the pair, and their split vote sent Kristin Flickinger and Danny Kilby to the jury. Cristian Chavez was still riding his Shot in the Dark save, one of only four players in the show's history to see Safe on the scroll. He was less pleased that Eric Macksoud never used the extra vote Cristian had handed him. Eric returned the now expired advantage, and Cristian kept the parchment as a possible bluff. Carter Krull still held the idol he got from Rob Antonson. Carter did not know that Cristian had already told Sharonda Cox about it.\n\nWith Jelly's idol spent, the tribe went hunting for a new one. Maggie Nestor pushed her allies to search at dawn. Nobody found anything. Devin spent the morning building a fake idol from the parchment and wrapping of Jelly's old one and hiding it in the jungle, hoping someone would find it and feel safe. He later walked Maggie toward the spot, but she never noticed it, so Devin had to double back and collect his own decoy.\n\nThe reward challenge split the tribe into two teams of five. Mike Pinsky captained purple with Devin, Eric, Lewis Kelly, and Thien An Nguyen. Sharonda Cox captained yellow with Carter, Jelly, Maggie, and Cristian. The teams cleared a heavy rope, pushed a sled, unlocked sandbags, and fired them from slingshots at three targets. Purple led most of the way. Yellow pulled ahead when Carter hit the first target, then Lewis hit three in a row to win the helicopter ride and the fried chicken feast.Yellow went back to camp and ate nuts while purple flew off. Cristian said he had not had a real meal since the game started and was feeling weak. The hunger turned into strategy. Lewis had won too much, and the talk of voting him out grew louder. Maggie and Thien An still wanted Jelly gone. Jelly saw Maggie as her biggest threat.\n\nA storm hit that night. Wind, water, and no sleep for anyone. The next morning Devin tried and failed to hand Maggie the fake idol. Then the tribe went back to the water for immunity. Everyone held themselves on a ramp above the sea, moving to smaller handles as the challenge went on. Eric and Jelly dropped before the final stage. Maggie, Thien An, Cristian, Devin, Sharonda, and Mike followed. Carter and Lewis lasted past thirty minutes until Lewis let go, giving Carter the first individual immunity of his season.\n\nBack at camp the two sides dug in. Maggie and Jelly went after each other, with Thien An behind Maggie. Cristian worked on Carter to take out Lewis while the chance was there. Devin told Lewis to his face that he was voting him out unless Lewis gave him a reason not to. Lewis turned on the charm and worked the camp.\n\nTribal Council started calm, with Jelly and Lewis both on the table and more weight on Lewis. Jeff Probst then brought out the coin. One call, fire or water. A correct call meant safety, an idol, and a two million dollar prize. A wrong call meant the vote was canceled and the flipper went home. Devin, Cristian, and Lewis all volunteered. Cristian held the coin for luck and passed it to Devin. The group settled on Devin to flip. Lewis, knowing he was the likely target, decided to take the risk himself, and Devin gave him the coin. Lewis called fire. It landed on water. No vote was held, and Lewis became the third member of the jury. The prize stayed at one million dollars and the coin flip rolled over to Season 52.",
-   "points": 9,
+   "points": 10,
    "votedOff": [
     "Lewis Kelly"
    ],
@@ -1960,7 +1960,7 @@ window.SURVIVOR51 = {
     "Maggie Nestor",
     "Ana Sani"
    ],
-   "total": 125
+   "total": 126
   },
   {
    "name": "Carolyn",
@@ -1971,7 +1971,7 @@ window.SURVIVOR51 = {
     "Patt Cannaday",
     "Angelica \u201cJelly\u201d Loblack"
    ],
-   "total": 116
+   "total": 117
   },
   {
    "name": "Andrew",
@@ -1982,7 +1982,7 @@ window.SURVIVOR51 = {
     "Alexis Levine",
     "Devin Way"
    ],
-   "total": 87
+   "total": 89
   },
   {
    "name": "Stacy",
@@ -1993,7 +1993,7 @@ window.SURVIVOR51 = {
     "An \u201cThien An\u201d Nguyen",
     "Cristian Chavez"
    ],
-   "total": 82
+   "total": 83
   }
  ],
  "cats": [
@@ -2016,13 +2016,13 @@ window.SURVIVOR51 = {
  ],
  "tribeTotals": {
   "Savu": 45,
-  "Tovuto": 346,
+  "Tovuto": 351,
   "Dina": 13,
   "Toka": 8
  },
  "startTotals": {
-  "Savu": 191,
-  "Toka": 221
+  "Savu": 192,
+  "Toka": 225
  },
  "scale": [
   {
